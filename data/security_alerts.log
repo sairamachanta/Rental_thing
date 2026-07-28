@@ -1,0 +1,4 @@
+[SECURITY ALERT 2026-07-28T16:06:26.276Z] IP: ::1 | Reason: Automated Testing/Scraper Tool Detected | UA: go-http-client/1.1
+[SECURITY ALERT 2026-07-28T16:06:26.295Z] IP: ::1 | Reason: Request from blacklisted IP | UA: go-http-client/1.1
+[SECURITY ALERT 2026-07-28T16:06:49.404Z] IP: ::1 | Reason: Request from blacklisted IP | UA: mozilla/5.0 (windows nt 10.0; win64; x64) applewebkit/537.36 (khtml, like gecko) chrome/150.0.0.0 safari/537.36 edg/150.0.0.0
+[SECURITY ALERT 2026-07-28T16:07:14.672Z] IP: ::1 | Reason: Request from blacklisted IP | UA: mozilla/5.0 (windows nt 10.0; win64; x64) applewebkit/537.36 (khtml, like gecko) chrome/150.0.0.0 safari/537.36

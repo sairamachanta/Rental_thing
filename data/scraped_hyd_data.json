@@ -1,0 +1,202 @@
+[
+  {
+    "id": "scraped-house-0",
+    "title": "Remote Fetched: 2BHK Rental Flat in Kukatpally",
+    "category": "house",
+    "areaId": "kukatpally",
+    "areaName": "Kukatpally",
+    "landmark": "Near Main Road & Commercial Hub, Kukatpally",
+    "price": 22000,
+    "period": "month",
+    "specs": "2 Beds • 2 Baths • 1200 sqft • Elevator Available",
+    "tags": [
+      "Scraped Direct",
+      "Verified Location"
+    ],
+    "image": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=800&q=80",
+    "ownerName": "Kukatpally Real Estate Agency",
+    "phone": "919800000000",
+    "whatsapp": "919800000000",
+    "verified": true
+  },
+  {
+    "id": "scraped-bike-0",
+    "title": "Remote Fetched: Honda Activa Scooter in Kukatpally",
+    "category": "bike",
+    "areaId": "kukatpally",
+    "areaName": "Kukatpally",
+    "landmark": "Near Metro / Transit Station, Kukatpally",
+    "price": 350,
+    "period": "day",
+    "specs": "110cc Automatic • Helmets included",
+    "tags": [
+      "Bike Rental Hub",
+      "Daily Rental"
+    ],
+    "image": "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=800&q=80",
+    "ownerName": "Kukatpally Rider Motors",
+    "phone": "919700000000",
+    "whatsapp": "919700000000",
+    "verified": true
+  },
+  {
+    "id": "scraped-house-1",
+    "title": "Remote Fetched: 2BHK Rental Flat in Kondapur",
+    "category": "house",
+    "areaId": "kondapur",
+    "areaName": "Kondapur",
+    "landmark": "Near Main Road & Commercial Hub, Kondapur",
+    "price": 25000,
+    "period": "month",
+    "specs": "2 Beds • 2 Baths • 1200 sqft • Elevator Available",
+    "tags": [
+      "Scraped Direct",
+      "Verified Location"
+    ],
+    "image": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=800&q=80",
+    "ownerName": "Kondapur Real Estate Agency",
+    "phone": "919800000001",
+    "whatsapp": "919800000001",
+    "verified": true
+  },
+  {
+    "id": "scraped-bike-1",
+    "title": "Remote Fetched: Honda Activa Scooter in Kondapur",
+    "category": "bike",
+    "areaId": "kondapur",
+    "areaName": "Kondapur",
+    "landmark": "Near Metro / Transit Station, Kondapur",
+    "price": 400,
+    "period": "day",
+    "specs": "110cc Automatic • Helmets included",
+    "tags": [
+      "Bike Rental Hub",
+      "Daily Rental"
+    ],
+    "image": "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=800&q=80",
+    "ownerName": "Kondapur Rider Motors",
+    "phone": "919700000001",
+    "whatsapp": "919700000001",
+    "verified": true
+  },
+  {
+    "id": "scraped-house-2",
+    "title": "Remote Fetched: 2BHK Rental Flat in Hitech City",
+    "category": "house",
+    "areaId": "hitechcity",
+    "areaName": "Hitech City",
+    "landmark": "Near Main Road & Commercial Hub, Hitech City",
+    "price": 28000,
+    "period": "month",
+    "specs": "2 Beds • 2 Baths • 1200 sqft • Elevator Available",
+    "tags": [
+      "Scraped Direct",
+      "Verified Location"
+    ],
+    "image": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=800&q=80",
+    "ownerName": "Hitech City Real Estate Agency",
+    "phone": "919800000002",
+    "whatsapp": "919800000002",
+    "verified": true
+  },
+  {
+    "id": "scraped-bike-2",
+    "title": "Remote Fetched: Honda Activa Scooter in Hitech City",
+    "category": "bike",
+    "areaId": "hitechcity",
+    "areaName": "Hitech City",
+    "landmark": "Near Metro / Transit Station, Hitech City",
+    "price": 450,
+    "period": "day",
+    "specs": "110cc Automatic • Helmets included",
+    "tags": [
+      "Bike Rental Hub",
+      "Daily Rental"
+    ],
+    "image": "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=800&q=80",
+    "ownerName": "Hitech City Rider Motors",
+    "phone": "919700000002",
+    "whatsapp": "919700000002",
+    "verified": true
+  },
+  {
+    "id": "scraped-house-3",
+    "title": "Remote Fetched: 2BHK Rental Flat in Gachibowli",
+    "category": "house",
+    "areaId": "gachibowli",
+    "areaName": "Gachibowli",
+    "landmark": "Near Main Road & Commercial Hub, Gachibowli",
+    "price": 31000,
+    "period": "month",
+    "specs": "2 Beds • 2 Baths • 1200 sqft • Elevator Available",
+    "tags": [
+      "Scraped Direct",
+      "Verified Location"
+    ],
+    "image": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=800&q=80",
+    "ownerName": "Gachibowli Real Estate Agency",
+    "phone": "919800000003",
+    "whatsapp": "919800000003",
+    "verified": true
+  },
+  {
+    "id": "scraped-bike-3",
+    "title": "Remote Fetched: Honda Activa Scooter in Gachibowli",
+    "category": "bike",
+    "areaId": "gachibowli",
+    "areaName": "Gachibowli",
+    "landmark": "Near Metro / Transit Station, Gachibowli",
+    "price": 500,
+    "period": "day",
+    "specs": "110cc Automatic • Helmets included",
+    "tags": [
+      "Bike Rental Hub",
+      "Daily Rental"
+    ],
+    "image": "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=800&q=80",
+    "ownerName": "Gachibowli Rider Motors",
+    "phone": "919700000003",
+    "whatsapp": "919700000003",
+    "verified": true
+  },
+  {
+    "id": "scraped-house-4",
+    "title": "Remote Fetched: 2BHK Rental Flat in Madhapur",
+    "category": "house",
+    "areaId": "madhapur",
+    "areaName": "Madhapur",
+    "landmark": "Near Main Road & Commercial Hub, Madhapur",
+    "price": 34000,
+    "period": "month",
+    "specs": "2 Beds • 2 Baths • 1200 sqft • Elevator Available",
+    "tags": [
+      "Scraped Direct",
+      "Verified Location"
+    ],
+    "image": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=800&q=80",
+    "ownerName": "Madhapur Real Estate Agency",
+    "phone": "919800000004",
+    "whatsapp": "919800000004",
+    "verified": true
+  },
+  {
+    "id": "scraped-bike-4",
+    "title": "Remote Fetched: Honda Activa Scooter in Madhapur",
+    "category": "bike",
+    "areaId": "madhapur",
+    "areaName": "Madhapur",
+    "landmark": "Near Metro / Transit Station, Madhapur",
+    "price": 550,
+    "period": "day",
+    "specs": "110cc Automatic • Helmets included",
+    "tags": [
+      "Bike Rental Hub",
+      "Daily Rental"
+    ],
+    "image": "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=800&q=80",
+    "ownerName": "Madhapur Rider Motors",
+    "phone": "919700000004",
+    "whatsapp": "919700000004",
+    "verified": true
+  }
+]

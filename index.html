@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary SEO Meta Tags for Top Google Ranking -->
+    <title>ManaRent — #1 Rent Houses, PGs, Bikes, Cars & Furniture in Hyderabad & Metros</title>
+    <meta name="title" content="ManaRent — #1 Rent Houses, PGs, Bikes, Cars & Furniture in Hyderabad & Metros">
+    <meta name="description" content="Find verified rentals area-by-area in Hyderabad (Kukatpally, Kondapur, Hitech City, Gachibowli, Madhapur), Bengaluru, Mumbai & Delhi. Direct WhatsApp contact with owners!">
+    <meta name="keywords" content="Rent house in Hyderabad, 2BHK flat Kukatpally, PG in Madhapur, Bike rental Hitech City, Self drive cars Gachibowli, Kondapur rentals, ManaRent, Zero brokerage house rent">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="http://localhost:4000/">
+
+    <!-- Open Graph / Facebook / WhatsApp Preview Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://localhost:4000/">
+    <meta property="og:title" content="ManaRent — Hyperlocal Rental Marketplace for Hyderabad & Metros">
+    <meta property="og:description" content="Find houses, PGs, bikes, cars & appliances area-by-area in Hyderabad. Connect directly with owners on WhatsApp with zero brokerage!">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1200&q=80">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="http://localhost:4000/">
+    <meta name="twitter:title" content="ManaRent — #1 Hyperlocal Rental Aggregator">
+    <meta name="twitter:description" content="Rent houses, bikes, self-drive cars, and PGs area-by-area across Hyderabad & major Indian tech hubs. Direct WhatsApp contact!">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1200&q=80">
+
+    <!-- JSON-LD Structured Data Schema for Google Search Rich Snippets -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "ManaRent",
+      "url": "http://localhost:4000/",
+      "description": "Hyperlocal rental marketplace for houses, PGs, bikes, cars, and appliances across Hyderabad subcities.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "http://localhost:4000/?search={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="brand" onclick="resetFilters()">
+                <span class="brand-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </span>
+                <span class="brand-title">ManaRent <span>HUB</span></span>
+                <span class="brand-tag">Hyperlocal</span>
+            </div>
+
+            <div class="nav-actions">
+                <select class="filter-dropdown" id="citySelectDropdown" style="margin:0; background: rgba(139, 92, 246, 0.15); border-color: var(--primary); font-weight: 700;">
+                    <!-- Rendered by JS -->
+                </select>
+
+                <button class="btn-primary" id="postListingBtn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    <span>Post Rental (Free)</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="hero">
+        <div class="hero-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Direct Owner & Verified Listings • Zero Brokerage Option</span>
+        </div>
+        <h1 class="hero-title">
+            Rent Anything Subcity-by-Subcity <br>
+            <span class="highlight">Verified Local Rentals</span>
+        </h1>
+        <p class="hero-subtitle">
+            Houses, PGs, Bikes, Self-Drive Cars, Autos, Furniture, Laptops & Event Wear across Hyderabad, Bengaluru, Mumbai, Pune, Delhi NCR & Chennai. Direct WhatsApp connection with verified owners.
+        </p>
+    </header>
+
+    <!-- HYPERLOCAL SUBCITY QUICK BAR -->
+    <section class="area-bar-wrapper">
+        <div class="area-section-title">
+            <span>Filter by Subcity / Area:</span>
+            <span>Active Local Hubs</span>
+        </div>
+        <div class="area-pills" id="areaPillsContainer">
+            <!-- Area pills rendered dynamically by JS -->
+        </div>
+    </section>
+
+    <!-- SEARCH & FILTER BAR -->
+    <section class="search-container">
+        <div class="search-box">
+            <div class="search-input-group">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <input type="text" id="searchInput" placeholder="Search by Landmark (e.g. KPHB Metro, DLF Road, Mindspace, Botanical Garden)...">
+            </div>
+
+            <select class="filter-dropdown" id="areaSelectDropdown">
+                <!-- Rendered dynamically by JS -->
+            </select>
+
+            <select class="filter-dropdown" id="sortSelectDropdown">
+                <option value="default">⚡ Sort: Default</option>
+                <option value="lowToHigh">💰 Rent: Low to High</option>
+                <option value="highToLow">💎 Rent: High to Low</option>
+                <option value="rating">⭐ Highest Rated</option>
+            </select>
+        </div>
+    </section>
+
+    <!-- CATEGORY SELECTOR TABS -->
+    <section class="categories-container">
+        <div class="category-grid" id="categoryGridContainer">
+            <!-- Rendered dynamically by JS -->
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT LISTINGS GRID -->
+    <main class="main-content">
+        <div class="section-header">
+            <h2 class="section-title">
+                <span>Available Local Rentals</span>
+            </h2>
+            <span class="listings-count" id="listingsCount">Loading listings...</span>
+        </div>
+
+        <div class="listings-grid" id="listingsGrid">
+            <!-- Listing cards rendered dynamically by JS -->
+        </div>
+    </main>
+
+    <!-- OWNER LISTING SUBMISSION MODAL -->
+    <div class="modal-overlay" id="postListingModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">List Your Property or Vehicle for Rent</h3>
+                <button class="modal-close" id="closeModalBtn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="ownerListingForm">
+                    <!-- HONEYPOT BOT TRAP (Hidden from humans, filled by automated bots) -->
+                    <input type="text" id="website_honeypot_trap" name="website_honeypot_trap" style="display:none !important; position:absolute; left:-9999px;" tabindex="-1" autocomplete="off">
+
+                    <div class="form-group">
+                        <label class="form-label">Listing Title</label>
+                        <input type="text" id="formTitle" class="form-control" placeholder="e.g. 2BHK Flat near KPHB Metro Station / Honda Activa 6G" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Category</label>
+                            <select id="formCategory" class="form-control" required>
+                                <option value="house">🏡 Flat / House</option>
+                                <option value="pg">🛏️ PG / Hostel Bed</option>
+                                <option value="bike">🏍️ Bike / Scooter</option>
+                                <option value="car">🚗 Self-Drive Car</option>
+                                <option value="auto">🛺 Auto / Commercial</option>
+                                <option value="furniture">🛋️ Furniture & Appliances</option>
+                                <option value="laptop">💻 Laptops & IT Gear</option>
+                                <option value="fashion">👔 Event & Bridal Fashion</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Subcity / Area</label>
+                            <select id="formArea" class="form-control" required>
+                                <option value="kukatpally">Kukatpally / KPHB</option>
+                                <option value="kondapur">Kondapur</option>
+                                <option value="hitech">Hitech City</option>
+                                <option value="gachibowli">Gachibowli</option>
+                                <option value="madhapur">Madhapur</option>
+                                <option value="miyapur">Miyapur</option>
+                                <option value="ameerpet">Ameerpet / SR Nagar</option>
+                                <option value="banjara">Banjara Hills</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Landmark / Specific Location</label>
+                        <input type="text" id="formLandmark" class="form-control" placeholder="e.g. Near DLF Food Street / 2 mins from Metro Gate 2" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Rent Amount (₹)</label>
+                            <input type="number" id="formPrice" class="form-control" placeholder="e.g. 22000" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Rent Period</label>
+                            <select id="formPeriod" class="form-control" required>
+                                <option value="month">Per Month</option>
+                                <option value="day">Per Day</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Key Details / Specs</label>
+                        <input type="text" id="formSpecs" class="form-control" placeholder="e.g. 2 Beds, 2 Baths, 1100 sqft, Car Parking, Gated Community" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Your Name</label>
+                            <input type="text" id="formOwnerName" class="form-control" placeholder="e.g. Ramesh V." required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">WhatsApp Phone Number</label>
+                            <input type="tel" id="formPhone" class="form-control" placeholder="919876543210 (With 91)" required>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; margin-top: 1rem;">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        <span>Publish Listing Now</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">📍 ManaRent HUB</div>
+            <p class="footer-text">
+                Hyperlocal Rental Aggregator Engine • High-Density listings across subcities in Hyderabad, Bengaluru, Mumbai, Pune, Delhi NCR & Chennai.
+            </p>
+            <div class="footer-bottom">
+                &copy; 2026 ManaRent. Empowering Hyperlocal Rental Discovery without Middlemen.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="data/hyd_seed_data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
