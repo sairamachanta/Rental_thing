@@ -1,5 +1,5 @@
 /**
- * ManaRent HUB - Client Controller with Anti-Bot & Anti-Scraper Guards
+ * ManaRent HUB - Client Controller with Anti-Bot Guards & High-Converting Interstitial Ad Prompts
  */
 
 const AppState = {
@@ -16,7 +16,7 @@ const AppState = {
     totalListingsCount: 0
 };
 
-// Client-Side Headless Automation Detection (Cypress, Playwright, Puppeteer, Selenium)
+// Client-Side Headless Automation Detection
 function detectAutomationTools() {
     if (navigator.webdriver || window.Cypress || window.__playwright || window._phantom || window.callPhantom) {
         console.warn("⚠️ Security Alert: Automated testing tool / headless scraper detected.");
@@ -261,6 +261,48 @@ window.selectCategory = function(catId) {
     fetchListings(true);
 };
 
+// 💰 SMART INTERSTITIAL AD PROMPT BEFORE CONNECTING TO OWNER
+window.connectOwnerWithAd = function(targetUrl, ownerName, type) {
+    const overlay = document.createElement("div");
+    overlay.className = "ad-interstitial-overlay";
+    overlay.innerHTML = `
+        <div class="ad-interstitial-card">
+            <div class="ad-spinner"></div>
+            <div class="ad-tag">⚡ SPONSORED DIRECT CONNECT</div>
+            <h3 class="ad-title">Connecting you to ${escapeHtml(ownerName)}...</h3>
+            <p class="ad-sub">Verified Zero-Brokerage Direct Owner Connection</p>
+            
+            <!-- AdSense Auto-Ad Slot / Featured Offer -->
+            <div class="ad-box">
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-6965081263252229"
+                     data-ad-slot="1234567890"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <div style="font-size:0.75rem; color:var(--text-muted); margin-top:6px;">
+                    🚚 Moving to a new house? <b>Get 20% OFF Packers & Movers in Hyderabad!</b>
+                </div>
+            </div>
+            
+            <div class="ad-timer">Opening ${type === 'whatsapp' ? 'WhatsApp' : 'Call'} in <span id="adCount">1.8</span>s...</div>
+        </div>
+    `;
+    document.body.appendChild(overlay);
+
+    let timeLeft = 1.8;
+    const interval = setInterval(() => {
+        timeLeft -= 0.3;
+        const countEl = document.getElementById("adCount");
+        if (countEl) countEl.textContent = Math.max(0, timeLeft).toFixed(1);
+        if (timeLeft <= 0) {
+            clearInterval(interval);
+            document.body.removeChild(overlay);
+            window.open(targetUrl, "_blank");
+        }
+    }, 300);
+};
+
 function setupEventListeners() {
     const cityDropdown = document.getElementById("citySelectDropdown");
     if (cityDropdown) {
@@ -352,14 +394,29 @@ function renderListingsGrid(listings, totalCount) {
         return;
     }
 
-    grid.innerHTML = listings.map(item => {
+    grid.innerHTML = listings.map((item, idx) => {
         const waMsg = encodeURIComponent(
             `Hi ${item.ownerName}, I am interested in your listing "${item.title}" in ${item.areaName} (${item.cityName || 'Hyd'}) on ManaRent. Is it available for rent?`
         );
         const waUrl = `https://wa.me/${item.whatsapp}?text=${waMsg}`;
         const phoneUrl = `tel:+${item.phone}`;
 
+        // Insert native in-feed AdSense banner every 8 listings
+        const showInFeedAd = (idx > 0 && idx % 8 === 0);
+
         return `
+            ${showInFeedAd ? `
+                <div class="listing-card in-feed-ad-card">
+                    <span class="ad-tag-badge">SPONSORED AD</span>
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-6965081263252229"
+                         data-ad-slot="9876543210"
+                         data-ad-format="auto"
+                         data-full-width-responsive="true"></ins>
+                </div>
+            ` : ''}
+
             <div class="listing-card">
                 <div class="card-image-wrapper">
                     <img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.title)}" class="card-image" loading="lazy" 
@@ -384,18 +441,23 @@ function renderListingsGrid(listings, totalCount) {
                         </div>
 
                         <div class="card-actions">
-                            <a href="${waUrl}" target="_blank" class="btn-whatsapp" title="Chat on WhatsApp">
+                            <button onclick="connectOwnerWithAd('${waUrl}', '${escapeHtml(item.ownerName)}', 'whatsapp')" class="btn-whatsapp" title="Chat on WhatsApp">
                                 ${ICONS.whatsapp} <span>WhatsApp</span>
-                            </a>
-                            <a href="${phoneUrl}" class="btn-call" title="Call Owner">
+                            </button>
+                            <button onclick="connectOwnerWithAd('${phoneUrl}', '${escapeHtml(item.ownerName)}', 'phone')" class="btn-call" title="Call Owner">
                                 ${ICONS.phone}
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         `;
     }).join("");
+
+    // Trigger AdSense push if adsbygoogle is loaded
+    try {
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    } catch (e) {}
 }
 
 window.resetFilters = function() {
@@ -417,7 +479,6 @@ window.resetFilters = function() {
 async function handleFormSubmit(e) {
     e.preventDefault();
     
-    // Check honeypot field
     const honeypotVal = document.getElementById("website_honeypot_trap") ? document.getElementById("website_honeypot_trap").value : "";
 
     const title = document.getElementById("formTitle").value;
