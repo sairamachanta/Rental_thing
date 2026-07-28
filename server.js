@@ -24,7 +24,7 @@ const ANALYTICS_PATH = path.join(__dirname, 'data', 'analytics.json');
 let listingsDatabase = [];
 let analyticsData = {
     totalPageViews: 0,
-    dailyVisitors: {}, // e.g. { "2026-07-28": { views: 120, uniqueIPs: ["1.2.3.4"] } }
+    dailyVisitors: {},
 };
 
 function loadDatabase() {
@@ -106,7 +106,6 @@ function escapeHtml(str) {
 }
 
 const server = http.createServer((req, res) => {
-    // 🛡️ APPLY SECURITY FILTERS
     if (!applySecurityFilters(req, res)) {
         return;
     }
@@ -115,7 +114,6 @@ const server = http.createServer((req, res) => {
     const reqUrl = new URL(req.url, `http://${req.headers.host || 'localhost:4000'}`);
     const pathname = reqUrl.pathname;
 
-    // Record page view analytics
     recordVisitor(clientIP);
 
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -125,6 +123,16 @@ const server = http.createServer((req, res) => {
     if (req.method === 'OPTIONS') {
         res.writeHead(204);
         res.end();
+        return;
+    }
+
+    // Google Search Console Ownership Verification Route
+    if (pathname === '/googlee96d2a214376ff98.html') {
+        const verifyFilePath = path.join(__dirname, 'googlee96d2a214376ff98.html');
+        fs.readFile(verifyFilePath, (err, data) => {
+            if (err) { res.writeHead(404); res.end(); }
+            else { res.writeHead(200, { 'Content-Type': 'text/html' }); res.end(data); }
+        });
         return;
     }
 
@@ -147,7 +155,7 @@ const server = http.createServer((req, res) => {
         return;
     }
 
-    // GET /api/analytics (Daily Visitor Tracker Endpoint)
+    // GET /api/analytics
     if (pathname === '/api/analytics' && req.method === 'GET') {
         const today = new Date().toISOString().split('T')[0];
         const todayData = analyticsData.dailyVisitors[today] || { views: 0, uniqueIPs: [] };
@@ -318,6 +326,5 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(PORT, () => {
-    console.log(`🚀 ManaRent Analytics & Server running at http://localhost:${PORT}`);
-    console.log(`📊 Analytics Tracker API: http://localhost:4000/api/analytics`);
+    console.log(`🚀 ManaRent Google Search Console Verification Server running at http://localhost:${PORT}`);
 });
