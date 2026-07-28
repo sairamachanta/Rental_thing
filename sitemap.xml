@@ -3,66 +3,66 @@
     <!-- Main Live Website -->
     <url>
         <loc>https://manarent.onrender.com/</loc>
-        <lastmod>2026-07-28</lastmod>
+        <lastmod>2026-07-29</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
     
-    <!-- Hyderabad Subcities -->
-    <url>
-        <loc>https://manarent.onrender.com/?city=hyderabad&amp;area=kukatpally</loc>
-        <lastmod>2026-07-28</lastmod>
-        <changefreq>hourly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>https://manarent.onrender.com/?city=hyderabad&amp;area=kondapur</loc>
-        <lastmod>2026-07-28</lastmod>
-        <changefreq>hourly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>https://manarent.onrender.com/?city=hyderabad&amp;area=hitech</loc>
-        <lastmod>2026-07-28</lastmod>
-        <changefreq>hourly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>https://manarent.onrender.com/?city=hyderabad&amp;area=gachibowli</loc>
-        <lastmod>2026-07-28</lastmod>
-        <changefreq>hourly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>https://manarent.onrender.com/?city=hyderabad&amp;area=madhapur</loc>
-        <lastmod>2026-07-28</lastmod>
-        <changefreq>hourly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    
-    <!-- Categories -->
-    <url>
-        <loc>https://manarent.onrender.com/?category=house</loc>
-        <lastmod>2026-07-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://manarent.onrender.com/?category=pg</loc>
-        <lastmod>2026-07-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://manarent.onrender.com/?category=bike</loc>
-        <lastmod>2026-07-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://manarent.onrender.com/?category=car</loc>
-        <lastmod>2026-07-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.8</priority>
-    </url>
+    <!-- HYDERABAD SUBCITIES -->
+    <url><loc>https://manarent.onrender.com/?city=hyderabad&amp;area=kukatpally</loc><lastmod>2026-07-29</lastmod><changefreq>hourly</changefreq><priority>0.9</priority></url>
+    <url><loc>https://manarent.onrender.com/?city=hyderabad&amp;area=kondapur</loc><lastmod>2026-07-29</lastmod><changefreq>hourly</changefreq><priority>0.9</priority></url>
+    <url><loc>https://manarent.onrender.com/?city=hyderabad&amp;area=hitech</loc><lastmod>2026-07-29</lastmod><changefreq>hourly</changefreq><priority>0.9</priority></url>
+    <url><loc>https://manarent.onrender.com/?city=hyderabad&amp;area=gachibowli</loc><lastmod>2026-07-29</lastmod><changefreq>hourly</changefreq><priority>0.9</priority></url>
+    <url><loc>https://manarent.onrender.com/?city=hyderabad&amp;area=madhapur</loc><lastmod>2026-07-29</lastmod><changefreq>hourly</changefreq><priority>0.9</priority></url>
+    <url><loc>https://manarent.onrender.com/?city=hyderabad&amp;area=miyapur</loc><lastmod>2026-07-29</lastmod><changefreq>hourly</changefreq><priority>0.9</priority></url>
+    <url><loc>https://manarent.onrender.com/?city=hyderabad&amp;area=ameerpet</loc><lastmod>2026-07-29</lastmod><changefreq>hourly</changefreq><priority>0.9</priority></url>
+    <url><loc>https://manarent.onrender.com/?city=hyderabad&amp;area=banjara</loc><lastmod>2026-07-29</lastmod><changefreq>hourly</changefreq><priority>0.9</priority></url>
+
+    <!-- BENGALURU SUBCITIES -->
+    <url><loc>https://manarent.onrender.com/?city=bengaluru&amp;area=koramangala</loc><lastmod>2026-07-29</lastmod><changefreq>hourly</changefreq><priority>0.9</priority></url>
+    <url><loc>https://manarent.onrender.com/?city=bengaluru&amp;area=indiranagar</loc><lastmod>2026-07-29</lastmod><changefreq>hourly</changefreq><priority>0.9</priority></url>
+    <url><loc>https://manarent.onrender.com/?city=bengaluru&amp;area=whitefield</loc><lastmod>2026-07-29</lastmod><changefreq>hourly</changefreq><priority>0.9</priority></url>
+    <url><loc>https://manarent.onrender.com/?city=bengaluru&amp;area=hsr</loc><lastmod>2026-07-29</lastmod><changefreq>hourly</changefreq><priority>0.9</priority></url>
+    <url><loc>https://manarent.onrender.com/?city=bengaluru&amp;area=ecity</loc><lastmod>2026-07-29</lastmod><changefreq>hourly</changefreq><priority>0.9</priority></url>
+    <url><loc>https://manarent.onrender.com/?city=bengaluru&amp;area=marathahalli</loc><lastmod>2026-07-29</lastmod><changefreq>hourly</changefreq><priority>0.9</priority></url>
+
+    <!-- MUMBAI SUBCITIES -->
+    <url><loc>https://manarent.onrender.com/?city=mumbai&amp;area=bandra</loc><lastmod>2026-07-29</lastmod><changefreq>hourly</changefreq><priority>0.9</priority></url>
+    <url><loc>https://manarent.onrender.com/?city=mumbai&amp;area=andheri</loc><lastmod>2026-07-29</lastmod><changefreq>hourly</changefreq><priority>0.9</priority></url>
+    <url><loc>https://manarent.onrender.com/?city=mumbai&amp;area=powai</loc><lastmod>2026-07-29</lastmod><changefreq>hourly</changefreq><priority>0.9</priority></url>
+    <url><loc>https://manarent.onrender.com/?city=mumbai&amp;area=thane</loc><lastmod>2026-07-29</lastmod><changefreq>hourly</changefreq><priority>0.9</priority></url>
+
+    <!-- PUNE SUBCITIES -->
+    <url><loc>https://manarent.onrender.com/?city=pune&amp;area=hinjewadi</loc><lastmod>2026-07-29</lastmod><changefreq>hourly</changefreq><priority>0.9</priority></url>
+    <url><loc>https://manarent.onrender.com/?city=pune&amp;area=kharadi</loc><lastmod>2026-07-29</lastmod><changefreq>hourly</changefreq><priority>0.9</priority></url>
+    <url><loc>https://manarent.onrender.com/?city=pune&amp;area=viman</loc><lastmod>2026-07-29</lastmod><changefreq>hourly</changefreq><priority>0.9</priority></url>
+
+    <!-- DELHI NCR SUBCITIES -->
+    <url><loc>https://manarent.onrender.com/?city=delhi&amp;area=gurgaon</loc><lastmod>2026-07-29</lastmod><changefreq>hourly</changefreq><priority>0.9</priority></url>
+    <url><loc>https://manarent.onrender.com/?city=delhi&amp;area=noida</loc><lastmod>2026-07-29</lastmod><changefreq>hourly</changefreq><priority>0.9</priority></url>
+    <url><loc>https://manarent.onrender.com/?city=delhi&amp;area=saket</loc><lastmod>2026-07-29</lastmod><changefreq>hourly</changefreq><priority>0.9</priority></url>
+
+    <!-- CHENNAI SUBCITIES -->
+    <url><loc>https://manarent.onrender.com/?city=chennai&amp;area=omr</loc><lastmod>2026-07-29</lastmod><changefreq>hourly</changefreq><priority>0.9</priority></url>
+    <url><loc>https://manarent.onrender.com/?city=chennai&amp;area=velachery</loc><lastmod>2026-07-29</lastmod><changefreq>hourly</changefreq><priority>0.9</priority></url>
+
+    <!-- CATEGORIES -->
+    <url><loc>https://manarent.onrender.com/?category=house</loc><lastmod>2026-07-29</lastmod><changefreq>daily</changefreq><priority>0.85</priority></url>
+    <url><loc>https://manarent.onrender.com/?category=pg</loc><lastmod>2026-07-29</lastmod><changefreq>daily</changefreq><priority>0.85</priority></url>
+    <url><loc>https://manarent.onrender.com/?category=bike</loc><lastmod>2026-07-29</lastmod><changefreq>daily</changefreq><priority>0.85</priority></url>
+    <url><loc>https://manarent.onrender.com/?category=car</loc><lastmod>2026-07-29</lastmod><changefreq>daily</changefreq><priority>0.85</priority></url>
+    <url><loc>https://manarent.onrender.com/?category=auto</loc><lastmod>2026-07-29</lastmod><changefreq>daily</changefreq><priority>0.85</priority></url>
+    <url><loc>https://manarent.onrender.com/?category=furniture</loc><lastmod>2026-07-29</lastmod><changefreq>daily</changefreq><priority>0.85</priority></url>
+    <url><loc>https://manarent.onrender.com/?category=laptop</loc><lastmod>2026-07-29</lastmod><changefreq>daily</changefreq><priority>0.85</priority></url>
+    <url><loc>https://manarent.onrender.com/?category=fashion</loc><lastmod>2026-07-29</lastmod><changefreq>daily</changefreq><priority>0.85</priority></url>
+
+    <!-- COMBINED HIGH-DENSITY CATEGORY & SUBCITY PAGES -->
+    <url><loc>https://manarent.onrender.com/?city=hyderabad&amp;area=kukatpally&amp;category=house</loc><lastmod>2026-07-29</lastmod><changefreq>hourly</changefreq><priority>0.88</priority></url>
+    <url><loc>https://manarent.onrender.com/?city=hyderabad&amp;area=kondapur&amp;category=house</loc><lastmod>2026-07-29</lastmod><changefreq>hourly</changefreq><priority>0.88</priority></url>
+    <url><loc>https://manarent.onrender.com/?city=hyderabad&amp;area=hitech&amp;category=pg</loc><lastmod>2026-07-29</lastmod><changefreq>hourly</changefreq><priority>0.88</priority></url>
+    <url><loc>https://manarent.onrender.com/?city=hyderabad&amp;area=gachibowli&amp;category=car</loc><lastmod>2026-07-29</lastmod><changefreq>hourly</changefreq><priority>0.88</priority></url>
+    <url><loc>https://manarent.onrender.com/?city=hyderabad&amp;area=madhapur&amp;category=bike</loc><lastmod>2026-07-29</lastmod><changefreq>hourly</changefreq><priority>0.88</priority></url>
+    <url><loc>https://manarent.onrender.com/?city=bengaluru&amp;area=koramangala&amp;category=house</loc><lastmod>2026-07-29</lastmod><changefreq>hourly</changefreq><priority>0.88</priority></url>
+    <url><loc>https://manarent.onrender.com/?city=mumbai&amp;area=bandra&amp;category=house</loc><lastmod>2026-07-29</lastmod><changefreq>hourly</changefreq><priority>0.88</priority></url>
+    <url><loc>https://manarent.onrender.com/?city=delhi&amp;area=gurgaon&amp;category=pg</loc><lastmod>2026-07-29</lastmod><changefreq>hourly</changefreq><priority>0.88</priority></url>
 </urlset>
