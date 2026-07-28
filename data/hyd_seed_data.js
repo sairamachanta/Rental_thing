@@ -2115,144 +2115,436 @@ const CITIES_REGISTRY = {
         "icon": "🌳",
         "subcities": [
             {
-                "id": "koramangala",
-                "name": "Koramangala 1st-8th Block"
+                "id": "koramangala1stblock",
+                "name": "Koramangala 1st Block"
             },
             {
-                "id": "indiranagar",
+                "id": "koramangala2ndblock",
+                "name": "Koramangala 2nd Block"
+            },
+            {
+                "id": "koramangala3rdblock",
+                "name": "Koramangala 3rd Block"
+            },
+            {
+                "id": "koramangala4thblock",
+                "name": "Koramangala 4th Block"
+            },
+            {
+                "id": "koramangala5thblock",
+                "name": "Koramangala 5th Block"
+            },
+            {
+                "id": "koramangala6thblock",
+                "name": "Koramangala 6th Block"
+            },
+            {
+                "id": "koramangala7thblock",
+                "name": "Koramangala 7th Block"
+            },
+            {
+                "id": "koramangala8thblock",
+                "name": "Koramangala 8th Block"
+            },
+            {
+                "id": "indiranagar100ftroad",
                 "name": "Indiranagar 100ft Road"
             },
             {
-                "id": "whitefield",
+                "id": "indiranagar12thmain",
+                "name": "Indiranagar 12th Main"
+            },
+            {
+                "id": "indiranagardefencecolony",
+                "name": "Indiranagar Defence Colony"
+            },
+            {
+                "id": "whitefielditpl",
                 "name": "Whitefield ITPL"
             },
             {
-                "id": "hsr",
-                "name": "HSR Layout Sector 1-7"
+                "id": "whitefieldforumvaluemall",
+                "name": "Whitefield Forum Value Mall"
             },
             {
-                "id": "ecity",
-                "name": "Electronic City Phase 1 & 2"
+                "id": "whitefieldhopefarm",
+                "name": "Whitefield Hope Farm"
             },
             {
-                "id": "marathahalli",
-                "name": "Marathahalli Bridge"
+                "id": "whitefieldepipzone",
+                "name": "Whitefield EPIP Zone"
             },
             {
-                "id": "bellandur",
+                "id": "hsrlayoutsector1",
+                "name": "HSR Layout Sector 1"
+            },
+            {
+                "id": "hsrlayoutsector2",
+                "name": "HSR Layout Sector 2"
+            },
+            {
+                "id": "hsrlayoutsector3",
+                "name": "HSR Layout Sector 3"
+            },
+            {
+                "id": "hsrlayoutsector4",
+                "name": "HSR Layout Sector 4"
+            },
+            {
+                "id": "hsrlayoutsector5",
+                "name": "HSR Layout Sector 5"
+            },
+            {
+                "id": "hsrlayoutsector6",
+                "name": "HSR Layout Sector 6"
+            },
+            {
+                "id": "hsrlayoutsector7",
+                "name": "HSR Layout Sector 7"
+            },
+            {
+                "id": "electroniccityphase1",
+                "name": "Electronic City Phase 1"
+            },
+            {
+                "id": "electroniccityphase2",
+                "name": "Electronic City Phase 2"
+            },
+            {
+                "id": "electroniccitywiprogate",
+                "name": "Electronic City Wipro Gate"
+            },
+            {
+                "id": "bellandurouterringroad",
                 "name": "Bellandur Outer Ring Road"
             },
             {
-                "id": "sarjapur",
-                "name": "Sarjapur Road"
+                "id": "bellandurgreenglenlayout",
+                "name": "Bellandur Green Glen Layout"
             },
             {
-                "id": "jayanagar",
+                "id": "bellandurecospace",
+                "name": "Bellandur EcoSpace"
+            },
+            {
+                "id": "sarjapurroadwiprocampus",
+                "name": "Sarjapur Road Wipro Campus"
+            },
+            {
+                "id": "sarjapurroadkaikondrahalli",
+                "name": "Sarjapur Road Kaikondrahalli"
+            },
+            {
+                "id": "sarjapurroadkasavanahalli",
+                "name": "Sarjapur Road Kasavanahalli"
+            },
+            {
+                "id": "sarjapurroadsompura",
+                "name": "Sarjapur Road Sompura"
+            },
+            {
+                "id": "marathahallibridge",
+                "name": "Marathahalli Bridge"
+            },
+            {
+                "id": "marathahallimultiplex",
+                "name": "Marathahalli Multiplex"
+            },
+            {
+                "id": "marathahalliaecslayout",
+                "name": "Marathahalli AECS Layout"
+            },
+            {
+                "id": "marathahallikundalahalli",
+                "name": "Marathahalli Kundalahalli"
+            },
+            {
+                "id": "btmlayout1ststage",
+                "name": "BTM Layout 1st Stage"
+            },
+            {
+                "id": "btmlayout2ndstage",
+                "name": "BTM Layout 2nd Stage"
+            },
+            {
+                "id": "btmlayoutmadiwalalake",
+                "name": "BTM Layout Madiwala Lake"
+            },
+            {
+                "id": "jayanagar4thblock",
                 "name": "Jayanagar 4th Block"
             },
             {
-                "id": "jpnagar",
-                "name": "JP Nagar Phase 1-8"
+                "id": "jayanagar3rdblock",
+                "name": "Jayanagar 3rd Block"
             },
             {
-                "id": "btm",
-                "name": "BTM Layout 1st & 2nd Stage"
+                "id": "jayanagar9thblock",
+                "name": "Jayanagar 9th Block"
             },
             {
-                "id": "hebbal",
+                "id": "jayanagarsouthendcircle",
+                "name": "Jayanagar South End Circle"
+            },
+            {
+                "id": "jpnagarphase1",
+                "name": "JP Nagar Phase 1"
+            },
+            {
+                "id": "jpnagarphase2",
+                "name": "JP Nagar Phase 2"
+            },
+            {
+                "id": "jpnagarphase3",
+                "name": "JP Nagar Phase 3"
+            },
+            {
+                "id": "jpnagarphase6",
+                "name": "JP Nagar Phase 6"
+            },
+            {
+                "id": "jpnagarphase7",
+                "name": "JP Nagar Phase 7"
+            },
+            {
+                "id": "hebbalmanyatatechpark",
                 "name": "Hebbal Manyata Tech Park"
             },
             {
-                "id": "yelahanka",
-                "name": "Yelahanka New Town"
+                "id": "hebballakeview",
+                "name": "Hebbal Lake View"
             },
             {
-                "id": "banashankari",
-                "name": "Banashankari 2nd & 3rd Stage"
+                "id": "hebbalesteemmall",
+                "name": "Hebbal Esteem Mall"
             },
             {
-                "id": "malleswaram",
+                "id": "yelahankanewtown4thphase",
+                "name": "Yelahanka New Town 4th Phase"
+            },
+            {
+                "id": "yelahankakogilucross",
+                "name": "Yelahanka Kogilu Cross"
+            },
+            {
+                "id": "yelahankarmzgalleria",
+                "name": "Yelahanka RMZ Galleria"
+            },
+            {
+                "id": "banashankari2ndstage",
+                "name": "Banashankari 2nd Stage"
+            },
+            {
+                "id": "banashankari3rdstage",
+                "name": "Banashankari 3rd Stage"
+            },
+            {
+                "id": "banashankaribdacomplex",
+                "name": "Banashankari BDA Complex"
+            },
+            {
+                "id": "malleshwaramsampigeroad",
                 "name": "Malleshwaram Sampige Road"
             },
             {
-                "id": "rajajinagar",
-                "name": "Rajajinagar Metro Hub"
+                "id": "malleshwarammargosaroad",
+                "name": "Malleshwaram Margosa Road"
             },
             {
-                "id": "kengeri",
+                "id": "malleshwaram18thcross",
+                "name": "Malleshwaram 18th Cross"
+            },
+            {
+                "id": "rajajinagar1stblock",
+                "name": "Rajajinagar 1st Block"
+            },
+            {
+                "id": "rajajinagar6thblock",
+                "name": "Rajajinagar 6th Block"
+            },
+            {
+                "id": "rajajinagarorionmall",
+                "name": "Rajajinagar Orion Mall"
+            },
+            {
+                "id": "kengerisatellitetown",
                 "name": "Kengeri Satellite Town"
             },
             {
-                "id": "hennur",
-                "name": "Hennur Road"
+                "id": "kengerimetrostation",
+                "name": "Kengeri Metro Station"
             },
             {
-                "id": "thanisandra",
+                "id": "hennurcross",
+                "name": "Hennur Cross"
+            },
+            {
+                "id": "hennurmainroad",
+                "name": "Hennur Main Road"
+            },
+            {
+                "id": "hennurkothanur",
+                "name": "Hennur Kothanur"
+            },
+            {
+                "id": "thanisandramainroad",
                 "name": "Thanisandra Main Road"
             },
             {
-                "id": "domlur",
-                "name": "Domlur EGL IT Park"
+                "id": "thanisandrabharatiyacity",
+                "name": "Thanisandra Bharatiya City"
             },
             {
-                "id": "commercialstreet",
-                "name": "Commercial Street & MG Road"
-            },
-            {
-                "id": "frasertown",
-                "name": "Fraser Town"
-            },
-            {
-                "id": "kammanahalli",
-                "name": "Kammanahalli HRBR Layout"
-            },
-            {
-                "id": "nagawara",
+                "id": "nagawarajunction",
                 "name": "Nagawara Junction"
             },
             {
-                "id": "rtnagar",
-                "name": "RT Nagar"
+                "id": "nagawaraelementsmall",
+                "name": "Nagawara Elements Mall"
             },
             {
-                "id": "horamavu",
-                "name": "Horamavu"
+                "id": "rtnagarbdacomplex",
+                "name": "RT Nagar BDA Complex"
+            },
+            {
+                "id": "horamavuagara",
+                "name": "Horamavu Agara"
             },
             {
                 "id": "ramamurthynagar",
                 "name": "Ramamurthy Nagar"
             },
             {
-                "id": "varthur",
+                "id": "varthurgunjur",
                 "name": "Varthur Gunjur"
             },
             {
-                "id": "kadugodi",
+                "id": "kadugodimetrostation",
                 "name": "Kadugodi Metro Station"
             },
             {
-                "id": "hoodi",
+                "id": "hoodicircle",
                 "name": "Hoodi Circle"
             },
             {
-                "id": "brookefield",
-                "name": "Brookefield AECS Layout"
+                "id": "brookefieldmainroad",
+                "name": "Brookefield Main Road"
             },
             {
-                "id": "kasavanahalli",
-                "name": "Kasavanahalli Haralur Road"
+                "id": "silkboardcircle",
+                "name": "Silk Board Circle"
             },
             {
-                "id": "silkboard",
-                "name": "Silk Board & Madiwala"
+                "id": "madiwalamarket",
+                "name": "Madiwala Market"
             },
             {
-                "id": "ejipura",
+                "id": "tavarekere",
+                "name": "Tavarekere"
+            },
+            {
+                "id": "ejipurainnerringroad",
                 "name": "Ejipura Inner Ring Road"
             },
             {
                 "id": "richmondtown",
-                "name": "Richmond Town & Ulsoor"
+                "name": "Richmond Town"
+            },
+            {
+                "id": "ulsoorlakeroad",
+                "name": "Ulsoor Lake Road"
+            },
+            {
+                "id": "basavanagudibulltempleroad",
+                "name": "Basavanagudi Bull Temple Road"
+            },
+            {
+                "id": "sadashivanagar",
+                "name": "Sadashivanagar"
+            },
+            {
+                "id": "dollarscolonyrmv2ndstage",
+                "name": "Dollars Colony RMV 2nd Stage"
+            },
+            {
+                "id": "mathikeremsramaiahcollege",
+                "name": "Mathikere MS Ramaiah College"
+            },
+            {
+                "id": "peenyaindustrialarea",
+                "name": "Peenya Industrial Area"
+            },
+            {
+                "id": "yeshwanthpurmetrohub",
+                "name": "Yeshwanthpur Metro Hub"
+            },
+            {
+                "id": "nagarbhavibdacomplex",
+                "name": "Nagarbhavi BDA Complex"
+            },
+            {
+                "id": "rrnagarglobalvillagetechpark",
+                "name": "RR Nagar Global Village Tech Park"
+            },
+            {
+                "id": "devanahalliairporttrumpet",
+                "name": "Devanahalli Airport Trumpet"
+            },
+            {
+                "id": "jakkurflyingclubroad",
+                "name": "Jakkur Flying Club Road"
+            },
+            {
+                "id": "sahakarnagar",
+                "name": "Sahakarnagar"
+            },
+            {
+                "id": "vidyaranyapurabellayout",
+                "name": "Vidyaranyapura BEL Layout"
+            },
+            {
+                "id": "sanjaynagar",
+                "name": "Sanjaynagar"
+            },
+            {
+                "id": "vasanthnagargolfcourseroad",
+                "name": "Vasanthnagar Golf Course Road"
+            },
+            {
+                "id": "banaswadi",
+                "name": "Banaswadi"
+            },
+            {
+                "id": "lingarajapuram",
+                "name": "Lingarajapuram"
+            },
+            {
+                "id": "kalyannagarhrbrlayout1stblock",
+                "name": "Kalyan Nagar HRBR Layout 1st Block"
+            },
+            {
+                "id": "kasturinagar",
+                "name": "Kasturi Nagar"
+            },
+            {
+                "id": "cvramannagar",
+                "name": "CV Raman Nagar"
+            },
+            {
+                "id": "kaggadasapura",
+                "name": "Kaggadasapura"
+            },
+            {
+                "id": "mahadevapurametro",
+                "name": "Mahadevapura Metro"
+            },
+            {
+                "id": "panathur",
+                "name": "Panathur"
+            },
+            {
+                "id": "kadubeesanahalli",
+                "name": "Kadubeesanahalli"
             }
         ]
     },
@@ -2261,108 +2553,352 @@ const CITIES_REGISTRY = {
         "icon": "🌊",
         "subcities": [
             {
-                "id": "bandra",
-                "name": "Bandra West & Bandra Kurla Complex (BKC)"
+                "id": "colabacauseway",
+                "name": "Colaba Causeway"
             },
             {
-                "id": "andheri",
-                "name": "Andheri West & Lokhandwala"
+                "id": "fortkalaghoda",
+                "name": "Fort Kala Ghoda"
             },
             {
-                "id": "andherieast",
-                "name": "Andheri East & MIDC"
+                "id": "marinelinesdrive",
+                "name": "Marine Lines Drive"
             },
             {
-                "id": "powai",
-                "name": "Powai Hiranandani Gardens"
+                "id": "churchgateoval",
+                "name": "Churchgate Oval"
             },
             {
-                "id": "thane",
-                "name": "Thane West Ghodbunder Road"
+                "id": "narimanpoint",
+                "name": "Nariman Point"
             },
             {
-                "id": "vashi",
-                "name": "Navi Mumbai Vashi & Sanpada"
+                "id": "cuffeparade",
+                "name": "Cuffe Parade"
             },
             {
-                "id": "nerul",
-                "name": "Nerul & Belapur CBD"
+                "id": "girgaonchowpatty",
+                "name": "Girgaon Chowpatty"
             },
             {
-                "id": "khar",
-                "name": "Khar West & Santacruz"
+                "id": "malabarhillwalkeshwar",
+                "name": "Malabar Hill Walkeshwar"
             },
             {
-                "id": "juhu",
-                "name": "Juhu Tara Road"
+                "id": "tardeoacmarket",
+                "name": "Tardeo AC Market"
             },
             {
-                "id": "goregaon",
-                "name": "Goregaon East Film City"
+                "id": "breachcandyhospitalroad",
+                "name": "Breach Candy Hospital Road"
             },
             {
-                "id": "malad",
-                "name": "Malad West Mindspace"
+                "id": "grantroadlamington",
+                "name": "Grant Road Lamington"
             },
             {
-                "id": "kandivali",
-                "name": "Kandivali West & East"
+                "id": "mumbaicentralstation",
+                "name": "Mumbai Central Station"
             },
             {
-                "id": "borivali",
-                "name": "Borivali West IC Colony"
+                "id": "bycullazooarea",
+                "name": "Byculla Zoo Area"
             },
             {
-                "id": "ghatkopar",
-                "name": "Ghatkopar East & West"
+                "id": "mazgaondockyard",
+                "name": "Mazgaon Dock Yard"
             },
             {
-                "id": "kurla",
-                "name": "Kurla Phoenix Marketcity"
+                "id": "chinchpokli",
+                "name": "Chinchpokli"
             },
             {
-                "id": "chembur",
-                "name": "Chembur East & Diamond Garden"
+                "id": "lalbaugrajacircle",
+                "name": "Lalbaug Raja Circle"
             },
             {
-                "id": "dadar",
-                "name": "Dadar West & Shivaji Park"
+                "id": "parelkemhospital",
+                "name": "Parel KEM Hospital"
             },
             {
-                "id": "worli",
-                "name": "Worli Sea Face"
-            },
-            {
-                "id": "lowerparel",
+                "id": "lowerparelhighstreetphoenix",
                 "name": "Lower Parel High Street Phoenix"
             },
             {
-                "id": "colaba",
-                "name": "Colaba & Marine Drive"
+                "id": "worliseaface",
+                "name": "Worli Sea Face"
             },
             {
-                "id": "prabhadevi",
-                "name": "Prabhadevi & Mahim"
+                "id": "worlicenturybazaar",
+                "name": "Worli Century Bazaar"
             },
             {
-                "id": "mulund",
-                "name": "Mulund West"
+                "id": "prabhadevisiddhivinayaktemple",
+                "name": "Prabhadevi Siddhivinayak Temple"
             },
             {
-                "id": "vikhroli",
+                "id": "mahimchurchcircle",
+                "name": "Mahim Church Circle"
+            },
+            {
+                "id": "dadarwestshivajipark",
+                "name": "Dadar West Shivaji Park"
+            },
+            {
+                "id": "dadareastttcircle",
+                "name": "Dadar East TT Circle"
+            },
+            {
+                "id": "matungafivegardens",
+                "name": "Matunga Five Gardens"
+            },
+            {
+                "id": "wadaladostiacres",
+                "name": "Wadala Dosti Acres"
+            },
+            {
+                "id": "sioncircle",
+                "name": "Sion Circle"
+            },
+            {
+                "id": "dharavijunction",
+                "name": "Dharavi Junction"
+            },
+            {
+                "id": "kurlaphoenixmarketcity",
+                "name": "Kurla Phoenix Marketcity"
+            },
+            {
+                "id": "kurlaweststation",
+                "name": "Kurla West Station"
+            },
+            {
+                "id": "chemburdiamondgarden",
+                "name": "Chembur Diamond Garden"
+            },
+            {
+                "id": "chembureastswastikpark",
+                "name": "Chembur East Swastik Park"
+            },
+            {
+                "id": "ghatkoparwestrcitymall",
+                "name": "Ghatkopar West R City Mall"
+            },
+            {
+                "id": "ghatkopareastgarodianagar",
+                "name": "Ghatkopar East Garodia Nagar"
+            },
+            {
+                "id": "vikhroligodrejone",
                 "name": "Vikhroli Godrej One"
             },
             {
-                "id": "airoli",
-                "name": "Airoli Mindspace IT Park"
+                "id": "kanjurmarghiranandanizen",
+                "name": "Kanjurmarg Hiranandani Zen"
             },
             {
-                "id": "kharghar",
+                "id": "bhanduplbsmarg",
+                "name": "Bhandup LBS Marg"
+            },
+            {
+                "id": "mulundwestrunwalgreens",
+                "name": "Mulund West Runwal Greens"
+            },
+            {
+                "id": "bandrawesthillroad",
+                "name": "Bandra West Hill Road"
+            },
+            {
+                "id": "bandrawestlinkingroad",
+                "name": "Bandra West Linking Road"
+            },
+            {
+                "id": "bandrawestcarterroad",
+                "name": "Bandra West Carter Road"
+            },
+            {
+                "id": "bandraeastbkcgblock",
+                "name": "Bandra East BKC G Block"
+            },
+            {
+                "id": "bandraeastkalanagar",
+                "name": "Bandra East Kalanagar"
+            },
+            {
+                "id": "kharwest14throad",
+                "name": "Khar West 14th Road"
+            },
+            {
+                "id": "santacruzwestjuhuscheme",
+                "name": "Santacruz West Juhu Scheme"
+            },
+            {
+                "id": "vileparlewestmithibai",
+                "name": "Vile Parle West Mithibai"
+            },
+            {
+                "id": "juhutararoadbeach",
+                "name": "Juhu Tara Road Beach"
+            },
+            {
+                "id": "andheriwestlokhandwalamarket",
+                "name": "Andheri West Lokhandwala Market"
+            },
+            {
+                "id": "andheriwestversovabeach",
+                "name": "Andheri West Versova Beach"
+            },
+            {
+                "id": "andheriwestoshiwaralinkroad",
+                "name": "Andheri West Oshiwara Link Road"
+            },
+            {
+                "id": "andherieastmidcseepz",
+                "name": "Andheri East MIDC SEEPZ"
+            },
+            {
+                "id": "andherieastchakalametro",
+                "name": "Andheri East Chakala Metro"
+            },
+            {
+                "id": "andherieastmarol",
+                "name": "Andheri East Marol"
+            },
+            {
+                "id": "powaihiranandanigardens",
+                "name": "Powai Hiranandani Gardens"
+            },
+            {
+                "id": "powaiiitmaingate",
+                "name": "Powai IIT Main Gate"
+            },
+            {
+                "id": "powaichandivali",
+                "name": "Powai Chandivali"
+            },
+            {
+                "id": "goregaoneastfilmcityroad",
+                "name": "Goregaon East Film City Road"
+            },
+            {
+                "id": "goregaonwestbangurnagar",
+                "name": "Goregaon West Bangur Nagar"
+            },
+            {
+                "id": "maladwestmindspaceitpark",
+                "name": "Malad West Mindspace IT Park"
+            },
+            {
+                "id": "maladwestevershinenagar",
+                "name": "Malad West Evershine Nagar"
+            },
+            {
+                "id": "kandivaliwestmahavirnagar",
+                "name": "Kandivali West Mahavir Nagar"
+            },
+            {
+                "id": "kandivalieastthakurvillage",
+                "name": "Kandivali East Thakur Village"
+            },
+            {
+                "id": "borivaliwesticcolony",
+                "name": "Borivali West IC Colony"
+            },
+            {
+                "id": "borivaliwestlinkroad",
+                "name": "Borivali West Link Road"
+            },
+            {
+                "id": "borivalieastnationalpark",
+                "name": "Borivali East National Park"
+            },
+            {
+                "id": "dahisarwestlinkroad",
+                "name": "Dahisar West Link Road"
+            },
+            {
+                "id": "miraroadstationroad",
+                "name": "Mira Road Station Road"
+            },
+            {
+                "id": "bhayandarwest",
+                "name": "Bhayandar West"
+            },
+            {
+                "id": "thanewestghodbunderroad",
+                "name": "Thane West Ghodbunder Road"
+            },
+            {
+                "id": "thanewesthiranandaniestate",
+                "name": "Thane West Hiranandani Estate"
+            },
+            {
+                "id": "thanewestvivianamall",
+                "name": "Thane West Viviana Mall"
+            },
+            {
+                "id": "thanewestmajiwadacircle",
+                "name": "Thane West Majiwada Circle"
+            },
+            {
+                "id": "thanewestnaupada",
+                "name": "Thane West Naupada"
+            },
+            {
+                "id": "navimumbaivashisector17",
+                "name": "Navi Mumbai Vashi Sector 17"
+            },
+            {
+                "id": "navimumbaisanpada",
+                "name": "Navi Mumbai Sanpada"
+            },
+            {
+                "id": "navimumbaijuinagar",
+                "name": "Navi Mumbai Juinagar"
+            },
+            {
+                "id": "navimumbainerullp",
+                "name": "Navi Mumbai Nerul LP"
+            },
+            {
+                "id": "navimumbaiseawoodsgrandcentral",
+                "name": "Navi Mumbai Seawoods Grand Central"
+            },
+            {
+                "id": "navimumbaibelapurcbd",
+                "name": "Navi Mumbai Belapur CBD"
+            },
+            {
+                "id": "khargharcentralpark",
                 "name": "Kharghar Central Park"
             },
             {
-                "id": "panvel",
-                "name": "Panvel & Ulwe"
+                "id": "panvelhiranandanifortunecity",
+                "name": "Panvel Hiranandani Fortune City"
+            },
+            {
+                "id": "ulwesector19",
+                "name": "Ulwe Sector 19"
+            },
+            {
+                "id": "kamothe",
+                "name": "Kamothe"
+            },
+            {
+                "id": "kalamboli",
+                "name": "Kalamboli"
+            },
+            {
+                "id": "airolimindspace",
+                "name": "Airoli Mindspace"
+            },
+            {
+                "id": "ghansolireliancecorporatepark",
+                "name": "Ghansoli Reliance Corporate Park"
+            },
+            {
+                "id": "koparkhairane",
+                "name": "Koparkhairane"
             }
         ]
     },
@@ -2371,72 +2907,236 @@ const CITIES_REGISTRY = {
         "icon": "🏔️",
         "subcities": [
             {
-                "id": "hinjewadi",
-                "name": "Hinjewadi Rajiv Gandhi IT Park Phase 1-3"
+                "id": "hinjewadiphase1wiprocircle",
+                "name": "Hinjewadi Phase 1 Wipro Circle"
             },
             {
-                "id": "kharadi",
-                "name": "Kharadi EON IT Park"
+                "id": "hinjewadiphase2techmahindra",
+                "name": "Hinjewadi Phase 2 Tech Mahindra"
             },
             {
-                "id": "viman",
+                "id": "hinjewadiphase3megapolis",
+                "name": "Hinjewadi Phase 3 Megapolis"
+            },
+            {
+                "id": "kharadieonfreezone",
+                "name": "Kharadi EON Free Zone"
+            },
+            {
+                "id": "kharadizensaritpark",
+                "name": "Kharadi Zensar IT Park"
+            },
+            {
+                "id": "kharadiworldtradecenter",
+                "name": "Kharadi World Trade Center"
+            },
+            {
+                "id": "vimannagarphoenixmarketcity",
                 "name": "Viman Nagar Phoenix Marketcity"
             },
             {
-                "id": "baner",
+                "id": "vimannagarduttamandirchowk",
+                "name": "Viman Nagar Dutta Mandir Chowk"
+            },
+            {
+                "id": "vimannagarsymbiosisroad",
+                "name": "Viman Nagar Symbiosis Road"
+            },
+            {
+                "id": "banerhighstreet",
                 "name": "Baner High Street"
             },
             {
-                "id": "balewadi",
-                "name": "Balewadi High Street & Stadium"
+                "id": "banerpancardclubroad",
+                "name": "Baner Pancard Club Road"
             },
             {
-                "id": "wakad",
+                "id": "banercumminsindia",
+                "name": "Baner Cummins India"
+            },
+            {
+                "id": "balewadihighstreet",
+                "name": "Balewadi High Street"
+            },
+            {
+                "id": "balewadisportscomplex",
+                "name": "Balewadi Sports Complex"
+            },
+            {
+                "id": "wakadkaspatewasti",
                 "name": "Wakad Kaspate Wasti"
             },
             {
-                "id": "aundh",
+                "id": "wakadutkarshnagar",
+                "name": "Wakad Utkarsh Nagar"
+            },
+            {
+                "id": "aundhitiroad",
                 "name": "Aundh ITI Road"
             },
             {
-                "id": "kothrud",
+                "id": "aundhwestendmall",
+                "name": "Aundh Westend Mall"
+            },
+            {
+                "id": "kothrudkarveroad",
                 "name": "Kothrud Karve Road"
             },
             {
-                "id": "hadapsar",
+                "id": "kothrudidealcolony",
+                "name": "Kothrud Ideal Colony"
+            },
+            {
+                "id": "kothrudchandanichowk",
+                "name": "Kothrud Chandani Chowk"
+            },
+            {
+                "id": "hadapsarmagarpattacity",
                 "name": "Hadapsar Magarpatta City"
             },
             {
-                "id": "kalyaninagar",
-                "name": "Kalyani Nagar"
+                "id": "hadapsaramanoraparktown",
+                "name": "Hadapsar Amanora Park Town"
             },
             {
-                "id": "koregaonpark",
+                "id": "hadapsarspinfocity",
+                "name": "Hadapsar SP Infocity"
+            },
+            {
+                "id": "kalyaninagarjoggerspark",
+                "name": "Kalyani Nagar Joggers Park"
+            },
+            {
+                "id": "koregaonparknorthmainroad",
                 "name": "Koregaon Park North Main Road"
             },
             {
-                "id": "pimplesaudagar",
-                "name": "Pimple Saudagar"
+                "id": "koregaonparksouthmainroad",
+                "name": "Koregaon Park South Main Road"
             },
             {
-                "id": "bavdhan",
-                "name": "Bavdhan & Pashan"
+                "id": "pimplesaudagarkunaliconroad",
+                "name": "Pimple Saudagar Kunal Icon Road"
             },
             {
-                "id": "katraj",
-                "name": "Katraj & Bibwewadi"
+                "id": "pimplenilakhdproad",
+                "name": "Pimple Nilakh DP Road"
             },
             {
-                "id": "kondhwa",
+                "id": "pimplegurav",
+                "name": "Pimple Gurav"
+            },
+            {
+                "id": "rahatani",
+                "name": "Rahatani"
+            },
+            {
+                "id": "bavdhanndaroad",
+                "name": "Bavdhan NDA Road"
+            },
+            {
+                "id": "pashancircle",
+                "name": "Pashan Circle"
+            },
+            {
+                "id": "katrajzoocircle",
+                "name": "Katraj Zoo Circle"
+            },
+            {
+                "id": "bibwewadilaketown",
+                "name": "Bibwewadi Lake Town"
+            },
+            {
+                "id": "kondhwanibmroad",
                 "name": "Kondhwa NIBM Road"
             },
             {
-                "id": "fcroad",
-                "name": "FC Road & Deccan Gymkhana"
+                "id": "kondhwaundrichowk",
+                "name": "Kondhwa Undri Chowk"
             },
             {
-                "id": "chinchwad",
-                "name": "Pimpri Chinchwad & Nigdi"
+                "id": "campmgroad",
+                "name": "Camp MG Road"
+            },
+            {
+                "id": "swargateststandchowk",
+                "name": "Swargate ST Stand Chowk"
+            },
+            {
+                "id": "fcroadgoodluckchowk",
+                "name": "FC Road Goodluck Chowk"
+            },
+            {
+                "id": "sbroadjwmarriott",
+                "name": "SB Road JW Marriott"
+            },
+            {
+                "id": "modelcolony",
+                "name": "Model Colony"
+            },
+            {
+                "id": "dhankawadibharatividyapeeth",
+                "name": "Dhankawadi Bharati Vidyapeeth"
+            },
+            {
+                "id": "warjeflyoverchowk",
+                "name": "Warje Flyover Chowk"
+            },
+            {
+                "id": "karvenagardproad",
+                "name": "Karve Nagar DP Road"
+            },
+            {
+                "id": "erandwanedeenanathhospital",
+                "name": "Erandwane Deenanath Hospital"
+            },
+            {
+                "id": "shivajinagarstation",
+                "name": "Shivajinagar Station"
+            },
+            {
+                "id": "pimprichinchwadautocluster",
+                "name": "Pimpri Chinchwad Auto Cluster"
+            },
+            {
+                "id": "nigdipradhikaran",
+                "name": "Nigdi Pradhikaran"
+            },
+            {
+                "id": "ravetbasketbridge",
+                "name": "Ravet Basket Bridge"
+            },
+            {
+                "id": "akurdidypatilcollege",
+                "name": "Akurdi DY Patil College"
+            },
+            {
+                "id": "susroadbaner",
+                "name": "Sus Road Baner"
+            },
+            {
+                "id": "mahalungestadiumroad",
+                "name": "Mahalunge Stadium Road"
+            },
+            {
+                "id": "manjripunesolapurroad",
+                "name": "Manjri Pune Solapur Road"
+            },
+            {
+                "id": "wagholilexiconinternational",
+                "name": "Wagholi Lexicon International"
+            },
+            {
+                "id": "lohegaonairportroad",
+                "name": "Lohegaon Airport Road"
+            },
+            {
+                "id": "dhanoritingrenagar",
+                "name": "Dhanori Tingre Nagar"
+            },
+            {
+                "id": "yerwadabusinessbay",
+                "name": "Yerwada Business Bay"
             }
         ]
     },
@@ -2445,64 +3145,240 @@ const CITIES_REGISTRY = {
         "icon": "🕌",
         "subcities": [
             {
-                "id": "gurgaon",
-                "name": "Gurgaon Cyber City & DLF Phase 1-5"
+                "id": "gurgaoncybercitybuilding10",
+                "name": "Gurgaon Cyber City Building 10"
             },
             {
-                "id": "golfcourseroad",
-                "name": "Gurgaon Golf Course Road & Extension"
+                "id": "gurgaondlfphase1golfcourse",
+                "name": "Gurgaon DLF Phase 1 Golf Course"
             },
             {
-                "id": "sohnaroad",
-                "name": "Gurgaon Sohna Road"
+                "id": "gurgaondlfphase2cyberhub",
+                "name": "Gurgaon DLF Phase 2 Cyber Hub"
             },
             {
-                "id": "noida",
-                "name": "Noida Sector 18, 62 & 63"
+                "id": "gurgaondlfphase3moulsari",
+                "name": "Gurgaon DLF Phase 3 Moulsari"
             },
             {
-                "id": "noidaexpressway",
-                "name": "Noida Expressway Sector 76 & 137"
+                "id": "gurgaondlfphase4supermart",
+                "name": "Gurgaon DLF Phase 4 Supermart"
             },
             {
-                "id": "greaternoida",
-                "name": "Greater Noida Knowledge Park"
+                "id": "gurgaondlfphase5horizoncenter",
+                "name": "Gurgaon DLF Phase 5 Horizon Center"
             },
             {
-                "id": "saket",
-                "name": "Delhi Saket & Malviya Nagar"
+                "id": "gurgaongolfcourseextensionroad",
+                "name": "Gurgaon Golf Course Extension Road"
             },
             {
-                "id": "hauzkhas",
-                "name": "Delhi Hauz Khas & Green Park"
+                "id": "gurgaonsohnaroadsubhashchowk",
+                "name": "Gurgaon Sohna Road Subhash Chowk"
             },
             {
-                "id": "vasantkunj",
-                "name": "Delhi Vasant Kunj & Vasant Vihar"
+                "id": "gurgaonnirvanacountrysouthcity2",
+                "name": "Gurgaon Nirvana Country South City 2"
             },
             {
-                "id": "lajpatnagar",
-                "name": "Delhi Lajpat Nagar & South Ex"
+                "id": "gurgaonsushantlok1vyaparkendra",
+                "name": "Gurgaon Sushant Lok 1 Vyapar Kendra"
             },
             {
-                "id": "dwarka",
-                "name": "Delhi Dwarka Sector 6, 10 & 21"
+                "id": "gurgaonsector14hudamarket",
+                "name": "Gurgaon Sector 14 HUDA Market"
             },
             {
-                "id": "janakpuri",
-                "name": "Delhi Janakpuri & Tilak Nagar"
+                "id": "gurgaonsector23hudamarket",
+                "name": "Gurgaon Sector 23 HUDA Market"
             },
             {
-                "id": "connaughtplace",
-                "name": "Delhi Connaught Place & Karol Bagh"
+                "id": "gurgaonsector31hudamarket",
+                "name": "Gurgaon Sector 31 HUDA Market"
             },
             {
-                "id": "rohini",
-                "name": "Delhi Rohini & Pitampura"
+                "id": "gurgaonsector43hudacitymetro",
+                "name": "Gurgaon Sector 43 Huda City Metro"
             },
             {
-                "id": "mayurvihar",
-                "name": "Delhi Mayur Vihar & Laxmi Nagar"
+                "id": "gurgaonsector56moremarket",
+                "name": "Gurgaon Sector 56 More Market"
+            },
+            {
+                "id": "gurgaonnewgurgaonsector82vatika",
+                "name": "Gurgaon New Gurgaon Sector 82 Vatika"
+            },
+            {
+                "id": "gurgaonnewgurgaonsector90dlfnewtown",
+                "name": "Gurgaon New Gurgaon Sector 90 DLF New Town"
+            },
+            {
+                "id": "noidasector18attamarket",
+                "name": "Noida Sector 18 Atta Market"
+            },
+            {
+                "id": "noidasector62electroniccity",
+                "name": "Noida Sector 62 Electronic City"
+            },
+            {
+                "id": "noidasector63ithub",
+                "name": "Noida Sector 63 IT Hub"
+            },
+            {
+                "id": "noidasector50centralpark",
+                "name": "Noida Sector 50 Central Park"
+            },
+            {
+                "id": "noidasector75golfcity",
+                "name": "Noida Sector 75 Golf City"
+            },
+            {
+                "id": "noidasector76metrostation",
+                "name": "Noida Sector 76 Metro Station"
+            },
+            {
+                "id": "noidasector137expresswayparastierea",
+                "name": "Noida Sector 137 Expressway Paras Tierea"
+            },
+            {
+                "id": "noidasector150sportscity",
+                "name": "Noida Sector 150 Sports City"
+            },
+            {
+                "id": "greaternoidaparichowk",
+                "name": "Greater Noida Pari Chowk"
+            },
+            {
+                "id": "greaternoidaknowledgepark23",
+                "name": "Greater Noida Knowledge Park 2 & 3"
+            },
+            {
+                "id": "greaternoidatechzone4",
+                "name": "Greater Noida Techzone 4"
+            },
+            {
+                "id": "delhisaketselectcitywalkmall",
+                "name": "Delhi Saket Select Citywalk Mall"
+            },
+            {
+                "id": "delhihauzkhasvillage",
+                "name": "Delhi Hauz Khas Village"
+            },
+            {
+                "id": "delhivasantkunjambiencemall",
+                "name": "Delhi Vasant Kunj Ambience Mall"
+            },
+            {
+                "id": "delhivasantviharcblock",
+                "name": "Delhi Vasant Vihar C Block"
+            },
+            {
+                "id": "delhilajpatnagar2centralmarket",
+                "name": "Delhi Lajpat Nagar 2 Central Market"
+            },
+            {
+                "id": "delhisouthextension12",
+                "name": "Delhi South Extension 1 & 2"
+            },
+            {
+                "id": "delhigreaterkailash1mblock",
+                "name": "Delhi Greater Kailash 1 M Block"
+            },
+            {
+                "id": "delhigreaterkailash2eblock",
+                "name": "Delhi Greater Kailash 2 E Block"
+            },
+            {
+                "id": "delhidefencecolonymainmarket",
+                "name": "Delhi Defence Colony Main Market"
+            },
+            {
+                "id": "delhigreenparkmarket",
+                "name": "Delhi Green Park Market"
+            },
+            {
+                "id": "delhimalviyanagarshivalik",
+                "name": "Delhi Malviya Nagar Shivalik"
+            },
+            {
+                "id": "delhinewfriendscolonycommunitycenter",
+                "name": "Delhi New Friends Colony Community Center"
+            },
+            {
+                "id": "delhidwarkasector6market",
+                "name": "Delhi Dwarka Sector 6 Market"
+            },
+            {
+                "id": "delhidwarkasector10metrostation",
+                "name": "Delhi Dwarka Sector 10 Metro Station"
+            },
+            {
+                "id": "delhidwarkasector12citycentre",
+                "name": "Delhi Dwarka Sector 12 City Centre"
+            },
+            {
+                "id": "delhidwarkasector21metro",
+                "name": "Delhi Dwarka Sector 21 Metro"
+            },
+            {
+                "id": "delhijanakpuridistrictcentre",
+                "name": "Delhi Janakpuri District Centre"
+            },
+            {
+                "id": "delhirajourigardenmainmarket",
+                "name": "Delhi Rajouri Garden Main Market"
+            },
+            {
+                "id": "delhipunjabibaghclubroad",
+                "name": "Delhi Punjabi Bagh Club Road"
+            },
+            {
+                "id": "delhipaschimviharouterringroad",
+                "name": "Delhi Paschim Vihar Outer Ring Road"
+            },
+            {
+                "id": "delhikarolbaghajmalkhanroad",
+                "name": "Delhi Karol Bagh Ajmal Khan Road"
+            },
+            {
+                "id": "delhipatelnagareastwest",
+                "name": "Delhi Patel Nagar East & West"
+            },
+            {
+                "id": "delhiconnaughtplaceinnercircle",
+                "name": "Delhi Connaught Place Inner Circle"
+            },
+            {
+                "id": "delhichanakyapuridiplomaticenclave",
+                "name": "Delhi Chanakyapuri Diplomatic Enclave"
+            },
+            {
+                "id": "delhirohinisector79",
+                "name": "Delhi Rohini Sector 7 & 9"
+            },
+            {
+                "id": "delhipitampuranetajisubhashplacensp",
+                "name": "Delhi Pitampura Netaji Subhash Place (NSP)"
+            },
+            {
+                "id": "delhishalimarbagh",
+                "name": "Delhi Shalimar Bagh"
+            },
+            {
+                "id": "delhimodeltown2",
+                "name": "Delhi Model Town 2"
+            },
+            {
+                "id": "delhimayurviharphase1pocket1",
+                "name": "Delhi Mayur Vihar Phase 1 Pocket 1"
+            },
+            {
+                "id": "delhilaxminagarvikasmarg",
+                "name": "Delhi Laxmi Nagar Vikas Marg"
+            },
+            {
+                "id": "delhipreetvihar",
+                "name": "Delhi Preet Vihar"
             }
         ]
     },
@@ -2511,60 +3387,232 @@ const CITIES_REGISTRY = {
         "icon": "🏖️",
         "subcities": [
             {
-                "id": "omr",
-                "name": "OMR Thoraipakkam & Sholinganallur"
+                "id": "omrthoraipakkamptcquarter",
+                "name": "OMR Thoraipakkam PTC Quarter"
             },
             {
-                "id": "siruseri",
-                "name": "OMR Navalur & Siruseri IT Park"
+                "id": "omrsholinganallursignal",
+                "name": "OMR Sholinganallur Signal"
             },
             {
-                "id": "velachery",
-                "name": "Velachery Main Road & Phoenix Mall"
+                "id": "omrkarapakkamtcscampus",
+                "name": "OMR Karapakkam TCS Campus"
             },
             {
-                "id": "annanagar",
-                "name": "Anna Nagar Tower Park"
+                "id": "omrnavaluragscinemas",
+                "name": "OMR Navalur AGS Cinemas"
             },
             {
-                "id": "tnagar",
-                "name": "T Nagar Pondy Bazaar"
+                "id": "omrsiruserisipcotitpark",
+                "name": "OMR Siruseri SIPCOT IT Park"
             },
             {
-                "id": "adyar",
-                "name": "Adyar & Besant Nagar Beach"
+                "id": "omrsemmancheridlf",
+                "name": "OMR Semmancheri DLF"
             },
             {
-                "id": "guindy",
-                "name": "Guindy Industrial Estate"
+                "id": "omrperunguditollplaza",
+                "name": "OMR Perungudi Toll Plaza"
             },
             {
-                "id": "porur",
-                "name": "Porur DLF IT Park"
+                "id": "omrtaramaniascendasitpark",
+                "name": "OMR Taramani Ascendas IT Park"
             },
             {
-                "id": "vadapalani",
+                "id": "velacheryvijayanagarbusstand",
+                "name": "Velachery Vijayanagar Bus Stand"
+            },
+            {
+                "id": "velacheryphoenixmarketcity",
+                "name": "Velachery Phoenix Marketcity"
+            },
+            {
+                "id": "velacherymadipakkamkootroad",
+                "name": "Velachery Madipakkam Koot Road"
+            },
+            {
+                "id": "velacherykeelkattalai",
+                "name": "Velachery Keelkattalai"
+            },
+            {
+                "id": "medavakkamjunction",
+                "name": "Medavakkam Junction"
+            },
+            {
+                "id": "sithalapakkam",
+                "name": "Sithalapakkam"
+            },
+            {
+                "id": "ecrpalavakkambeach",
+                "name": "ECR Palavakkam Beach"
+            },
+            {
+                "id": "ecrneelankarai",
+                "name": "ECR Neelankarai"
+            },
+            {
+                "id": "ecrinjambakkamvgp",
+                "name": "ECR Injambakkam VGP"
+            },
+            {
+                "id": "ecrakkaraiprarthanadrivein",
+                "name": "ECR Akkarai Prarthana Drive-In"
+            },
+            {
+                "id": "ecruthandi",
+                "name": "ECR Uthandi"
+            },
+            {
+                "id": "ecrkovalambeach",
+                "name": "ECR Kovalam Beach"
+            },
+            {
+                "id": "annanagareasttowerpark",
+                "name": "Anna Nagar East Tower Park"
+            },
+            {
+                "id": "annanagarwestdepot",
+                "name": "Anna Nagar West Depot"
+            },
+            {
+                "id": "annanagarshanthicolony",
+                "name": "Anna Nagar Shanthi Colony"
+            },
+            {
+                "id": "shenoynagarmetro",
+                "name": "Shenoy Nagar Metro"
+            },
+            {
+                "id": "kilpaukmedicalcollege",
+                "name": "Kilpauk Medical College"
+            },
+            {
+                "id": "chetpetecopark",
+                "name": "Chetpet Eco Park"
+            },
+            {
+                "id": "koyambeducmbt",
+                "name": "Koyambedu CMBT"
+            },
+            {
+                "id": "vadapalaniforumvijayamall",
                 "name": "Vadapalani Forum Vijaya Mall"
             },
             {
-                "id": "nungambakkam",
+                "id": "ashoknagarpillar",
+                "name": "Ashok Nagar Pillar"
+            },
+            {
+                "id": "kknagar100ftroad",
+                "name": "KK Nagar 100ft Road"
+            },
+            {
+                "id": "westmambalamstation",
+                "name": "West Mambalam Station"
+            },
+            {
+                "id": "tnagarpondybazaar",
+                "name": "T Nagar Pondy Bazaar"
+            },
+            {
+                "id": "tnagarusmanroad",
+                "name": "T Nagar Usman Road"
+            },
+            {
+                "id": "nungambakkamhighroad",
                 "name": "Nungambakkam High Road"
             },
             {
-                "id": "mylapore",
-                "name": "Mylapore & Alwarpet"
+                "id": "gopalapuramdavschool",
+                "name": "Gopalapuram DAV School"
             },
             {
-                "id": "chromepet",
-                "name": "Chromepet & Tambaram Sanatorium"
+                "id": "mylaporekapaleeshwarartemple",
+                "name": "Mylapore Kapaleeshwarar Temple"
             },
             {
-                "id": "ecr",
-                "name": "ECR East Coast Road"
+                "id": "mandavelimarket",
+                "name": "Mandaveli Market"
             },
             {
-                "id": "medavakkam",
-                "name": "Medavakkam & Perungudi"
+                "id": "alwarpetttkroad",
+                "name": "Alwarpet TTK Road"
+            },
+            {
+                "id": "rapuramsangeetha",
+                "name": "RA Puram Sangeetha"
+            },
+            {
+                "id": "adyarsignal",
+                "name": "Adyar Signal"
+            },
+            {
+                "id": "besantnagarelliotsbeach",
+                "name": "Besant Nagar Elliot's Beach"
+            },
+            {
+                "id": "thiruvanmiyurrtobeach",
+                "name": "Thiruvanmiyur RTO Beach"
+            },
+            {
+                "id": "kotturpuramannacentenarylibrary",
+                "name": "Kotturpuram Anna Centenary Library"
+            },
+            {
+                "id": "guindyolympiatechpark",
+                "name": "Guindy Olympia Tech Park"
+            },
+            {
+                "id": "saidapetmetro",
+                "name": "Saidapet Metro"
+            },
+            {
+                "id": "ekkatuthangaljayatv",
+                "name": "Ekkatuthangal Jaya TV"
+            },
+            {
+                "id": "porurdlfitpark",
+                "name": "Porur DLF IT Park"
+            },
+            {
+                "id": "ramapuramsrmcampus",
+                "name": "Ramapuram SRM Campus"
+            },
+            {
+                "id": "iyappanthangalbusterminus",
+                "name": "Iyappanthangal Bus Terminus"
+            },
+            {
+                "id": "poonamalleehighroad",
+                "name": "Poonamallee High Road"
+            },
+            {
+                "id": "chromepetmitcampus",
+                "name": "Chromepet MIT Campus"
+            },
+            {
+                "id": "tambaramwestbusstand",
+                "name": "Tambaram West Bus Stand"
+            },
+            {
+                "id": "tambarameastmcccollege",
+                "name": "Tambaram East MCC College"
+            },
+            {
+                "id": "selaiyurcamproad",
+                "name": "Selaiyur Camp Road"
+            },
+            {
+                "id": "perungalathurrailwaystation",
+                "name": "Perungalathur Railway Station"
+            },
+            {
+                "id": "vandalurzoocircle",
+                "name": "Vandalur Zoo Circle"
+            },
+            {
+                "id": "guduvanchery",
+                "name": "Guduvanchery"
             }
         ]
     }
