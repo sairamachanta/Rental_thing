@@ -2,7 +2,7 @@
  * ManaRent Enterprise Anti-Bot & Anti-Scraper Security Middleware
  * 
  * Protects against:
- * 1. Automated Scraper Bots (Cypress, Playwright, Puppeteer, Selenium, Scrapy, Python requests)
+ * 1. Headless Browser Scrapers (Cypress, Playwright, Puppeteer, Selenium, PhantomJS)
  * 2. Data Harvesting & Unauthorized Scraping
  * 3. DDoS / API Rate Limiting (60 requests/min per IP)
  * 4. XSS & Code Injection Attacks
@@ -20,22 +20,14 @@ const SECURITY_LOG_PATH = path.join(__dirname, 'data', 'security_alerts.log');
 // Localhost / Loopback IPs that are always trusted for developer testing
 const LOCAL_TRUSTED_IPS = new Set(['127.0.0.1', '::1', '::ffff:127.0.0.1', 'localhost']);
 
-// Known External Scraper / Automated Tool User-Agents
+// Known Malicious Scraper / Automated Headless Tool User-Agents
 const BLOCKED_USER_AGENTS = [
     'cypress',
     'playwright',
     'puppeteer',
     'selenium',
     'phantomjs',
-    'python-requests',
-    'python-urllib',
-    'scrapy',
-    'go-http-client',
-    'java/',
-    'libwww-perl',
-    'wget',
-    'postmanruntime',
-    'insomnia'
+    'scrapy'
 ];
 
 function logSecurityAlert(ip, reason, userAgent) {
@@ -67,7 +59,7 @@ function applySecurityFilters(req, res) {
         return false;
     }
 
-    // 2. Anti-Scraper User-Agent Inspection for External Traffic
+    // 2. Anti-Scraper User-Agent Inspection (Blocking Cypress, Playwright, Puppeteer, Selenium, PhantomJS)
     const isBotOrScraper = BLOCKED_USER_AGENTS.some(agent => userAgent.includes(agent));
     if (isBotOrScraper) {
         logSecurityAlert(clientIP, "Automated Testing/Scraper Tool Detected", userAgent);
