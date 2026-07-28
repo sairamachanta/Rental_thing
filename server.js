@@ -126,6 +126,16 @@ const server = http.createServer((req, res) => {
         return;
     }
 
+    // Google AdSense ads.txt Route
+    if (pathname === '/ads.txt') {
+        const adsTxtPath = path.join(__dirname, 'ads.txt');
+        fs.readFile(adsTxtPath, (err, data) => {
+            if (err) { res.writeHead(404); res.end(); }
+            else { res.writeHead(200, { 'Content-Type': 'text/plain' }); res.end(data); }
+        });
+        return;
+    }
+
     // Google Search Console Ownership Verification Route
     if (pathname === '/googlee96d2a214376ff98.html') {
         const verifyFilePath = path.join(__dirname, 'googlee96d2a214376ff98.html');
@@ -326,5 +336,5 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(PORT, () => {
-    console.log(`🚀 ManaRent Google Search Console Verification Server running at http://localhost:${PORT}`);
+    console.log(`🚀 ManaRent AdSense Enabled Server running at http://localhost:${PORT}`);
 });
