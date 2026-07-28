@@ -7,3908 +7,2108 @@ const CITIES_REGISTRY = {
     "hyderabad": {
         "name": "Hyderabad",
         "icon": "🏛️",
-                "subcities": [
-          {
-                    "id": "keesara",
-                    "name": "Keesara",
-                    "zone": "Malkajgiri",
-                    "circleName": "Keesara",
-                    "wardNo": 1,
-                    "landmarks": [
-                              "Keesara Main Road",
-                              "Keesara Bus Stop",
-                              "Near Keesara Commercial Hub",
-                              "Keesara Metro Gate"
-                    ]
-          },
-          {
-                    "id": "chandrapuricolony",
-                    "name": "Chandrapuri Colony",
-                    "zone": "Malkajgiri",
-                    "circleName": "Keesara",
-                    "wardNo": 2,
-                    "landmarks": [
-                              "Chandrapuri Colony Main Road",
-                              "Chandrapuri Colony Bus Stop",
-                              "Near Chandrapuri Colony Commercial Hub",
-                              "Chandrapuri Colony Metro Gate"
-                    ]
-          },
-          {
-                    "id": "jawaharnagar",
-                    "name": "Jawahar Nagar",
-                    "zone": "Malkajgiri",
-                    "circleName": "Keesara",
-                    "wardNo": 3,
-                    "landmarks": [
-                              "Jawahar Nagar Main Road",
-                              "Jawahar Nagar Bus Stop",
-                              "Near Jawahar Nagar Commercial Hub",
-                              "Jawahar Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "dammaiguda",
-                    "name": "Dammaiguda",
-                    "zone": "Malkajgiri",
-                    "circleName": "Keesara",
-                    "wardNo": 4,
-                    "landmarks": [
-                              "Dammaiguda Main Road",
-                              "Dammaiguda Bus Stop",
-                              "Near Dammaiguda Commercial Hub",
-                              "Dammaiguda Metro Gate"
-                    ]
-          },
-          {
-                    "id": "nagaram",
-                    "name": "Nagaram",
-                    "zone": "Uppal",
-                    "circleName": "Ghatkesar",
-                    "wardNo": 5,
-                    "landmarks": [
-                              "Nagaram Main Road",
-                              "Nagaram Bus Stop",
-                              "Near Nagaram Commercial Hub",
-                              "Nagaram Metro Gate"
-                    ]
-          },
-          {
-                    "id": "ghatkesar",
-                    "name": "Ghatkesar",
-                    "zone": "Uppal",
-                    "circleName": "Ghatkesar",
-                    "wardNo": 6,
-                    "landmarks": [
-                              "Ghatkesar Main Road",
-                              "Ghatkesar Bus Stop",
-                              "Near Ghatkesar Commercial Hub",
-                              "Ghatkesar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "edulabad",
-                    "name": "Edulabad",
-                    "zone": "Uppal",
-                    "circleName": "Ghatkesar",
-                    "wardNo": 7,
-                    "landmarks": [
-                              "Edulabad Main Road",
-                              "Edulabad Bus Stop",
-                              "Near Edulabad Commercial Hub",
-                              "Edulabad Metro Gate"
-                    ]
-          },
-          {
-                    "id": "pocharam",
-                    "name": "Pocharam",
-                    "zone": "Uppal",
-                    "circleName": "Ghatkesar",
-                    "wardNo": 8,
-                    "landmarks": [
-                              "Pocharam Main Road",
-                              "Pocharam Bus Stop",
-                              "Near Pocharam Commercial Hub",
-                              "Pocharam Metro Gate"
-                    ]
-          },
-          {
-                    "id": "medipally",
-                    "name": "Medipally",
-                    "zone": "Uppal",
-                    "circleName": "Boduppal",
-                    "wardNo": 9,
-                    "landmarks": [
-                              "Medipally Main Road",
-                              "Medipally Bus Stop",
-                              "Near Medipally Commercial Hub",
-                              "Medipally Metro Gate"
-                    ]
-          },
-          {
-                    "id": "peerzadiguda",
-                    "name": "Peerzadiguda",
-                    "zone": "Uppal",
-                    "circleName": "Boduppal",
-                    "wardNo": 10,
-                    "landmarks": [
-                              "Peerzadiguda Main Road",
-                              "Peerzadiguda Bus Stop",
-                              "Near Peerzadiguda Commercial Hub",
-                              "Peerzadiguda Metro Gate"
-                    ]
-          },
-          {
-                    "id": "boduppal",
-                    "name": "Boduppal",
-                    "zone": "Uppal",
-                    "circleName": "Boduppal",
-                    "wardNo": 11,
-                    "landmarks": [
-                              "Boduppal Main Road",
-                              "Boduppal Bus Stop",
-                              "Near Boduppal Commercial Hub",
-                              "Boduppal Metro Gate"
-                    ]
-          },
-          {
-                    "id": "chengicherla",
-                    "name": "Chengicherla",
-                    "zone": "Uppal",
-                    "circleName": "Boduppal",
-                    "wardNo": 12,
-                    "landmarks": [
-                              "Chengicherla Main Road",
-                              "Chengicherla Bus Stop",
-                              "Near Chengicherla Commercial Hub",
-                              "Chengicherla Metro Gate"
-                    ]
-          },
-          {
-                    "id": "vampuguda",
-                    "name": "Vampuguda",
-                    "zone": "Uppal",
-                    "circleName": "Kapra",
-                    "wardNo": 13,
-                    "landmarks": [
-                              "Vampuguda Main Road",
-                              "Vampuguda Bus Stop",
-                              "Near Vampuguda Commercial Hub",
-                              "Vampuguda Metro Gate"
-                    ]
-          },
-          {
-                    "id": "kapra",
-                    "name": "Kapra",
-                    "zone": "Uppal",
-                    "circleName": "Kapra",
-                    "wardNo": 14,
-                    "landmarks": [
-                              "Kapra Main Road",
-                              "Kapra Bus Stop",
-                              "Near Kapra Commercial Hub",
-                              "Kapra Metro Gate"
-                    ]
-          },
-          {
-                    "id": "drasraonagar",
-                    "name": "Dr AS Rao Nagar",
-                    "zone": "Uppal",
-                    "circleName": "Kapra",
-                    "wardNo": 15,
-                    "landmarks": [
-                              "Dr AS Rao Nagar Main Road",
-                              "Dr AS Rao Nagar Bus Stop",
-                              "Near Dr AS Rao Nagar Commercial Hub",
-                              "Dr AS Rao Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "kushaiguda",
-                    "name": "Kushaiguda",
-                    "zone": "Uppal",
-                    "circleName": "Kapra",
-                    "wardNo": 16,
-                    "landmarks": [
-                              "Kushaiguda Main Road",
-                              "Kushaiguda Bus Stop",
-                              "Near Kushaiguda Commercial Hub",
-                              "Kushaiguda Metro Gate"
-                    ]
-          },
-          {
-                    "id": "cherlapally",
-                    "name": "Cherlapally",
-                    "zone": "Uppal",
-                    "circleName": "Kapra",
-                    "wardNo": 17,
-                    "landmarks": [
-                              "Cherlapally Main Road",
-                              "Cherlapally Bus Stop",
-                              "Near Cherlapally Commercial Hub",
-                              "Cherlapally Metro Gate"
-                    ]
-          },
-          {
-                    "id": "shakthisainagar",
-                    "name": "Shakthi Sai Nagar",
-                    "zone": "Uppal",
-                    "circleName": "Nacharam",
-                    "wardNo": 18,
-                    "landmarks": [
-                              "Shakthi Sai Nagar Main Road",
-                              "Shakthi Sai Nagar Bus Stop",
-                              "Near Shakthi Sai Nagar Commercial Hub",
-                              "Shakthi Sai Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "hbcolony",
-                    "name": "H.B. Colony",
-                    "zone": "Uppal",
-                    "circleName": "Nacharam",
-                    "wardNo": 19,
-                    "landmarks": [
-                              "H.B. Colony Main Road",
-                              "H.B. Colony Bus Stop",
-                              "Near H.B. Colony Commercial Hub",
-                              "H.B. Colony Metro Gate"
-                    ]
-          },
-          {
-                    "id": "mallapur",
-                    "name": "Mallapur",
-                    "zone": "Uppal",
-                    "circleName": "Nacharam",
-                    "wardNo": 20,
-                    "landmarks": [
-                              "Mallapur Main Road",
-                              "Mallapur Bus Stop",
-                              "Near Mallapur Commercial Hub",
-                              "Mallapur Metro Gate"
-                    ]
-          },
-          {
-                    "id": "nacharam",
-                    "name": "Nacharam",
-                    "zone": "Uppal",
-                    "circleName": "Nacharam",
-                    "wardNo": 21,
-                    "landmarks": [
-                              "Nacharam Main Road",
-                              "Nacharam Bus Stop",
-                              "Near Nacharam Commercial Hub",
-                              "Nacharam Metro Gate"
-                    ]
-          },
-          {
-                    "id": "hmtnagar",
-                    "name": "HMT Nagar",
-                    "zone": "Uppal",
-                    "circleName": "Nacharam",
-                    "wardNo": 22,
-                    "landmarks": [
-                              "HMT Nagar Main Road",
-                              "HMT Nagar Bus Stop",
-                              "Near HMT Nagar Commercial Hub",
-                              "HMT Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "chilkanagar",
-                    "name": "Chilkanagar",
-                    "zone": "Uppal",
-                    "circleName": "Uppal",
-                    "wardNo": 23,
-                    "landmarks": [
-                              "Chilkanagar Main Road",
-                              "Chilkanagar Bus Stop",
-                              "Near Chilkanagar Commercial Hub",
-                              "Chilkanagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "beerappagadda",
-                    "name": "Beerappagadda",
-                    "zone": "Uppal",
-                    "circleName": "Uppal",
-                    "wardNo": 24,
-                    "landmarks": [
-                              "Beerappagadda Main Road",
-                              "Beerappagadda Bus Stop",
-                              "Near Beerappagadda Commercial Hub",
-                              "Beerappagadda Metro Gate"
-                    ]
-          },
-          {
-                    "id": "habsiguda",
-                    "name": "Habsiguda",
-                    "zone": "Uppal",
-                    "circleName": "Uppal",
-                    "wardNo": 25,
-                    "landmarks": [
-                              "Habsiguda Main Road",
-                              "Habsiguda Bus Stop",
-                              "Near Habsiguda Commercial Hub",
-                              "Habsiguda Metro Gate"
-                    ]
-          },
-          {
-                    "id": "ramanthapur",
-                    "name": "Ramanthapur",
-                    "zone": "Uppal",
-                    "circleName": "Uppal",
-                    "wardNo": 26,
-                    "landmarks": [
-                              "Ramanthapur Main Road",
-                              "Ramanthapur Bus Stop",
-                              "Near Ramanthapur Commercial Hub",
-                              "Ramanthapur Metro Gate"
-                    ]
-          },
-          {
-                    "id": "venkatreddynagar",
-                    "name": "Venkat Reddy Nagar",
-                    "zone": "Uppal",
-                    "circleName": "Uppal",
-                    "wardNo": 27,
-                    "landmarks": [
-                              "Venkat Reddy Nagar Main Road",
-                              "Venkat Reddy Nagar Bus Stop",
-                              "Near Venkat Reddy Nagar Commercial Hub",
-                              "Venkat Reddy Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "uppal",
-                    "name": "Uppal",
-                    "zone": "Uppal",
-                    "circleName": "Uppal",
-                    "wardNo": 28,
-                    "landmarks": [
-                              "Uppal Main Road",
-                              "Uppal Bus Stop",
-                              "Near Uppal Commercial Hub",
-                              "Uppal Metro Gate"
-                    ]
-          },
-          {
-                    "id": "nagole",
-                    "name": "Nagole",
-                    "zone": "Lb Nagar",
-                    "circleName": "Nagole",
-                    "wardNo": 29,
-                    "landmarks": [
-                              "Nagole Main Road",
-                              "Nagole Bus Stop",
-                              "Near Nagole Commercial Hub",
-                              "Nagole Metro Gate"
-                    ]
-          },
-          {
-                    "id": "kothapet",
-                    "name": "Kothapet",
-                    "zone": "Lb Nagar",
-                    "circleName": "Saroornagar",
-                    "wardNo": 30,
-                    "landmarks": [
-                              "Kothapet Main Road",
-                              "Kothapet Bus Stop",
-                              "Near Kothapet Commercial Hub",
-                              "Kothapet Metro Gate"
-                    ]
-          },
-          {
-                    "id": "chaitanyapuri",
-                    "name": "Chaitanyapuri",
-                    "zone": "Lb Nagar",
-                    "circleName": "Saroornagar",
-                    "wardNo": 31,
-                    "landmarks": [
-                              "Chaitanyapuri Main Road",
-                              "Chaitanyapuri Bus Stop",
-                              "Near Chaitanyapuri Commercial Hub",
-                              "Chaitanyapuri Metro Gate"
-                    ]
-          },
-          {
-                    "id": "gaddiannaram",
-                    "name": "Gaddiannaram",
-                    "zone": "Lb Nagar",
-                    "circleName": "Saroornagar",
-                    "wardNo": 32,
-                    "landmarks": [
-                              "Gaddiannaram Main Road",
-                              "Gaddiannaram Bus Stop",
-                              "Near Gaddiannaram Commercial Hub",
-                              "Gaddiannaram Metro Gate"
-                    ]
-          },
-          {
-                    "id": "saroornagar",
-                    "name": "Saroornagar",
-                    "zone": "Lb Nagar",
-                    "circleName": "Saroornagar",
-                    "wardNo": 33,
-                    "landmarks": [
-                              "Saroornagar Main Road",
-                              "Saroornagar Bus Stop",
-                              "Near Saroornagar Commercial Hub",
-                              "Saroornagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "doctorscolony",
-                    "name": "Doctors Colony",
-                    "zone": "Lb Nagar",
-                    "circleName": "Saroornagar",
-                    "wardNo": 34,
-                    "landmarks": [
-                              "Doctors Colony Main Road",
-                              "Doctors Colony Bus Stop",
-                              "Near Doctors Colony Commercial Hub",
-                              "Doctors Colony Metro Gate"
-                    ]
-          },
-          {
-                    "id": "rkpuram",
-                    "name": "RK Puram",
-                    "zone": "Lb Nagar",
-                    "circleName": "Saroornagar",
-                    "wardNo": 35,
-                    "landmarks": [
-                              "RK Puram Main Road",
-                              "RK Puram Bus Stop",
-                              "Near RK Puram Commercial Hub",
-                              "RK Puram Metro Gate"
-                    ]
-          },
-          {
-                    "id": "ntrnagar",
-                    "name": "NTR Nagar",
-                    "zone": "Lb Nagar",
-                    "circleName": "Saroornagar",
-                    "wardNo": 36,
-                    "landmarks": [
-                              "NTR Nagar Main Road",
-                              "NTR Nagar Bus Stop",
-                              "Near NTR Nagar Commercial Hub",
-                              "NTR Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "lingojiguda",
-                    "name": "Lingojiguda",
-                    "zone": "Lb Nagar",
-                    "circleName": "Lb Nagar",
-                    "wardNo": 37,
-                    "landmarks": [
-                              "Lingojiguda Main Road",
-                              "Lingojiguda Bus Stop",
-                              "Near Lingojiguda Commercial Hub",
-                              "Lingojiguda Metro Gate"
-                    ]
-          },
-          {
-                    "id": "champapet",
-                    "name": "Champapet",
-                    "zone": "Lb Nagar",
-                    "circleName": "Lb Nagar",
-                    "wardNo": 38,
-                    "landmarks": [
-                              "Champapet Main Road",
-                              "Champapet Bus Stop",
-                              "Near Champapet Commercial Hub",
-                              "Champapet Metro Gate"
-                    ]
-          },
-          {
-                    "id": "kharmanghat",
-                    "name": "Kharmanghat",
-                    "zone": "Lb Nagar",
-                    "circleName": "Lb Nagar",
-                    "wardNo": 39,
-                    "landmarks": [
-                              "Kharmanghat Main Road",
-                              "Kharmanghat Bus Stop",
-                              "Near Kharmanghat Commercial Hub",
-                              "Kharmanghat Metro Gate"
-                    ]
-          },
-          {
-                    "id": "bairamalguda",
-                    "name": "Bairamalguda",
-                    "zone": "Lb Nagar",
-                    "circleName": "Lb Nagar",
-                    "wardNo": 40,
-                    "landmarks": [
-                              "Bairamalguda Main Road",
-                              "Bairamalguda Bus Stop",
-                              "Near Bairamalguda Commercial Hub",
-                              "Bairamalguda Metro Gate"
-                    ]
-          },
-          {
-                    "id": "hastinapuram",
-                    "name": "Hastinapuram",
-                    "zone": "Lb Nagar",
-                    "circleName": "Lb Nagar",
-                    "wardNo": 41,
-                    "landmarks": [
-                              "Hastinapuram Main Road",
-                              "Hastinapuram Bus Stop",
-                              "Near Hastinapuram Commercial Hub",
-                              "Hastinapuram Metro Gate"
-                    ]
-          },
-          {
-                    "id": "bnreddynagar",
-                    "name": "BN Reddy Nagar",
-                    "zone": "Lb Nagar",
-                    "circleName": "Hayathnagar",
-                    "wardNo": 42,
-                    "landmarks": [
-                              "BN Reddy Nagar Main Road",
-                              "BN Reddy Nagar Bus Stop",
-                              "Near BN Reddy Nagar Commercial Hub",
-                              "BN Reddy Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "vanasthalipuram",
-                    "name": "Vanasthalipuram",
-                    "zone": "Lb Nagar",
-                    "circleName": "Hayathnagar",
-                    "wardNo": 43,
-                    "landmarks": [
-                              "Vanasthalipuram Main Road",
-                              "Vanasthalipuram Bus Stop",
-                              "Near Vanasthalipuram Commercial Hub",
-                              "Vanasthalipuram Metro Gate"
-                    ]
-          },
-          {
-                    "id": "chintalkunta",
-                    "name": "Chintalkunta",
-                    "zone": "Lb Nagar",
-                    "circleName": "Hayathnagar",
-                    "wardNo": 44,
-                    "landmarks": [
-                              "Chintalkunta Main Road",
-                              "Chintalkunta Bus Stop",
-                              "Near Chintalkunta Commercial Hub",
-                              "Chintalkunta Metro Gate"
-                    ]
-          },
-          {
-                    "id": "mansoorabad",
-                    "name": "Mansoorabad",
-                    "zone": "Lb Nagar",
-                    "circleName": "Nagole",
-                    "wardNo": 45,
-                    "landmarks": [
-                              "Mansoorabad Main Road",
-                              "Mansoorabad Bus Stop",
-                              "Near Mansoorabad Commercial Hub",
-                              "Mansoorabad Metro Gate"
-                    ]
-          },
-          {
-                    "id": "gsi",
-                    "name": "GSI",
-                    "zone": "Lb Nagar",
-                    "circleName": "Nagole",
-                    "wardNo": 46,
-                    "landmarks": [
-                              "GSI Main Road",
-                              "GSI Bus Stop",
-                              "Near GSI Commercial Hub",
-                              "GSI Metro Gate"
-                    ]
-          },
-          {
-                    "id": "lecturerscolony",
-                    "name": "Lecturers Colony",
-                    "zone": "Lb Nagar",
-                    "circleName": "Nagole",
-                    "wardNo": 47,
-                    "landmarks": [
-                              "Lecturers Colony Main Road",
-                              "Lecturers Colony Bus Stop",
-                              "Near Lecturers Colony Commercial Hub",
-                              "Lecturers Colony Metro Gate"
-                    ]
-          },
-          {
-                    "id": "highcourtcolony",
-                    "name": "High Court Colony",
-                    "zone": "Lb Nagar",
-                    "circleName": "Hayathnagar",
-                    "wardNo": 48,
-                    "landmarks": [
-                              "High Court Colony Main Road",
-                              "High Court Colony Bus Stop",
-                              "Near High Court Colony Commercial Hub",
-                              "High Court Colony Metro Gate"
-                    ]
-          },
-          {
-                    "id": "sahebnagar",
-                    "name": "Sahebnagar",
-                    "zone": "Lb Nagar",
-                    "circleName": "Hayathnagar",
-                    "wardNo": 49,
-                    "landmarks": [
-                              "Sahebnagar Main Road",
-                              "Sahebnagar Bus Stop",
-                              "Near Sahebnagar Commercial Hub",
-                              "Sahebnagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "hayathnagar",
-                    "name": "Hayathnagar",
-                    "zone": "Lb Nagar",
-                    "circleName": "Hayathnagar",
-                    "wardNo": 50,
-                    "landmarks": [
-                              "Hayathnagar Main Road",
-                              "Hayathnagar Bus Stop",
-                              "Near Hayathnagar Commercial Hub",
-                              "Hayathnagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "kuntloor",
-                    "name": "Kuntloor",
-                    "zone": "Lb Nagar",
-                    "circleName": "Nagole",
-                    "wardNo": 51,
-                    "landmarks": [
-                              "Kuntloor Main Road",
-                              "Kuntloor Bus Stop",
-                              "Near Kuntloor Commercial Hub",
-                              "Kuntloor Metro Gate"
-                    ]
-          },
-          {
-                    "id": "peddaamberpet",
-                    "name": "Pedda Amberpet",
-                    "zone": "Lb Nagar",
-                    "circleName": "Nagole",
-                    "wardNo": 52,
-                    "landmarks": [
-                              "Pedda Amberpet Main Road",
-                              "Pedda Amberpet Bus Stop",
-                              "Near Pedda Amberpet Commercial Hub",
-                              "Pedda Amberpet Metro Gate"
-                    ]
-          },
-          {
-                    "id": "thorrur",
-                    "name": "Thorrur",
-                    "zone": "Shamshabad",
-                    "circleName": "Adibatla",
-                    "wardNo": 53,
-                    "landmarks": [
-                              "Thorrur Main Road",
-                              "Thorrur Bus Stop",
-                              "Near Thorrur Commercial Hub",
-                              "Thorrur Metro Gate"
-                    ]
-          },
-          {
-                    "id": "kongarakalan",
-                    "name": "Kongara Kalan",
-                    "zone": "Shamshabad",
-                    "circleName": "Adibatla",
-                    "wardNo": 54,
-                    "landmarks": [
-                              "Kongara Kalan Main Road",
-                              "Kongara Kalan Bus Stop",
-                              "Near Kongara Kalan Commercial Hub",
-                              "Kongara Kalan Metro Gate"
-                    ]
-          },
-          {
-                    "id": "adibatla",
-                    "name": "Adibatla",
-                    "zone": "Shamshabad",
-                    "circleName": "Adibatla",
-                    "wardNo": 55,
-                    "landmarks": [
-                              "Adibatla Main Road",
-                              "Adibatla Bus Stop",
-                              "Near Adibatla Commercial Hub",
-                              "Adibatla Metro Gate"
-                    ]
-          },
-          {
-                    "id": "turkayamjal",
-                    "name": "Turkayamjal",
-                    "zone": "Shamshabad",
-                    "circleName": "Adibatla",
-                    "wardNo": 56,
-                    "landmarks": [
-                              "Turkayamjal Main Road",
-                              "Turkayamjal Bus Stop",
-                              "Near Turkayamjal Commercial Hub",
-                              "Turkayamjal Metro Gate"
-                    ]
-          },
-          {
-                    "id": "nadargul",
-                    "name": "Nadargul",
-                    "zone": "Shamshabad",
-                    "circleName": "Badangpet",
-                    "wardNo": 57,
-                    "landmarks": [
-                              "Nadargul Main Road",
-                              "Nadargul Bus Stop",
-                              "Near Nadargul Commercial Hub",
-                              "Nadargul Metro Gate"
-                    ]
-          },
-          {
-                    "id": "prashanthihills",
-                    "name": "Prashanthi Hills",
-                    "zone": "Shamshabad",
-                    "circleName": "Badangpet",
-                    "wardNo": 58,
-                    "landmarks": [
-                              "Prashanthi Hills Main Road",
-                              "Prashanthi Hills Bus Stop",
-                              "Near Prashanthi Hills Commercial Hub",
-                              "Prashanthi Hills Metro Gate"
-                    ]
-          },
-          {
-                    "id": "jillelaguda",
-                    "name": "Jillelaguda",
-                    "zone": "Shamshabad",
-                    "circleName": "Badangpet",
-                    "wardNo": 59,
-                    "landmarks": [
-                              "Jillelaguda Main Road",
-                              "Jillelaguda Bus Stop",
-                              "Near Jillelaguda Commercial Hub",
-                              "Jillelaguda Metro Gate"
-                    ]
-          },
-          {
-                    "id": "meerpet",
-                    "name": "Meerpet",
-                    "zone": "Shamshabad",
-                    "circleName": "Badangpet",
-                    "wardNo": 60,
-                    "landmarks": [
-                              "Meerpet Main Road",
-                              "Meerpet Bus Stop",
-                              "Near Meerpet Commercial Hub",
-                              "Meerpet Metro Gate"
-                    ]
-          },
-          {
-                    "id": "badangpet",
-                    "name": "Badangpet",
-                    "zone": "Shamshabad",
-                    "circleName": "Badangpet",
-                    "wardNo": 61,
-                    "landmarks": [
-                              "Badangpet Main Road",
-                              "Badangpet Bus Stop",
-                              "Near Badangpet Commercial Hub",
-                              "Badangpet Metro Gate"
-                    ]
-          },
-          {
-                    "id": "balapur",
-                    "name": "Balapur",
-                    "zone": "Shamshabad",
-                    "circleName": "Badangpet",
-                    "wardNo": 62,
-                    "landmarks": [
-                              "Balapur Main Road",
-                              "Balapur Bus Stop",
-                              "Near Balapur Commercial Hub",
-                              "Balapur Metro Gate"
-                    ]
-          },
-          {
-                    "id": "shaheennagar",
-                    "name": "Shaheen Nagar",
-                    "zone": "Shamshabad",
-                    "circleName": "Jalpally",
-                    "wardNo": 63,
-                    "landmarks": [
-                              "Shaheen Nagar Main Road",
-                              "Shaheen Nagar Bus Stop",
-                              "Near Shaheen Nagar Commercial Hub",
-                              "Shaheen Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "pahadishareef",
-                    "name": "Pahadi Shareef",
-                    "zone": "Shamshabad",
-                    "circleName": "Jalpally",
-                    "wardNo": 64,
-                    "landmarks": [
-                              "Pahadi Shareef Main Road",
-                              "Pahadi Shareef Bus Stop",
-                              "Near Pahadi Shareef Commercial Hub",
-                              "Pahadi Shareef Metro Gate"
-                    ]
-          },
-          {
-                    "id": "jalpally",
-                    "name": "Jalpally",
-                    "zone": "Shamshabad",
-                    "circleName": "Jalpally",
-                    "wardNo": 65,
-                    "landmarks": [
-                              "Jalpally Main Road",
-                              "Jalpally Bus Stop",
-                              "Near Jalpally Commercial Hub",
-                              "Jalpally Metro Gate"
-                    ]
-          },
-          {
-                    "id": "thukkuguda",
-                    "name": "Thukkuguda",
-                    "zone": "Shamshabad",
-                    "circleName": "Shamshabad",
-                    "wardNo": 66,
-                    "landmarks": [
-                              "Thukkuguda Main Road",
-                              "Thukkuguda Bus Stop",
-                              "Near Thukkuguda Commercial Hub",
-                              "Thukkuguda Metro Gate"
-                    ]
-          },
-          {
-                    "id": "mankhal",
-                    "name": "Mankhal",
-                    "zone": "Shamshabad",
-                    "circleName": "Shamshabad",
-                    "wardNo": 67,
-                    "landmarks": [
-                              "Mankhal Main Road",
-                              "Mankhal Bus Stop",
-                              "Near Mankhal Commercial Hub",
-                              "Mankhal Metro Gate"
-                    ]
-          },
-          {
-                    "id": "bandlaguda",
-                    "name": "Bandlaguda",
-                    "zone": "Rajendranagar",
-                    "circleName": "Chandrayanagutta",
-                    "wardNo": 68,
-                    "landmarks": [
-                              "Bandlaguda Main Road",
-                              "Bandlaguda Bus Stop",
-                              "Near Bandlaguda Commercial Hub",
-                              "Bandlaguda Metro Gate"
-                    ]
-          },
-          {
-                    "id": "noorinagar",
-                    "name": "Noori Nagar",
-                    "zone": "Rajendranagar",
-                    "circleName": "Chandrayanagutta",
-                    "wardNo": 69,
-                    "landmarks": [
-                              "Noori Nagar Main Road",
-                              "Noori Nagar Bus Stop",
-                              "Near Noori Nagar Commercial Hub",
-                              "Noori Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "barkas",
-                    "name": "Barkas",
-                    "zone": "Rajendranagar",
-                    "circleName": "Chandrayanagutta",
-                    "wardNo": 70,
-                    "landmarks": [
-                              "Barkas Main Road",
-                              "Barkas Bus Stop",
-                              "Near Barkas Commercial Hub",
-                              "Barkas Metro Gate"
-                    ]
-          },
-          {
-                    "id": "kanchanbagh",
-                    "name": "Kanchanbagh",
-                    "zone": "Rajendranagar",
-                    "circleName": "Chandrayanagutta",
-                    "wardNo": 71,
-                    "landmarks": [
-                              "Kanchanbagh Main Road",
-                              "Kanchanbagh Bus Stop",
-                              "Near Kanchanbagh Commercial Hub",
-                              "Kanchanbagh Metro Gate"
-                    ]
-          },
-          {
-                    "id": "chandrayangutta",
-                    "name": "Chandrayangutta",
-                    "zone": "Rajendranagar",
-                    "circleName": "Chandrayanagutta",
-                    "wardNo": 72,
-                    "landmarks": [
-                              "Chandrayangutta Main Road",
-                              "Chandrayangutta Bus Stop",
-                              "Near Chandrayangutta Commercial Hub",
-                              "Chandrayangutta Metro Gate"
-                    ]
-          },
-          {
-                    "id": "riyasatnagar",
-                    "name": "Riyasat Nagar",
-                    "zone": "Rajendranagar",
-                    "circleName": "Jangammet",
-                    "wardNo": 73,
-                    "landmarks": [
-                              "Riyasat Nagar Main Road",
-                              "Riyasat Nagar Bus Stop",
-                              "Near Riyasat Nagar Commercial Hub",
-                              "Riyasat Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "lalithabagh",
-                    "name": "Lalitha Bagh",
-                    "zone": "Rajendranagar",
-                    "circleName": "Jangammet",
-                    "wardNo": 74,
-                    "landmarks": [
-                              "Lalitha Bagh Main Road",
-                              "Lalitha Bagh Bus Stop",
-                              "Near Lalitha Bagh Commercial Hub",
-                              "Lalitha Bagh Metro Gate"
-                    ]
-          },
-          {
-                    "id": "jangammet",
-                    "name": "Jangammet",
-                    "zone": "Rajendranagar",
-                    "circleName": "Jangammet",
-                    "wardNo": 75,
-                    "landmarks": [
-                              "Jangammet Main Road",
-                              "Jangammet Bus Stop",
-                              "Near Jangammet Commercial Hub",
-                              "Jangammet Metro Gate"
-                    ]
-          },
-          {
-                    "id": "phoolbagh",
-                    "name": "Phool Bagh",
-                    "zone": "Rajendranagar",
-                    "circleName": "Jangammet",
-                    "wardNo": 76,
-                    "landmarks": [
-                              "Phool Bagh Main Road",
-                              "Phool Bagh Bus Stop",
-                              "Near Phool Bagh Commercial Hub",
-                              "Phool Bagh Metro Gate"
-                    ]
-          },
-          {
-                    "id": "quadrichaman",
-                    "name": "Quadri Chaman",
-                    "zone": "Rajendranagar",
-                    "circleName": "Jangammet",
-                    "wardNo": 77,
-                    "landmarks": [
-                              "Quadri Chaman Main Road",
-                              "Quadri Chaman Bus Stop",
-                              "Near Quadri Chaman Commercial Hub",
-                              "Quadri Chaman Metro Gate"
-                    ]
-          },
-          {
-                    "id": "gowlipura",
-                    "name": "Gowlipura",
-                    "zone": "Charminar",
-                    "circleName": "Yakutpura",
-                    "wardNo": 78,
-                    "landmarks": [
-                              "Gowlipura Main Road",
-                              "Gowlipura Bus Stop",
-                              "Near Gowlipura Commercial Hub",
-                              "Gowlipura Metro Gate"
-                    ]
-          },
-          {
-                    "id": "talabchanchalam",
-                    "name": "Talab Chanchalam",
-                    "zone": "Charminar",
-                    "circleName": "Yakutpura",
-                    "wardNo": 79,
-                    "landmarks": [
-                              "Talab Chanchalam Main Road",
-                              "Talab Chanchalam Bus Stop",
-                              "Near Talab Chanchalam Commercial Hub",
-                              "Talab Chanchalam Metro Gate"
-                    ]
-          },
-          {
-                    "id": "yakutpura",
-                    "name": "Yakutpura",
-                    "zone": "Charminar",
-                    "circleName": "Yakutpura",
-                    "wardNo": 80,
-                    "landmarks": [
-                              "Yakutpura Main Road",
-                              "Yakutpura Bus Stop",
-                              "Near Yakutpura Commercial Hub",
-                              "Yakutpura Metro Gate"
-                    ]
-          },
-          {
-                    "id": "dabeerpura",
-                    "name": "Dabeerpura",
-                    "zone": "Charminar",
-                    "circleName": "Yakutpura",
-                    "wardNo": 81,
-                    "landmarks": [
-                              "Dabeerpura Main Road",
-                              "Dabeerpura Bus Stop",
-                              "Near Dabeerpura Commercial Hub",
-                              "Dabeerpura Metro Gate"
-                    ]
-          },
-          {
-                    "id": "reinbazar",
-                    "name": "Rein Bazar",
-                    "zone": "Charminar",
-                    "circleName": "Yakutpura",
-                    "wardNo": 82,
-                    "landmarks": [
-                              "Rein Bazar Main Road",
-                              "Rein Bazar Bus Stop",
-                              "Near Rein Bazar Commercial Hub",
-                              "Rein Bazar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "madannapet",
-                    "name": "Madannapet",
-                    "zone": "Charminar",
-                    "circleName": "Yakutpura",
-                    "wardNo": 83,
-                    "landmarks": [
-                              "Madannapet Main Road",
-                              "Madannapet Bus Stop",
-                              "Near Madannapet Commercial Hub",
-                              "Madannapet Metro Gate"
-                    ]
-          },
-          {
-                    "id": "bhanunagar",
-                    "name": "Bhanu Nagar",
-                    "zone": "Charminar",
-                    "circleName": "Santosh Nagar",
-                    "wardNo": 84,
-                    "landmarks": [
-                              "Bhanu Nagar Main Road",
-                              "Bhanu Nagar Bus Stop",
-                              "Near Bhanu Nagar Commercial Hub",
-                              "Bhanu Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "santoshnagar",
-                    "name": "Santosh Nagar",
-                    "zone": "Charminar",
-                    "circleName": "Santosh Nagar",
-                    "wardNo": 85,
-                    "landmarks": [
-                              "Santosh Nagar Main Road",
-                              "Santosh Nagar Bus Stop",
-                              "Near Santosh Nagar Commercial Hub",
-                              "Santosh Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "issadan",
-                    "name": "IS SADAN",
-                    "zone": "Charminar",
-                    "circleName": "Santosh Nagar",
-                    "wardNo": 86,
-                    "landmarks": [
-                              "IS SADAN Main Road",
-                              "IS SADAN Bus Stop",
-                              "Near IS SADAN Commercial Hub",
-                              "IS SADAN Metro Gate"
-                    ]
-          },
-          {
-                    "id": "saraswatinagar",
-                    "name": "Saraswati Nagar",
-                    "zone": "Charminar",
-                    "circleName": "Santosh Nagar",
-                    "wardNo": 87,
-                    "landmarks": [
-                              "Saraswati Nagar Main Road",
-                              "Saraswati Nagar Bus Stop",
-                              "Near Saraswati Nagar Commercial Hub",
-                              "Saraswati Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "saidabad",
-                    "name": "Saidabad",
-                    "zone": "Charminar",
-                    "circleName": "Malakpet",
-                    "wardNo": 88,
-                    "landmarks": [
-                              "Saidabad Main Road",
-                              "Saidabad Bus Stop",
-                              "Near Saidabad Commercial Hub",
-                              "Saidabad Metro Gate"
-                    ]
-          },
-          {
-                    "id": "asmangadh",
-                    "name": "Asmangadh",
-                    "zone": "Charminar",
-                    "circleName": "Malakpet",
-                    "wardNo": 89,
-                    "landmarks": [
-                              "Asmangadh Main Road",
-                              "Asmangadh Bus Stop",
-                              "Near Asmangadh Commercial Hub",
-                              "Asmangadh Metro Gate"
-                    ]
-          },
-          {
-                    "id": "moosarambagh",
-                    "name": "Moosarambagh",
-                    "zone": "Charminar",
-                    "circleName": "Moosarambagh",
-                    "wardNo": 90,
-                    "landmarks": [
-                              "Moosarambagh Main Road",
-                              "Moosarambagh Bus Stop",
-                              "Near Moosarambagh Commercial Hub",
-                              "Moosarambagh Metro Gate"
-                    ]
-          },
-          {
-                    "id": "oldmalakpet",
-                    "name": "Old Malakpet",
-                    "zone": "Charminar",
-                    "circleName": "Moosarambagh",
-                    "wardNo": 91,
-                    "landmarks": [
-                              "Old Malakpet Main Road",
-                              "Old Malakpet Bus Stop",
-                              "Near Old Malakpet Commercial Hub",
-                              "Old Malakpet Metro Gate"
-                    ]
-          },
-          {
-                    "id": "mchcolony",
-                    "name": "MCH Colony",
-                    "zone": "Charminar",
-                    "circleName": "Moosarambagh",
-                    "wardNo": 92,
-                    "landmarks": [
-                              "MCH Colony Main Road",
-                              "MCH Colony Bus Stop",
-                              "Near MCH Colony Commercial Hub",
-                              "MCH Colony Metro Gate"
-                    ]
-          },
-          {
-                    "id": "akberbagh",
-                    "name": "Akberbagh",
-                    "zone": "Charminar",
-                    "circleName": "Malakpet",
-                    "wardNo": 93,
-                    "landmarks": [
-                              "Akberbagh Main Road",
-                              "Akberbagh Bus Stop",
-                              "Near Akberbagh Commercial Hub",
-                              "Akberbagh Metro Gate"
-                    ]
-          },
-          {
-                    "id": "chawani",
-                    "name": "Chawani",
-                    "zone": "Charminar",
-                    "circleName": "Malakpet",
-                    "wardNo": 94,
-                    "landmarks": [
-                              "Chawani Main Road",
-                              "Chawani Bus Stop",
-                              "Near Chawani Commercial Hub",
-                              "Chawani Metro Gate"
-                    ]
-          },
-          {
-                    "id": "kaladera",
-                    "name": "Kala Dera",
-                    "zone": "Charminar",
-                    "circleName": "Moosarambagh",
-                    "wardNo": 95,
-                    "landmarks": [
-                              "Kala Dera Main Road",
-                              "Kala Dera Bus Stop",
-                              "Near Kala Dera Commercial Hub",
-                              "Kala Dera Metro Gate"
-                    ]
-          },
-          {
-                    "id": "azampura",
-                    "name": "Azampura",
-                    "zone": "Charminar",
-                    "circleName": "Moosarambagh",
-                    "wardNo": 96,
-                    "landmarks": [
-                              "Azampura Main Road",
-                              "Azampura Bus Stop",
-                              "Near Azampura Commercial Hub",
-                              "Azampura Metro Gate"
-                    ]
-          },
-          {
-                    "id": "puranihaveli",
-                    "name": "Purani Haveli",
-                    "zone": "Charminar",
-                    "circleName": "Charminar",
-                    "wardNo": 97,
-                    "landmarks": [
-                              "Purani Haveli Main Road",
-                              "Purani Haveli Bus Stop",
-                              "Near Purani Haveli Commercial Hub",
-                              "Purani Haveli Metro Gate"
-                    ]
-          },
-          {
-                    "id": "pathergatti",
-                    "name": "Pathergatti",
-                    "zone": "Charminar",
-                    "circleName": "Charminar",
-                    "wardNo": 98,
-                    "landmarks": [
-                              "Pathergatti Main Road",
-                              "Pathergatti Bus Stop",
-                              "Near Pathergatti Commercial Hub",
-                              "Pathergatti Metro Gate"
-                    ]
-          },
-          {
-                    "id": "haribowli",
-                    "name": "Hari Bowli",
-                    "zone": "Charminar",
-                    "circleName": "Charminar",
-                    "wardNo": 99,
-                    "landmarks": [
-                              "Hari Bowli Main Road",
-                              "Hari Bowli Bus Stop",
-                              "Near Hari Bowli Commercial Hub",
-                              "Hari Bowli Metro Gate"
-                    ]
-          },
-          {
-                    "id": "qazipura",
-                    "name": "Qazipura",
-                    "zone": "Charminar",
-                    "circleName": "Charminar",
-                    "wardNo": 100,
-                    "landmarks": [
-                              "Qazipura Main Road",
-                              "Qazipura Bus Stop",
-                              "Near Qazipura Commercial Hub",
-                              "Qazipura Metro Gate"
-                    ]
-          },
-          {
-                    "id": "ghansibazar",
-                    "name": "Ghansi Bazar",
-                    "zone": "Charminar",
-                    "circleName": "Charminar",
-                    "wardNo": 101,
-                    "landmarks": [
-                              "Ghansi Bazar Main Road",
-                              "Ghansi Bazar Bus Stop",
-                              "Near Ghansi Bazar Commercial Hub",
-                              "Ghansi Bazar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "puranapul",
-                    "name": "Purana Pul",
-                    "zone": "Charminar",
-                    "circleName": "Charminar",
-                    "wardNo": 102,
-                    "landmarks": [
-                              "Purana Pul Main Road",
-                              "Purana Pul Bus Stop",
-                              "Near Purana Pul Commercial Hub",
-                              "Purana Pul Metro Gate"
-                    ]
-          },
-          {
-                    "id": "doodhbowli",
-                    "name": "Doodh Bowli",
-                    "zone": "Rajendranagar",
-                    "circleName": "Bahadurpura",
-                    "wardNo": 103,
-                    "landmarks": [
-                              "Doodh Bowli Main Road",
-                              "Doodh Bowli Bus Stop",
-                              "Near Doodh Bowli Commercial Hub",
-                              "Doodh Bowli Metro Gate"
-                    ]
-          },
-          {
-                    "id": "shahalibanda",
-                    "name": "Shah Ali Banda",
-                    "zone": "Rajendranagar",
-                    "circleName": "Falaknuma",
-                    "wardNo": 104,
-                    "landmarks": [
-                              "Shah Ali Banda Main Road",
-                              "Shah Ali Banda Bus Stop",
-                              "Near Shah Ali Banda Commercial Hub",
-                              "Shah Ali Banda Metro Gate"
-                    ]
-          },
-          {
-                    "id": "falaknuma",
-                    "name": "Falaknuma",
-                    "zone": "Rajendranagar",
-                    "circleName": "Falaknuma",
-                    "wardNo": 105,
-                    "landmarks": [
-                              "Falaknuma Main Road",
-                              "Falaknuma Bus Stop",
-                              "Near Falaknuma Commercial Hub",
-                              "Falaknuma Metro Gate"
-                    ]
-          },
-          {
-                    "id": "jahanuma",
-                    "name": "Jahanuma",
-                    "zone": "Rajendranagar",
-                    "circleName": "Falaknuma",
-                    "wardNo": 106,
-                    "landmarks": [
-                              "Jahanuma Main Road",
-                              "Jahanuma Bus Stop",
-                              "Near Jahanuma Commercial Hub",
-                              "Jahanuma Metro Gate"
-                    ]
-          },
-          {
-                    "id": "nawabsahebkunta",
-                    "name": "Nawab Saheb Kunta",
-                    "zone": "Rajendranagar",
-                    "circleName": "Falaknuma",
-                    "wardNo": 107,
-                    "landmarks": [
-                              "Nawab Saheb Kunta Main Road",
-                              "Nawab Saheb Kunta Bus Stop",
-                              "Near Nawab Saheb Kunta Commercial Hub",
-                              "Nawab Saheb Kunta Metro Gate"
-                    ]
-          },
-          {
-                    "id": "teegalkunta",
-                    "name": "Teegal Kunta",
-                    "zone": "Rajendranagar",
-                    "circleName": "Bahadurpura",
-                    "wardNo": 108,
-                    "landmarks": [
-                              "Teegal Kunta Main Road",
-                              "Teegal Kunta Bus Stop",
-                              "Near Teegal Kunta Commercial Hub",
-                              "Teegal Kunta Metro Gate"
-                    ]
-          },
-          {
-                    "id": "chandulalbaradari",
-                    "name": "Chandu Lal Baradari",
-                    "zone": "Rajendranagar",
-                    "circleName": "Bahadurpura",
-                    "wardNo": 109,
-                    "landmarks": [
-                              "Chandu Lal Baradari Main Road",
-                              "Chandu Lal Baradari Bus Stop",
-                              "Near Chandu Lal Baradari Commercial Hub",
-                              "Chandu Lal Baradari Metro Gate"
-                    ]
-          },
-          {
-                    "id": "ramnasthpura",
-                    "name": "Ramnasthpura",
-                    "zone": "Rajendranagar",
-                    "circleName": "Bahadurpura",
-                    "wardNo": 110,
-                    "landmarks": [
-                              "Ramnasthpura Main Road",
-                              "Ramnasthpura Bus Stop",
-                              "Near Ramnasthpura Commercial Hub",
-                              "Ramnasthpura Metro Gate"
-                    ]
-          },
-          {
-                    "id": "kishanbagh",
-                    "name": "Kishanbagh",
-                    "zone": "Rajendranagar",
-                    "circleName": "Bahadurpura",
-                    "wardNo": 111,
-                    "landmarks": [
-                              "Kishanbagh Main Road",
-                              "Kishanbagh Bus Stop",
-                              "Near Kishanbagh Commercial Hub",
-                              "Kishanbagh Metro Gate"
-                    ]
-          },
-          {
-                    "id": "attapur",
-                    "name": "Attapur",
-                    "zone": "Rajendranagar",
-                    "circleName": "Attapur",
-                    "wardNo": 112,
-                    "landmarks": [
-                              "Attapur Main Road",
-                              "Attapur Bus Stop",
-                              "Near Attapur Commercial Hub",
-                              "Attapur Metro Gate"
-                    ]
-          },
-          {
-                    "id": "hyderguda",
-                    "name": "Hyderguda",
-                    "zone": "Rajendranagar",
-                    "circleName": "Attapur",
-                    "wardNo": 113,
-                    "landmarks": [
-                              "Hyderguda Main Road",
-                              "Hyderguda Bus Stop",
-                              "Near Hyderguda Commercial Hub",
-                              "Hyderguda Metro Gate"
-                    ]
-          },
-          {
-                    "id": "sulemannagar",
-                    "name": "Suleman Nagar",
-                    "zone": "Rajendranagar",
-                    "circleName": "Attapur",
-                    "wardNo": 114,
-                    "landmarks": [
-                              "Suleman Nagar Main Road",
-                              "Suleman Nagar Bus Stop",
-                              "Near Suleman Nagar Commercial Hub",
-                              "Suleman Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "shastripuram",
-                    "name": "Shastripuram",
-                    "zone": "Rajendranagar",
-                    "circleName": "Attapur",
-                    "wardNo": 115,
-                    "landmarks": [
-                              "Shastripuram Main Road",
-                              "Shastripuram Bus Stop",
-                              "Near Shastripuram Commercial Hub",
-                              "Shastripuram Metro Gate"
-                    ]
-          },
-          {
-                    "id": "katedan",
-                    "name": "Katedan",
-                    "zone": "Rajendranagar",
-                    "circleName": "Attapur",
-                    "wardNo": 116,
-                    "landmarks": [
-                              "Katedan Main Road",
-                              "Katedan Bus Stop",
-                              "Near Katedan Commercial Hub",
-                              "Katedan Metro Gate"
-                    ]
-          },
-          {
-                    "id": "mailardevpally",
-                    "name": "Mailardevpally",
-                    "zone": "Rajendranagar",
-                    "circleName": "Attapur",
-                    "wardNo": 117,
-                    "landmarks": [
-                              "Mailardevpally Main Road",
-                              "Mailardevpally Bus Stop",
-                              "Near Mailardevpally Commercial Hub",
-                              "Mailardevpally Metro Gate"
-                    ]
-          },
-          {
-                    "id": "shamshabad",
-                    "name": "Shamshabad",
-                    "zone": "Shamshabad",
-                    "circleName": "Shamshabad",
-                    "wardNo": 118,
-                    "landmarks": [
-                              "Shamshabad Main Road",
-                              "Shamshabad Bus Stop",
-                              "Near Shamshabad Commercial Hub",
-                              "Shamshabad Metro Gate"
-                    ]
-          },
-          {
-                    "id": "kothwalguda",
-                    "name": "Kothwalguda",
-                    "zone": "Shamshabad",
-                    "circleName": "Shamshabad",
-                    "wardNo": 119,
-                    "landmarks": [
-                              "Kothwalguda Main Road",
-                              "Kothwalguda Bus Stop",
-                              "Near Kothwalguda Commercial Hub",
-                              "Kothwalguda Metro Gate"
-                    ]
-          },
-          {
-                    "id": "rajendranagar",
-                    "name": "Rajendra Nagar",
-                    "zone": "Rajendranagar",
-                    "circleName": "Rajendra Nagar",
-                    "wardNo": 120,
-                    "landmarks": [
-                              "Rajendra Nagar Main Road",
-                              "Rajendra Nagar Bus Stop",
-                              "Near Rajendra Nagar Commercial Hub",
-                              "Rajendra Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "bandlagudajagir",
-                    "name": "Bandlaguda Jagir",
-                    "zone": "Rajendranagar",
-                    "circleName": "Rajendra Nagar",
-                    "wardNo": 121,
-                    "landmarks": [
-                              "Bandlaguda Jagir Main Road",
-                              "Bandlaguda Jagir Bus Stop",
-                              "Near Bandlaguda Jagir Commercial Hub",
-                              "Bandlaguda Jagir Metro Gate"
-                    ]
-          },
-          {
-                    "id": "kismatpur",
-                    "name": "Kismatpur",
-                    "zone": "Rajendranagar",
-                    "circleName": "Rajendra Nagar",
-                    "wardNo": 122,
-                    "landmarks": [
-                              "Kismatpur Main Road",
-                              "Kismatpur Bus Stop",
-                              "Near Kismatpur Commercial Hub",
-                              "Kismatpur Metro Gate"
-                    ]
-          },
-          {
-                    "id": "hydershahkote",
-                    "name": "Hydershahkote",
-                    "zone": "Rajendranagar",
-                    "circleName": "Rajendra Nagar",
-                    "wardNo": 123,
-                    "landmarks": [
-                              "Hydershahkote Main Road",
-                              "Hydershahkote Bus Stop",
-                              "Near Hydershahkote Commercial Hub",
-                              "Hydershahkote Metro Gate"
-                    ]
-          },
-          {
-                    "id": "narsingi",
-                    "name": "Narsingi",
-                    "zone": "Serilingampally",
-                    "circleName": "Narsingi",
-                    "wardNo": 124,
-                    "landmarks": [
-                              "Narsingi Main Road",
-                              "Narsingi Bus Stop",
-                              "Near Narsingi Commercial Hub",
-                              "Narsingi Metro Gate"
-                    ]
-          },
-          {
-                    "id": "kokapet",
-                    "name": "Kokapet",
-                    "zone": "Serilingampally",
-                    "circleName": "Narsingi",
-                    "wardNo": 125,
-                    "landmarks": [
-                              "Kokapet Main Road",
-                              "Kokapet Bus Stop",
-                              "Near Kokapet Commercial Hub",
-                              "Kokapet Metro Gate"
-                    ]
-          },
-          {
-                    "id": "gandipet",
-                    "name": "Gandipet",
-                    "zone": "Serilingampally",
-                    "circleName": "Narsingi",
-                    "wardNo": 126,
-                    "landmarks": [
-                              "Gandipet Main Road",
-                              "Gandipet Bus Stop",
-                              "Near Gandipet Commercial Hub",
-                              "Gandipet Metro Gate"
-                    ]
-          },
-          {
-                    "id": "manikonda",
-                    "name": "Manikonda",
-                    "zone": "Serilingampally",
-                    "circleName": "Narsingi",
-                    "wardNo": 127,
-                    "landmarks": [
-                              "Manikonda Main Road",
-                              "Manikonda Bus Stop",
-                              "Near Manikonda Commercial Hub",
-                              "Manikonda Metro Gate"
-                    ]
-          },
-          {
-                    "id": "neknampur",
-                    "name": "Neknampur",
-                    "zone": "Serilingampally",
-                    "circleName": "Narsingi",
-                    "wardNo": 128,
-                    "landmarks": [
-                              "Neknampur Main Road",
-                              "Neknampur Bus Stop",
-                              "Near Neknampur Commercial Hub",
-                              "Neknampur Metro Gate"
-                    ]
-          },
-          {
-                    "id": "nizamcolony",
-                    "name": "Nizam Colony",
-                    "zone": "Golconda",
-                    "circleName": "Golconda",
-                    "wardNo": 129,
-                    "landmarks": [
-                              "Nizam Colony Main Road",
-                              "Nizam Colony Bus Stop",
-                              "Near Nizam Colony Commercial Hub",
-                              "Nizam Colony Metro Gate"
-                    ]
-          },
-          {
-                    "id": "nanalnagar",
-                    "name": "Nanalnagar",
-                    "zone": "Golconda",
-                    "circleName": "Golconda",
-                    "wardNo": 130,
-                    "landmarks": [
-                              "Nanalnagar Main Road",
-                              "Nanalnagar Bus Stop",
-                              "Near Nanalnagar Commercial Hub",
-                              "Nanalnagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "tolichowki",
-                    "name": "Tolichowki",
-                    "zone": "Golconda",
-                    "circleName": "Golconda",
-                    "wardNo": 131,
-                    "landmarks": [
-                              "Tolichowki Main Road",
-                              "Tolichowki Bus Stop",
-                              "Near Tolichowki Commercial Hub",
-                              "Tolichowki Metro Gate"
-                    ]
-          },
-          {
-                    "id": "golconda",
-                    "name": "Golconda",
-                    "zone": "Golconda",
-                    "circleName": "Golconda",
-                    "wardNo": 132,
-                    "landmarks": [
-                              "Golconda Main Road",
-                              "Golconda Bus Stop",
-                              "Near Golconda Commercial Hub",
-                              "Golconda Metro Gate"
-                    ]
-          },
-          {
-                    "id": "ibrahimbagh",
-                    "name": "Ibrahimbagh",
-                    "zone": "Golconda",
-                    "circleName": "Golconda",
-                    "wardNo": 133,
-                    "landmarks": [
-                              "Ibrahimbagh Main Road",
-                              "Ibrahimbagh Bus Stop",
-                              "Near Ibrahimbagh Commercial Hub",
-                              "Ibrahimbagh Metro Gate"
-                    ]
-          },
-          {
-                    "id": "langarhouz",
-                    "name": "Langar Houz",
-                    "zone": "Golconda",
-                    "circleName": "Karwan",
-                    "wardNo": 134,
-                    "landmarks": [
-                              "Langar Houz Main Road",
-                              "Langar Houz Bus Stop",
-                              "Near Langar Houz Commercial Hub",
-                              "Langar Houz Metro Gate"
-                    ]
-          },
-          {
-                    "id": "gudimalkapur",
-                    "name": "Gudimalkapur",
-                    "zone": "Golconda",
-                    "circleName": "Karwan",
-                    "wardNo": 135,
-                    "landmarks": [
-                              "Gudimalkapur Main Road",
-                              "Gudimalkapur Bus Stop",
-                              "Near Gudimalkapur Commercial Hub",
-                              "Gudimalkapur Metro Gate"
-                    ]
-          },
-          {
-                    "id": "karwan",
-                    "name": "Karwan",
-                    "zone": "Golconda",
-                    "circleName": "Karwan",
-                    "wardNo": 136,
-                    "landmarks": [
-                              "Karwan Main Road",
-                              "Karwan Bus Stop",
-                              "Near Karwan Commercial Hub",
-                              "Karwan Metro Gate"
-                    ]
-          },
-          {
-                    "id": "tappachabutra",
-                    "name": "Tappachabutra",
-                    "zone": "Golconda",
-                    "circleName": "Karwan",
-                    "wardNo": 137,
-                    "landmarks": [
-                              "Tappachabutra Main Road",
-                              "Tappachabutra Bus Stop",
-                              "Near Tappachabutra Commercial Hub",
-                              "Tappachabutra Metro Gate"
-                    ]
-          },
-          {
-                    "id": "ziaguda",
-                    "name": "Ziaguda",
-                    "zone": "Golconda",
-                    "circleName": "Karwan",
-                    "wardNo": 138,
-                    "landmarks": [
-                              "Ziaguda Main Road",
-                              "Ziaguda Bus Stop",
-                              "Near Ziaguda Commercial Hub",
-                              "Ziaguda Metro Gate"
-                    ]
-          },
-          {
-                    "id": "asifnagar",
-                    "name": "Asif Nagar",
-                    "zone": "Golconda",
-                    "circleName": "Mehdipatnam",
-                    "wardNo": 139,
-                    "landmarks": [
-                              "Asif Nagar Main Road",
-                              "Asif Nagar Bus Stop",
-                              "Near Asif Nagar Commercial Hub",
-                              "Asif Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "padmanabhanagar",
-                    "name": "Padmanabha Nagar",
-                    "zone": "Golconda",
-                    "circleName": "Mehdipatnam",
-                    "wardNo": 140,
-                    "landmarks": [
-                              "Padmanabha Nagar Main Road",
-                              "Padmanabha Nagar Bus Stop",
-                              "Near Padmanabha Nagar Commercial Hub",
-                              "Padmanabha Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "mehdipatnam",
-                    "name": "Mehdipatnam",
-                    "zone": "Golconda",
-                    "circleName": "Mehdipatnam",
-                    "wardNo": 141,
-                    "landmarks": [
-                              "Mehdipatnam Main Road",
-                              "Mehdipatnam Bus Stop",
-                              "Near Mehdipatnam Commercial Hub",
-                              "Mehdipatnam Metro Gate"
-                    ]
-          },
-          {
-                    "id": "syednagar",
-                    "name": "Syed Nagar",
-                    "zone": "Golconda",
-                    "circleName": "Mehdipatnam",
-                    "wardNo": 142,
-                    "landmarks": [
-                              "Syed Nagar Main Road",
-                              "Syed Nagar Bus Stop",
-                              "Near Syed Nagar Commercial Hub",
-                              "Syed Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "vijayanagarcolony",
-                    "name": "Vijayanagar Colony",
-                    "zone": "Golconda",
-                    "circleName": "Masab Tank",
-                    "wardNo": 143,
-                    "landmarks": [
-                              "Vijayanagar Colony Main Road",
-                              "Vijayanagar Colony Bus Stop",
-                              "Near Vijayanagar Colony Commercial Hub",
-                              "Vijayanagar Colony Metro Gate"
-                    ]
-          },
-          {
-                    "id": "ahmednagar",
-                    "name": "Ahmed Nagar",
-                    "zone": "Golconda",
-                    "circleName": "Masab Tank",
-                    "wardNo": 144,
-                    "landmarks": [
-                              "Ahmed Nagar Main Road",
-                              "Ahmed Nagar Bus Stop",
-                              "Near Ahmed Nagar Commercial Hub",
-                              "Ahmed Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "shantinagar",
-                    "name": "Shanti Nagar",
-                    "zone": "Golconda",
-                    "circleName": "Masab Tank",
-                    "wardNo": 145,
-                    "landmarks": [
-                              "Shanti Nagar Main Road",
-                              "Shanti Nagar Bus Stop",
-                              "Near Shanti Nagar Commercial Hub",
-                              "Shanti Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "redhills",
-                    "name": "Red Hills",
-                    "zone": "Khairatabad",
-                    "circleName": "Khairatabad",
-                    "wardNo": 146,
-                    "landmarks": [
-                              "Red Hills Main Road",
-                              "Red Hills Bus Stop",
-                              "Near Red Hills Commercial Hub",
-                              "Red Hills Metro Gate"
-                    ]
-          },
-          {
-                    "id": "mallepally",
-                    "name": "Mallepally",
-                    "zone": "Golconda",
-                    "circleName": "Masab Tank",
-                    "wardNo": 147,
-                    "landmarks": [
-                              "Mallepally Main Road",
-                              "Mallepally Bus Stop",
-                              "Near Mallepally Commercial Hub",
-                              "Mallepally Metro Gate"
-                    ]
-          },
-          {
-                    "id": "dattatreyanagar",
-                    "name": "Dattatreya Nagar",
-                    "zone": "Golconda",
-                    "circleName": "Goshamahal",
-                    "wardNo": 148,
-                    "landmarks": [
-                              "Dattatreya Nagar Main Road",
-                              "Dattatreya Nagar Bus Stop",
-                              "Near Dattatreya Nagar Commercial Hub",
-                              "Dattatreya Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "manghalhat",
-                    "name": "Manghalhat",
-                    "zone": "Golconda",
-                    "circleName": "Goshamahal",
-                    "wardNo": 149,
-                    "landmarks": [
-                              "Manghalhat Main Road",
-                              "Manghalhat Bus Stop",
-                              "Near Manghalhat Commercial Hub",
-                              "Manghalhat Metro Gate"
-                    ]
-          },
-          {
-                    "id": "goshamahal",
-                    "name": "Goshamahal",
-                    "zone": "Golconda",
-                    "circleName": "Goshamahal",
-                    "wardNo": 150,
-                    "landmarks": [
-                              "Goshamahal Main Road",
-                              "Goshamahal Bus Stop",
-                              "Near Goshamahal Commercial Hub",
-                              "Goshamahal Metro Gate"
-                    ]
-          },
-          {
-                    "id": "begumbazar",
-                    "name": "Begum Bazar",
-                    "zone": "Golconda",
-                    "circleName": "Goshamahal",
-                    "wardNo": 151,
-                    "landmarks": [
-                              "Begum Bazar Main Road",
-                              "Begum Bazar Bus Stop",
-                              "Near Begum Bazar Commercial Hub",
-                              "Begum Bazar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "jambagh",
-                    "name": "Jambagh",
-                    "zone": "Golconda",
-                    "circleName": "Goshamahal",
-                    "wardNo": 152,
-                    "landmarks": [
-                              "Jambagh Main Road",
-                              "Jambagh Bus Stop",
-                              "Near Jambagh Commercial Hub",
-                              "Jambagh Metro Gate"
-                    ]
-          },
-          {
-                    "id": "exhibitiongrounds",
-                    "name": "Exhibition Grounds",
-                    "zone": "Golconda",
-                    "circleName": "Goshamahal",
-                    "wardNo": 153,
-                    "landmarks": [
-                              "Exhibition Grounds Main Road",
-                              "Exhibition Grounds Bus Stop",
-                              "Near Exhibition Grounds Commercial Hub",
-                              "Exhibition Grounds Metro Gate"
-                    ]
-          },
-          {
-                    "id": "gunfoundry",
-                    "name": "Gunfoundry",
-                    "zone": "Khairatabad",
-                    "circleName": "Khairatabad",
-                    "wardNo": 154,
-                    "landmarks": [
-                              "Gunfoundry Main Road",
-                              "Gunfoundry Bus Stop",
-                              "Near Gunfoundry Commercial Hub",
-                              "Gunfoundry Metro Gate"
-                    ]
-          },
-          {
-                    "id": "barkatpura",
-                    "name": "BARKATPURA",
-                    "zone": "Secunderabad",
-                    "circleName": "Amberpet",
-                    "wardNo": 155,
-                    "landmarks": [
-                              "BARKATPURA Main Road",
-                              "BARKATPURA Bus Stop",
-                              "Near BARKATPURA Commercial Hub",
-                              "BARKATPURA Metro Gate"
-                    ]
-          },
-          {
-                    "id": "kachiguda",
-                    "name": "Kachiguda",
-                    "zone": "Secunderabad",
-                    "circleName": "Amberpet",
-                    "wardNo": 156,
-                    "landmarks": [
-                              "Kachiguda Main Road",
-                              "Kachiguda Bus Stop",
-                              "Near Kachiguda Commercial Hub",
-                              "Kachiguda Metro Gate"
-                    ]
-          },
-          {
-                    "id": "golnaka",
-                    "name": "Golnaka",
-                    "zone": "Secunderabad",
-                    "circleName": "Amberpet",
-                    "wardNo": 157,
-                    "landmarks": [
-                              "Golnaka Main Road",
-                              "Golnaka Bus Stop",
-                              "Near Golnaka Commercial Hub",
-                              "Golnaka Metro Gate"
-                    ]
-          },
-          {
-                    "id": "patelnagar",
-                    "name": "Patel Nagar",
-                    "zone": "Secunderabad",
-                    "circleName": "Amberpet",
-                    "wardNo": 158,
-                    "landmarks": [
-                              "Patel Nagar Main Road",
-                              "Patel Nagar Bus Stop",
-                              "Near Patel Nagar Commercial Hub",
-                              "Patel Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "amberpet",
-                    "name": "Amberpet",
-                    "zone": "Secunderabad",
-                    "circleName": "Amberpet",
-                    "wardNo": 159,
-                    "landmarks": [
-                              "Amberpet Main Road",
-                              "Amberpet Bus Stop",
-                              "Near Amberpet Commercial Hub",
-                              "Amberpet Metro Gate"
-                    ]
-          },
-          {
-                    "id": "baghamberpet",
-                    "name": "Bagh Amberpet",
-                    "zone": "Secunderabad",
-                    "circleName": "Amberpet",
-                    "wardNo": 160,
-                    "landmarks": [
-                              "Bagh Amberpet Main Road",
-                              "Bagh Amberpet Bus Stop",
-                              "Near Bagh Amberpet Commercial Hub",
-                              "Bagh Amberpet Metro Gate"
-                    ]
-          },
-          {
-                    "id": "tilaknagar",
-                    "name": "Tilak Nagar",
-                    "zone": "Secunderabad",
-                    "circleName": "Amberpet",
-                    "wardNo": 161,
-                    "landmarks": [
-                              "Tilak Nagar Main Road",
-                              "Tilak Nagar Bus Stop",
-                              "Near Tilak Nagar Commercial Hub",
-                              "Tilak Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "nallakunta",
-                    "name": "Nallakunta",
-                    "zone": "Secunderabad",
-                    "circleName": "Amberpet",
-                    "wardNo": 162,
-                    "landmarks": [
-                              "Nallakunta Main Road",
-                              "Nallakunta Bus Stop",
-                              "Near Nallakunta Commercial Hub",
-                              "Nallakunta Metro Gate"
-                    ]
-          },
-          {
-                    "id": "adikmet",
-                    "name": "Adikmet",
-                    "zone": "Secunderabad",
-                    "circleName": "Musheerabad",
-                    "wardNo": 163,
-                    "landmarks": [
-                              "Adikmet Main Road",
-                              "Adikmet Bus Stop",
-                              "Near Adikmet Commercial Hub",
-                              "Adikmet Metro Gate"
-                    ]
-          },
-          {
-                    "id": "baghlingampally",
-                    "name": "Bagh Lingampally",
-                    "zone": "Secunderabad",
-                    "circleName": "Musheerabad",
-                    "wardNo": 164,
-                    "landmarks": [
-                              "Bagh Lingampally Main Road",
-                              "Bagh Lingampally Bus Stop",
-                              "Near Bagh Lingampally Commercial Hub",
-                              "Bagh Lingampally Metro Gate"
-                    ]
-          },
-          {
-                    "id": "gandhinagar",
-                    "name": "Gandhi Nagar",
-                    "zone": "Secunderabad",
-                    "circleName": "Kavadiguda",
-                    "wardNo": 165,
-                    "landmarks": [
-                              "Gandhi Nagar Main Road",
-                              "Gandhi Nagar Bus Stop",
-                              "Near Gandhi Nagar Commercial Hub",
-                              "Gandhi Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "kavadiguda",
-                    "name": "Kavadiguda",
-                    "zone": "Secunderabad",
-                    "circleName": "Kavadiguda",
-                    "wardNo": 166,
-                    "landmarks": [
-                              "Kavadiguda Main Road",
-                              "Kavadiguda Bus Stop",
-                              "Near Kavadiguda Commercial Hub",
-                              "Kavadiguda Metro Gate"
-                    ]
-          },
-          {
-                    "id": "bakaram",
-                    "name": "Bakaram",
-                    "zone": "Secunderabad",
-                    "circleName": "Kavadiguda",
-                    "wardNo": 167,
-                    "landmarks": [
-                              "Bakaram Main Road",
-                              "Bakaram Bus Stop",
-                              "Near Bakaram Commercial Hub",
-                              "Bakaram Metro Gate"
-                    ]
-          },
-          {
-                    "id": "bholakpur",
-                    "name": "Bholakpur",
-                    "zone": "Secunderabad",
-                    "circleName": "Kavadiguda",
-                    "wardNo": 168,
-                    "landmarks": [
-                              "Bholakpur Main Road",
-                              "Bholakpur Bus Stop",
-                              "Near Bholakpur Commercial Hub",
-                              "Bholakpur Metro Gate"
-                    ]
-          },
-          {
-                    "id": "musheerabad",
-                    "name": "Musheerabad",
-                    "zone": "Secunderabad",
-                    "circleName": "Musheerabad",
-                    "wardNo": 169,
-                    "landmarks": [
-                              "Musheerabad Main Road",
-                              "Musheerabad Bus Stop",
-                              "Near Musheerabad Commercial Hub",
-                              "Musheerabad Metro Gate"
-                    ]
-          },
-          {
-                    "id": "ramnagar",
-                    "name": "Ramnagar",
-                    "zone": "Secunderabad",
-                    "circleName": "Musheerabad",
-                    "wardNo": 170,
-                    "landmarks": [
-                              "Ramnagar Main Road",
-                              "Ramnagar Bus Stop",
-                              "Near Ramnagar Commercial Hub",
-                              "Ramnagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "bapujinagar",
-                    "name": "Bapuji Nagar",
-                    "zone": "Secunderabad",
-                    "circleName": "Musheerabad",
-                    "wardNo": 171,
-                    "landmarks": [
-                              "Bapuji Nagar Main Road",
-                              "Bapuji Nagar Bus Stop",
-                              "Near Bapuji Nagar Commercial Hub",
-                              "Bapuji Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "boudhanagar",
-                    "name": "Boudha Nagar",
-                    "zone": "Secunderabad",
-                    "circleName": "Tarnaka",
-                    "wardNo": 172,
-                    "landmarks": [
-                              "Boudha Nagar Main Road",
-                              "Boudha Nagar Bus Stop",
-                              "Near Boudha Nagar Commercial Hub",
-                              "Boudha Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "tarnaka",
-                    "name": "Tarnaka",
-                    "zone": "Secunderabad",
-                    "circleName": "Tarnaka",
-                    "wardNo": 173,
-                    "landmarks": [
-                              "Tarnaka Main Road",
-                              "Tarnaka Bus Stop",
-                              "Near Tarnaka Commercial Hub",
-                              "Tarnaka Metro Gate"
-                    ]
-          },
-          {
-                    "id": "seethaphalmandi",
-                    "name": "Seethaphalmandi",
-                    "zone": "Secunderabad",
-                    "circleName": "Tarnaka",
-                    "wardNo": 174,
-                    "landmarks": [
-                              "Seethaphalmandi Main Road",
-                              "Seethaphalmandi Bus Stop",
-                              "Near Seethaphalmandi Commercial Hub",
-                              "Seethaphalmandi Metro Gate"
-                    ]
-          },
-          {
-                    "id": "chilkalguda",
-                    "name": "Chilkalguda",
-                    "zone": "Secunderabad",
-                    "circleName": "Tarnaka",
-                    "wardNo": 175,
-                    "landmarks": [
-                              "Chilkalguda Main Road",
-                              "Chilkalguda Bus Stop",
-                              "Near Chilkalguda Commercial Hub",
-                              "Chilkalguda Metro Gate"
-                    ]
-          },
-          {
-                    "id": "mettuguda",
-                    "name": "Mettuguda",
-                    "zone": "Secunderabad",
-                    "circleName": "Mettuguda",
-                    "wardNo": 176,
-                    "landmarks": [
-                              "Mettuguda Main Road",
-                              "Mettuguda Bus Stop",
-                              "Near Mettuguda Commercial Hub",
-                              "Mettuguda Metro Gate"
-                    ]
-          },
-          {
-                    "id": "lalapet",
-                    "name": "Lalapet",
-                    "zone": "Secunderabad",
-                    "circleName": "Mettuguda",
-                    "wardNo": 177,
-                    "landmarks": [
-                              "Lalapet Main Road",
-                              "Lalapet Bus Stop",
-                              "Near Lalapet Commercial Hub",
-                              "Lalapet Metro Gate"
-                    ]
-          },
-          {
-                    "id": "northlalaguda",
-                    "name": "North Lalaguda",
-                    "zone": "Secunderabad",
-                    "circleName": "Mettuguda",
-                    "wardNo": 178,
-                    "landmarks": [
-                              "North Lalaguda Main Road",
-                              "North Lalaguda Bus Stop",
-                              "Near North Lalaguda Commercial Hub",
-                              "North Lalaguda Metro Gate"
-                    ]
-          },
-          {
-                    "id": "addagutta",
-                    "name": "Addagutta",
-                    "zone": "Secunderabad",
-                    "circleName": "Mettuguda",
-                    "wardNo": 179,
-                    "landmarks": [
-                              "Addagutta Main Road",
-                              "Addagutta Bus Stop",
-                              "Near Addagutta Commercial Hub",
-                              "Addagutta Metro Gate"
-                    ]
-          },
-          {
-                    "id": "eastanandbagh",
-                    "name": "East Anandbagh",
-                    "zone": "Malkajgiri",
-                    "circleName": "Malajgiri",
-                    "wardNo": 180,
-                    "landmarks": [
-                              "East Anandbagh Main Road",
-                              "East Anandbagh Bus Stop",
-                              "Near East Anandbagh Commercial Hub",
-                              "East Anandbagh Metro Gate"
-                    ]
-          },
-          {
-                    "id": "mirjalguda",
-                    "name": "Mirjalguda",
-                    "zone": "Malkajgiri",
-                    "circleName": "Malajgiri",
-                    "wardNo": 181,
-                    "landmarks": [
-                              "Mirjalguda Main Road",
-                              "Mirjalguda Bus Stop",
-                              "Near Mirjalguda Commercial Hub",
-                              "Mirjalguda Metro Gate"
-                    ]
-          },
-          {
-                    "id": "gouthamnagar",
-                    "name": "Goutham Nagar",
-                    "zone": "Malkajgiri",
-                    "circleName": "Malajgiri",
-                    "wardNo": 182,
-                    "landmarks": [
-                              "Goutham Nagar Main Road",
-                              "Goutham Nagar Bus Stop",
-                              "Near Goutham Nagar Commercial Hub",
-                              "Goutham Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "malkajgiri",
-                    "name": "Malkajgiri",
-                    "zone": "Malkajgiri",
-                    "circleName": "Malajgiri",
-                    "wardNo": 183,
-                    "landmarks": [
-                              "Malkajgiri Main Road",
-                              "Malkajgiri Bus Stop",
-                              "Near Malkajgiri Commercial Hub",
-                              "Malkajgiri Metro Gate"
-                    ]
-          },
-          {
-                    "id": "balramnagar",
-                    "name": "Balram Nagar",
-                    "zone": "Malkajgiri",
-                    "circleName": "Moula Ali",
-                    "wardNo": 184,
-                    "landmarks": [
-                              "Balram Nagar Main Road",
-                              "Balram Nagar Bus Stop",
-                              "Near Balram Nagar Commercial Hub",
-                              "Balram Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "vinayaknagar",
-                    "name": "Vinayak Nagar",
-                    "zone": "Malkajgiri",
-                    "circleName": "Moula Ali",
-                    "wardNo": 185,
-                    "landmarks": [
-                              "Vinayak Nagar Main Road",
-                              "Vinayak Nagar Bus Stop",
-                              "Near Vinayak Nagar Commercial Hub",
-                              "Vinayak Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "moulaali",
-                    "name": "Moula Ali",
-                    "zone": "Malkajgiri",
-                    "circleName": "Moula Ali",
-                    "wardNo": 186,
-                    "landmarks": [
-                              "Moula Ali Main Road",
-                              "Moula Ali Bus Stop",
-                              "Near Moula Ali Commercial Hub",
-                              "Moula Ali Metro Gate"
-                    ]
-          },
-          {
-                    "id": "kakatiyanagar",
-                    "name": "Kakatiya Nagar",
-                    "zone": "Malkajgiri",
-                    "circleName": "Moula Ali",
-                    "wardNo": 187,
-                    "landmarks": [
-                              "Kakatiya Nagar Main Road",
-                              "Kakatiya Nagar Bus Stop",
-                              "Near Kakatiya Nagar Commercial Hub",
-                              "Kakatiya Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "neredmet",
-                    "name": "Neredmet",
-                    "zone": "Malkajgiri",
-                    "circleName": "Moula Ali",
-                    "wardNo": 188,
-                    "landmarks": [
-                              "Neredmet Main Road",
-                              "Neredmet Bus Stop",
-                              "Near Neredmet Commercial Hub",
-                              "Neredmet Metro Gate"
-                    ]
-          },
-          {
-                    "id": "yapral",
-                    "name": "Yapral",
-                    "zone": "Malkajgiri",
-                    "circleName": "Keesara",
-                    "wardNo": 189,
-                    "landmarks": [
-                              "Yapral Main Road",
-                              "Yapral Bus Stop",
-                              "Near Yapral Commercial Hub",
-                              "Yapral Metro Gate"
-                    ]
-          },
-          {
-                    "id": "turkapally",
-                    "name": "Turkapally",
-                    "zone": "Malkajgiri",
-                    "circleName": "Alwal",
-                    "wardNo": 190,
-                    "landmarks": [
-                              "Turkapally Main Road",
-                              "Turkapally Bus Stop",
-                              "Near Turkapally Commercial Hub",
-                              "Turkapally Metro Gate"
-                    ]
-          },
-          {
-                    "id": "machabollaram",
-                    "name": "Macha Bollaram",
-                    "zone": "Malkajgiri",
-                    "circleName": "Alwal",
-                    "wardNo": 191,
-                    "landmarks": [
-                              "Macha Bollaram Main Road",
-                              "Macha Bollaram Bus Stop",
-                              "Near Macha Bollaram Commercial Hub",
-                              "Macha Bollaram Metro Gate"
-                    ]
-          },
-          {
-                    "id": "templealwal",
-                    "name": "Temple Alwal",
-                    "zone": "Malkajgiri",
-                    "circleName": "Alwal",
-                    "wardNo": 192,
-                    "landmarks": [
-                              "Temple Alwal Main Road",
-                              "Temple Alwal Bus Stop",
-                              "Near Temple Alwal Commercial Hub",
-                              "Temple Alwal Metro Gate"
-                    ]
-          },
-          {
-                    "id": "venkatapuram",
-                    "name": "Venkatapuram",
-                    "zone": "Malkajgiri",
-                    "circleName": "Alwal",
-                    "wardNo": 193,
-                    "landmarks": [
-                              "Venkatapuram Main Road",
-                              "Venkatapuram Bus Stop",
-                              "Near Venkatapuram Commercial Hub",
-                              "Venkatapuram Metro Gate"
-                    ]
-          },
-          {
-                    "id": "bhudevinagar",
-                    "name": "Bhudevi Nagar",
-                    "zone": "Malkajgiri",
-                    "circleName": "Alwal",
-                    "wardNo": 194,
-                    "landmarks": [
-                              "Bhudevi Nagar Main Road",
-                              "Bhudevi Nagar Bus Stop",
-                              "Near Bhudevi Nagar Commercial Hub",
-                              "Bhudevi Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "kanajiguda",
-                    "name": "Kanajiguda",
-                    "zone": "Malkajgiri",
-                    "circleName": "Alwal",
-                    "wardNo": 195,
-                    "landmarks": [
-                              "Kanajiguda Main Road",
-                              "Kanajiguda Bus Stop",
-                              "Near Kanajiguda Commercial Hub",
-                              "Kanajiguda Metro Gate"
-                    ]
-          },
-          {
-                    "id": "mondamarket",
-                    "name": "Monda Market",
-                    "zone": "Malkajgiri",
-                    "circleName": "Bowenpally",
-                    "wardNo": 196,
-                    "landmarks": [
-                              "Monda Market Main Road",
-                              "Monda Market Bus Stop",
-                              "Near Monda Market Commercial Hub",
-                              "Monda Market Metro Gate"
-                    ]
-          },
-          {
-                    "id": "padmaraonagar",
-                    "name": "Padmarao Nagar",
-                    "zone": "Secunderabad",
-                    "circleName": "Kavadiguda",
-                    "wardNo": 197,
-                    "landmarks": [
-                              "Padmarao Nagar Main Road",
-                              "Padmarao Nagar Bus Stop",
-                              "Near Padmarao Nagar Commercial Hub",
-                              "Padmarao Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "bansilalpet",
-                    "name": "Bansilalpet",
-                    "zone": "Secunderabad",
-                    "circleName": "Kavadiguda",
-                    "wardNo": 198,
-                    "landmarks": [
-                              "Bansilalpet Main Road",
-                              "Bansilalpet Bus Stop",
-                              "Near Bansilalpet Commercial Hub",
-                              "Bansilalpet Metro Gate"
-                    ]
-          },
-          {
-                    "id": "ramgopalpet",
-                    "name": "Ramgopalpet",
-                    "zone": "Secunderabad",
-                    "circleName": "Kavadiguda",
-                    "wardNo": 199,
-                    "landmarks": [
-                              "Ramgopalpet Main Road",
-                              "Ramgopalpet Bus Stop",
-                              "Near Ramgopalpet Commercial Hub",
-                              "Ramgopalpet Metro Gate"
-                    ]
-          },
-          {
-                    "id": "begumpet",
-                    "name": "Begumpet",
-                    "zone": "Khairatabad",
-                    "circleName": "Ameerpet",
-                    "wardNo": 200,
-                    "landmarks": [
-                              "Begumpet Main Road",
-                              "Begumpet Bus Stop",
-                              "Near Begumpet Commercial Hub",
-                              "Begumpet Metro Gate"
-                    ]
-          },
-          {
-                    "id": "ameerpet",
-                    "name": "Ameerpet",
-                    "zone": "Khairatabad",
-                    "circleName": "Ameerpet",
-                    "wardNo": 201,
-                    "landmarks": [
-                              "Ameerpet Main Road",
-                              "Ameerpet Bus Stop",
-                              "Near Ameerpet Commercial Hub",
-                              "Ameerpet Metro Gate"
-                    ]
-          },
-          {
-                    "id": "srnagar",
-                    "name": "SR Nagar",
-                    "zone": "Khairatabad",
-                    "circleName": "Ameerpet",
-                    "wardNo": 202,
-                    "landmarks": [
-                              "SR Nagar Main Road",
-                              "SR Nagar Bus Stop",
-                              "Near SR Nagar Commercial Hub",
-                              "SR Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "bkguda",
-                    "name": "BK Guda",
-                    "zone": "Khairatabad",
-                    "circleName": "Ameerpet",
-                    "wardNo": 203,
-                    "landmarks": [
-                              "BK Guda Main Road",
-                              "BK Guda Bus Stop",
-                              "Near BK Guda Commercial Hub",
-                              "BK Guda Metro Gate"
-                    ]
-          },
-          {
-                    "id": "sanathnagar",
-                    "name": "Sanathnagar",
-                    "zone": "Khairatabad",
-                    "circleName": "Ameerpet",
-                    "wardNo": 204,
-                    "landmarks": [
-                              "Sanathnagar Main Road",
-                              "Sanathnagar Bus Stop",
-                              "Near Sanathnagar Commercial Hub",
-                              "Sanathnagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "erragadda",
-                    "name": "Erragadda",
-                    "zone": "Khairatabad",
-                    "circleName": "Yousufguda",
-                    "wardNo": 205,
-                    "landmarks": [
-                              "Erragadda Main Road",
-                              "Erragadda Bus Stop",
-                              "Near Erragadda Commercial Hub",
-                              "Erragadda Metro Gate"
-                    ]
-          },
-          {
-                    "id": "vengalraonagar",
-                    "name": "Vengal Rao Nagar",
-                    "zone": "Khairatabad",
-                    "circleName": "Yousufguda",
-                    "wardNo": 206,
-                    "landmarks": [
-                              "Vengal Rao Nagar Main Road",
-                              "Vengal Rao Nagar Bus Stop",
-                              "Near Vengal Rao Nagar Commercial Hub",
-                              "Vengal Rao Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "srinagarcolony",
-                    "name": "Srinagar Colony",
-                    "zone": "Khairatabad",
-                    "circleName": "Yousufguda",
-                    "wardNo": 207,
-                    "landmarks": [
-                              "Srinagar Colony Main Road",
-                              "Srinagar Colony Bus Stop",
-                              "Near Srinagar Colony Commercial Hub",
-                              "Srinagar Colony Metro Gate"
-                    ]
-          },
-          {
-                    "id": "yousufguda",
-                    "name": "Yousufguda",
-                    "zone": "Khairatabad",
-                    "circleName": "Yousufguda",
-                    "wardNo": 208,
-                    "landmarks": [
-                              "Yousufguda Main Road",
-                              "Yousufguda Bus Stop",
-                              "Near Yousufguda Commercial Hub",
-                              "Yousufguda Metro Gate"
-                    ]
-          },
-          {
-                    "id": "agcolony",
-                    "name": "AG Colony",
-                    "zone": "Khairatabad",
-                    "circleName": "Yousufguda",
-                    "wardNo": 209,
-                    "landmarks": [
-                              "AG Colony Main Road",
-                              "AG Colony Bus Stop",
-                              "Near AG Colony Commercial Hub",
-                              "AG Colony Metro Gate"
-                    ]
-          },
-          {
-                    "id": "krishnanagar",
-                    "name": "Krishna Nagar",
-                    "zone": "Khairatabad",
-                    "circleName": "Borabanda",
-                    "wardNo": 210,
-                    "landmarks": [
-                              "Krishna Nagar Main Road",
-                              "Krishna Nagar Bus Stop",
-                              "Near Krishna Nagar Commercial Hub",
-                              "Krishna Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "rahamathnagar",
-                    "name": "Rahamath Nagar",
-                    "zone": "Khairatabad",
-                    "circleName": "Borabanda",
-                    "wardNo": 211,
-                    "landmarks": [
-                              "Rahamath Nagar Main Road",
-                              "Rahamath Nagar Bus Stop",
-                              "Near Rahamath Nagar Commercial Hub",
-                              "Rahamath Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "karmikanagar",
-                    "name": "Karmika Nagar",
-                    "zone": "Khairatabad",
-                    "circleName": "Borabanda",
-                    "wardNo": 212,
-                    "landmarks": [
-                              "Karmika Nagar Main Road",
-                              "Karmika Nagar Bus Stop",
-                              "Near Karmika Nagar Commercial Hub",
-                              "Karmika Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "rajeevnagar",
-                    "name": "Rajeev Nagar",
-                    "zone": "Khairatabad",
-                    "circleName": "Borabanda",
-                    "wardNo": 213,
-                    "landmarks": [
-                              "Rajeev Nagar Main Road",
-                              "Rajeev Nagar Bus Stop",
-                              "Near Rajeev Nagar Commercial Hub",
-                              "Rajeev Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "borabanda",
-                    "name": "Borabanda",
-                    "zone": "Khairatabad",
-                    "circleName": "Borabanda",
-                    "wardNo": 214,
-                    "landmarks": [
-                              "Borabanda Main Road",
-                              "Borabanda Bus Stop",
-                              "Near Borabanda Commercial Hub",
-                              "Borabanda Metro Gate"
-                    ]
-          },
-          {
-                    "id": "jubileehills",
-                    "name": "Jubilee Hills",
-                    "zone": "Khairatabad",
-                    "circleName": "Jubilee Hills",
-                    "wardNo": 215,
-                    "landmarks": [
-                              "Jubilee Hills Main Road",
-                              "Jubilee Hills Bus Stop",
-                              "Near Jubilee Hills Commercial Hub",
-                              "Jubilee Hills Metro Gate"
-                    ]
-          },
-          {
-                    "id": "venkateshwaracolony",
-                    "name": "Venkateshwara Colony",
-                    "zone": "Khairatabad",
-                    "circleName": "Jubilee Hills",
-                    "wardNo": 216,
-                    "landmarks": [
-                              "Venkateshwara Colony Main Road",
-                              "Venkateshwara Colony Bus Stop",
-                              "Near Venkateshwara Colony Commercial Hub",
-                              "Venkateshwara Colony Metro Gate"
-                    ]
-          },
-          {
-                    "id": "irrummanzil",
-                    "name": "Irrum Manzil",
-                    "zone": "Khairatabad",
-                    "circleName": "Khairatabad",
-                    "wardNo": 217,
-                    "landmarks": [
-                              "Irrum Manzil Main Road",
-                              "Irrum Manzil Bus Stop",
-                              "Near Irrum Manzil Commercial Hub",
-                              "Irrum Manzil Metro Gate"
-                    ]
-          },
-          {
-                    "id": "somajiguda",
-                    "name": "Somajiguda",
-                    "zone": "Khairatabad",
-                    "circleName": "Khairatabad",
-                    "wardNo": 218,
-                    "landmarks": [
-                              "Somajiguda Main Road",
-                              "Somajiguda Bus Stop",
-                              "Near Somajiguda Commercial Hub",
-                              "Somajiguda Metro Gate"
-                    ]
-          },
-          {
-                    "id": "khairatabad",
-                    "name": "Khairatabad",
-                    "zone": "Khairatabad",
-                    "circleName": "Khairatabad",
-                    "wardNo": 219,
-                    "landmarks": [
-                              "Khairatabad Main Road",
-                              "Khairatabad Bus Stop",
-                              "Near Khairatabad Commercial Hub",
-                              "Khairatabad Metro Gate"
-                    ]
-          },
-          {
-                    "id": "himayathnagar",
-                    "name": "Himayathnagar",
-                    "zone": "Khairatabad",
-                    "circleName": "Khairatabad",
-                    "wardNo": 220,
-                    "landmarks": [
-                              "Himayathnagar Main Road",
-                              "Himayathnagar Bus Stop",
-                              "Near Himayathnagar Commercial Hub",
-                              "Himayathnagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "banjarahills",
-                    "name": "Banjara Hills",
-                    "zone": "Khairatabad",
-                    "circleName": "Jubilee Hills",
-                    "wardNo": 221,
-                    "landmarks": [
-                              "Banjara Hills Main Road",
-                              "Banjara Hills Bus Stop",
-                              "Near Banjara Hills Commercial Hub",
-                              "Banjara Hills Metro Gate"
-                    ]
-          },
-          {
-                    "id": "filmnagar",
-                    "name": "Film Nagar",
-                    "zone": "Khairatabad",
-                    "circleName": "Jubilee Hills",
-                    "wardNo": 222,
-                    "landmarks": [
-                              "Film Nagar Main Road",
-                              "Film Nagar Bus Stop",
-                              "Near Film Nagar Commercial Hub",
-                              "Film Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "shaikpet",
-                    "name": "Shaikpet",
-                    "zone": "Golconda",
-                    "circleName": "Golconda",
-                    "wardNo": 223,
-                    "landmarks": [
-                              "Shaikpet Main Road",
-                              "Shaikpet Bus Stop",
-                              "Near Shaikpet Commercial Hub",
-                              "Shaikpet Metro Gate"
-                    ]
-          },
-          {
-                    "id": "oucolony",
-                    "name": "OU Colony",
-                    "zone": "Golconda",
-                    "circleName": "Golconda",
-                    "wardNo": 224,
-                    "landmarks": [
-                              "OU Colony Main Road",
-                              "OU Colony Bus Stop",
-                              "Near OU Colony Commercial Hub",
-                              "OU Colony Metro Gate"
-                    ]
-          },
-          {
-                    "id": "gachibowli",
-                    "name": "Gachibowli",
-                    "zone": "Serilingampally",
-                    "circleName": "Serilingampally",
-                    "wardNo": 225,
-                    "landmarks": [
-                              "Gachibowli Main Road",
-                              "Gachibowli Bus Stop",
-                              "Near Gachibowli Commercial Hub",
-                              "Gachibowli Metro Gate"
-                    ]
-          },
-          {
-                    "id": "nallagandla",
-                    "name": "Nallagandla",
-                    "zone": "Serilingampally",
-                    "circleName": "Serilingampally",
-                    "wardNo": 226,
-                    "landmarks": [
-                              "Nallagandla Main Road",
-                              "Nallagandla Bus Stop",
-                              "Near Nallagandla Commercial Hub",
-                              "Nallagandla Metro Gate"
-                    ]
-          },
-          {
-                    "id": "serilingampally",
-                    "name": "Serilingampally",
-                    "zone": "Serilingampally",
-                    "circleName": "Serilingampally",
-                    "wardNo": 227,
-                    "landmarks": [
-                              "Serilingampally Main Road",
-                              "Serilingampally Bus Stop",
-                              "Near Serilingampally Commercial Hub",
-                              "Serilingampally Metro Gate"
-                    ]
-          },
-          {
-                    "id": "masjidbanda",
-                    "name": "Masjid Banda",
-                    "zone": "Serilingampally",
-                    "circleName": "Serilingampally",
-                    "wardNo": 228,
-                    "landmarks": [
-                              "Masjid Banda Main Road",
-                              "Masjid Banda Bus Stop",
-                              "Near Masjid Banda Commercial Hub",
-                              "Masjid Banda Metro Gate"
-                    ]
-          },
-          {
-                    "id": "sriramnagar",
-                    "name": "Sri Ram Nagar",
-                    "zone": "Serilingampally",
-                    "circleName": "Serilingampally",
-                    "wardNo": 229,
-                    "landmarks": [
-                              "Sri Ram Nagar Main Road",
-                              "Sri Ram Nagar Bus Stop",
-                              "Near Sri Ram Nagar Commercial Hub",
-                              "Sri Ram Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "anjaiahnagar",
-                    "name": "Anjaiah Nagar",
-                    "zone": "Kukatpally",
-                    "circleName": "Madhapur",
-                    "wardNo": 230,
-                    "landmarks": [
-                              "Anjaiah Nagar Main Road",
-                              "Anjaiah Nagar Bus Stop",
-                              "Near Anjaiah Nagar Commercial Hub",
-                              "Anjaiah Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "hiteccity",
-                    "name": "HITEC City",
-                    "zone": "Kukatpally",
-                    "circleName": "Madhapur",
-                    "wardNo": 231,
-                    "landmarks": [
-                              "HITEC City Main Road",
-                              "HITEC City Bus Stop",
-                              "Near HITEC City Commercial Hub",
-                              "HITEC City Metro Gate"
-                    ]
-          },
-          {
-                    "id": "madhapur",
-                    "name": "Madhapur",
-                    "zone": "Kukatpally",
-                    "circleName": "Madhapur",
-                    "wardNo": 232,
-                    "landmarks": [
-                              "Madhapur Main Road",
-                              "Madhapur Bus Stop",
-                              "Near Madhapur Commercial Hub",
-                              "Madhapur Metro Gate"
-                    ]
-          },
-          {
-                    "id": "izzathnagar",
-                    "name": "Izzath Nagar",
-                    "zone": "Kukatpally",
-                    "circleName": "Madhapur",
-                    "wardNo": 233,
-                    "landmarks": [
-                              "Izzath Nagar Main Road",
-                              "Izzath Nagar Bus Stop",
-                              "Near Izzath Nagar Commercial Hub",
-                              "Izzath Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "kondapur",
-                    "name": "Kondapur",
-                    "zone": "Serilingampally",
-                    "circleName": "Serilingampally",
-                    "wardNo": 234,
-                    "landmarks": [
-                              "Kondapur Main Road",
-                              "Kondapur Bus Stop",
-                              "Near Kondapur Commercial Hub",
-                              "Kondapur Metro Gate"
-                    ]
-          },
-          {
-                    "id": "matrusrinagar",
-                    "name": "Matrusri Nagar",
-                    "zone": "Kukatpally",
-                    "circleName": "Madhapur",
-                    "wardNo": 235,
-                    "landmarks": [
-                              "Matrusri Nagar Main Road",
-                              "Matrusri Nagar Bus Stop",
-                              "Near Matrusri Nagar Commercial Hub",
-                              "Matrusri Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "hafeezpet",
-                    "name": "Hafeezpet",
-                    "zone": "Serilingampally",
-                    "circleName": "Miyapur",
-                    "wardNo": 236,
-                    "landmarks": [
-                              "Hafeezpet Main Road",
-                              "Hafeezpet Bus Stop",
-                              "Near Hafeezpet Commercial Hub",
-                              "Hafeezpet Metro Gate"
-                    ]
-          },
-          {
-                    "id": "madeenaguda",
-                    "name": "Madeenaguda",
-                    "zone": "Serilingampally",
-                    "circleName": "Miyapur",
-                    "wardNo": 237,
-                    "landmarks": [
-                              "Madeenaguda Main Road",
-                              "Madeenaguda Bus Stop",
-                              "Near Madeenaguda Commercial Hub",
-                              "Madeenaguda Metro Gate"
-                    ]
-          },
-          {
-                    "id": "chandanagar",
-                    "name": "Chanda Nagar",
-                    "zone": "Serilingampally",
-                    "circleName": "Miyapur",
-                    "wardNo": 238,
-                    "landmarks": [
-                              "Chanda Nagar Main Road",
-                              "Chanda Nagar Bus Stop",
-                              "Near Chanda Nagar Commercial Hub",
-                              "Chanda Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "deepthisrinagar",
-                    "name": "Deepthisri Nagar",
-                    "zone": "Serilingampally",
-                    "circleName": "Miyapur",
-                    "wardNo": 239,
-                    "landmarks": [
-                              "Deepthisri Nagar Main Road",
-                              "Deepthisri Nagar Bus Stop",
-                              "Near Deepthisri Nagar Commercial Hub",
-                              "Deepthisri Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "miyapur",
-                    "name": "Miyapur",
-                    "zone": "Serilingampally",
-                    "circleName": "Miyapur",
-                    "wardNo": 240,
-                    "landmarks": [
-                              "Miyapur Main Road",
-                              "Miyapur Bus Stop",
-                              "Near Miyapur Commercial Hub",
-                              "Miyapur Metro Gate"
-                    ]
-          },
-          {
-                    "id": "makthamahabubpet",
-                    "name": "Maktha Mahabubpet",
-                    "zone": "Serilingampally",
-                    "circleName": "Miyapur",
-                    "wardNo": 241,
-                    "landmarks": [
-                              "Maktha Mahabubpet Main Road",
-                              "Maktha Mahabubpet Bus Stop",
-                              "Near Maktha Mahabubpet Commercial Hub",
-                              "Maktha Mahabubpet Metro Gate"
-                    ]
-          },
-          {
-                    "id": "mayurinagar",
-                    "name": "Mayuri Nagar",
-                    "zone": "Kukatpally",
-                    "circleName": "Madhapur",
-                    "wardNo": 242,
-                    "landmarks": [
-                              "Mayuri Nagar Main Road",
-                              "Mayuri Nagar Bus Stop",
-                              "Near Mayuri Nagar Commercial Hub",
-                              "Mayuri Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "hydernagar",
-                    "name": "Hyder Nagar",
-                    "zone": "Kukatpally",
-                    "circleName": "Allwyn Colony",
-                    "wardNo": 243,
-                    "landmarks": [
-                              "Hyder Nagar Main Road",
-                              "Hyder Nagar Bus Stop",
-                              "Near Hyder Nagar Commercial Hub",
-                              "Hyder Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "bhagyanagarcolony",
-                    "name": "Bhagya Nagar Colony",
-                    "zone": "Kukatpally",
-                    "circleName": "Allwyn Colony",
-                    "wardNo": 244,
-                    "landmarks": [
-                              "Bhagya Nagar Colony Main Road",
-                              "Bhagya Nagar Colony Bus Stop",
-                              "Near Bhagya Nagar Colony Commercial Hub",
-                              "Bhagya Nagar Colony Metro Gate"
-                    ]
-          },
-          {
-                    "id": "shamshiguda",
-                    "name": "Shamshiguda",
-                    "zone": "Kukatpally",
-                    "circleName": "Allwyn Colony",
-                    "wardNo": 245,
-                    "landmarks": [
-                              "Shamshiguda Main Road",
-                              "Shamshiguda Bus Stop",
-                              "Near Shamshiguda Commercial Hub",
-                              "Shamshiguda Metro Gate"
-                    ]
-          },
-          {
-                    "id": "allwyncolony",
-                    "name": "Allwyn Colony",
-                    "zone": "Kukatpally",
-                    "circleName": "Allwyn Colony",
-                    "wardNo": 246,
-                    "landmarks": [
-                              "Allwyn Colony Main Road",
-                              "Allwyn Colony Bus Stop",
-                              "Near Allwyn Colony Commercial Hub",
-                              "Allwyn Colony Metro Gate"
-                    ]
-          },
-          {
-                    "id": "vivekanandanagarcolony",
-                    "name": "Vivekananda Nagar Colony",
-                    "zone": "Kukatpally",
-                    "circleName": "Allwyn Colony",
-                    "wardNo": 247,
-                    "landmarks": [
-                              "Vivekananda Nagar Colony Main Road",
-                              "Vivekananda Nagar Colony Bus Stop",
-                              "Near Vivekananda Nagar Colony Commercial Hub",
-                              "Vivekananda Nagar Colony Metro Gate"
-                    ]
-          },
-          {
-                    "id": "venkateshwaranagar",
-                    "name": "Venkateshwara Nagar",
-                    "zone": "Kukatpally",
-                    "circleName": "Allwyn Colony",
-                    "wardNo": 248,
-                    "landmarks": [
-                              "Venkateshwara Nagar Main Road",
-                              "Venkateshwara Nagar Bus Stop",
-                              "Near Venkateshwara Nagar Commercial Hub",
-                              "Venkateshwara Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "kukatpally",
-                    "name": "Kukatpally",
-                    "zone": "Kukatpally",
-                    "circleName": "Kukatpally",
-                    "wardNo": 249,
-                    "landmarks": [
-                              "Kukatpally Main Road",
-                              "Kukatpally Bus Stop",
-                              "Near Kukatpally Commercial Hub",
-                              "Kukatpally Metro Gate"
-                    ]
-          },
-          {
-                    "id": "balajinagar",
-                    "name": "Balaji Nagar",
-                    "zone": "Kukatpally",
-                    "circleName": "Kukatpally",
-                    "wardNo": 250,
-                    "landmarks": [
-                              "Balaji Nagar Main Road",
-                              "Balaji Nagar Bus Stop",
-                              "Near Balaji Nagar Commercial Hub",
-                              "Balaji Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "vasanthnagar",
-                    "name": "Vasanth Nagar",
-                    "zone": "Kukatpally",
-                    "circleName": "Kukatpally",
-                    "wardNo": 251,
-                    "landmarks": [
-                              "Vasanth Nagar Main Road",
-                              "Vasanth Nagar Bus Stop",
-                              "Near Vasanth Nagar Commercial Hub",
-                              "Vasanth Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "kphbcolony",
-                    "name": "KPHB Colony",
-                    "zone": "Kukatpally",
-                    "circleName": "Kukatpally",
-                    "wardNo": 252,
-                    "landmarks": [
-                              "KPHB Colony Main Road",
-                              "KPHB Colony Bus Stop",
-                              "Near KPHB Colony Commercial Hub",
-                              "KPHB Colony Metro Gate"
-                    ]
-          },
-          {
-                    "id": "kaithalapur",
-                    "name": "Kaithalapur",
-                    "zone": "Kukatpally",
-                    "circleName": "Kukatpally",
-                    "wardNo": 253,
-                    "landmarks": [
-                              "Kaithalapur Main Road",
-                              "Kaithalapur Bus Stop",
-                              "Near Kaithalapur Commercial Hub",
-                              "Kaithalapur Metro Gate"
-                    ]
-          },
-          {
-                    "id": "gayatrinagar",
-                    "name": "Gayatri Nagar",
-                    "zone": "Kukatpally",
-                    "circleName": "Kukatpally",
-                    "wardNo": 254,
-                    "landmarks": [
-                              "Gayatri Nagar Main Road",
-                              "Gayatri Nagar Bus Stop",
-                              "Near Gayatri Nagar Commercial Hub",
-                              "Gayatri Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "allapur",
-                    "name": "Allapur",
-                    "zone": "Kukatpally",
-                    "circleName": "Moosapet",
-                    "wardNo": 255,
-                    "landmarks": [
-                              "Allapur Main Road",
-                              "Allapur Bus Stop",
-                              "Near Allapur Commercial Hub",
-                              "Allapur Metro Gate"
-                    ]
-          },
-          {
-                    "id": "motinagar",
-                    "name": "Moti Nagar",
-                    "zone": "Kukatpally",
-                    "circleName": "Moosapet",
-                    "wardNo": 256,
-                    "landmarks": [
-                              "Moti Nagar Main Road",
-                              "Moti Nagar Bus Stop",
-                              "Near Moti Nagar Commercial Hub",
-                              "Moti Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "moosapet",
-                    "name": "Moosapet",
-                    "zone": "Kukatpally",
-                    "circleName": "Moosapet",
-                    "wardNo": 257,
-                    "landmarks": [
-                              "Moosapet Main Road",
-                              "Moosapet Bus Stop",
-                              "Near Moosapet Commercial Hub",
-                              "Moosapet Metro Gate"
-                    ]
-          },
-          {
-                    "id": "prashanthnagar",
-                    "name": "Prashanth Nagar",
-                    "zone": "Kukatpally",
-                    "circleName": "Moosapet",
-                    "wardNo": 258,
-                    "landmarks": [
-                              "Prashanth Nagar Main Road",
-                              "Prashanth Nagar Bus Stop",
-                              "Near Prashanth Nagar Commercial Hub",
-                              "Prashanth Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "balanagar",
-                    "name": "Balanagar",
-                    "zone": "Kukatpally",
-                    "circleName": "Moosapet",
-                    "wardNo": 259,
-                    "landmarks": [
-                              "Balanagar Main Road",
-                              "Balanagar Bus Stop",
-                              "Near Balanagar Commercial Hub",
-                              "Balanagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "fatehnagar",
-                    "name": "Fateh Nagar",
-                    "zone": "Malkajgiri",
-                    "circleName": "Bowenpally",
-                    "wardNo": 260,
-                    "landmarks": [
-                              "Fateh Nagar Main Road",
-                              "Fateh Nagar Bus Stop",
-                              "Near Fateh Nagar Commercial Hub",
-                              "Fateh Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "prakashnagar",
-                    "name": "Prakash Nagar",
-                    "zone": "Malkajgiri",
-                    "circleName": "Bowenpally",
-                    "wardNo": 261,
-                    "landmarks": [
-                              "Prakash Nagar Main Road",
-                              "Prakash Nagar Bus Stop",
-                              "Near Prakash Nagar Commercial Hub",
-                              "Prakash Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "oldbowenpally",
-                    "name": "Old Bowenpally",
-                    "zone": "Malkajgiri",
-                    "circleName": "Bowenpally",
-                    "wardNo": 262,
-                    "landmarks": [
-                              "Old Bowenpally Main Road",
-                              "Old Bowenpally Bus Stop",
-                              "Near Old Bowenpally Commercial Hub",
-                              "Old Bowenpally Metro Gate"
-                    ]
-          },
-          {
-                    "id": "tellapur",
-                    "name": "Tellapur",
-                    "zone": "Serilingampally",
-                    "circleName": "Patancheruvu",
-                    "wardNo": 263,
-                    "landmarks": [
-                              "Tellapur Main Road",
-                              "Tellapur Bus Stop",
-                              "Near Tellapur Commercial Hub",
-                              "Tellapur Metro Gate"
-                    ]
-          },
-          {
-                    "id": "hasmathpet",
-                    "name": "Hasmathpet",
-                    "zone": "Malkajgiri",
-                    "circleName": "Bowenpally",
-                    "wardNo": 264,
-                    "landmarks": [
-                              "Hasmathpet Main Road",
-                              "Hasmathpet Bus Stop",
-                              "Near Hasmathpet Commercial Hub",
-                              "Hasmathpet Metro Gate"
-                    ]
-          },
-          {
-                    "id": "muthangi",
-                    "name": "Muthangi",
-                    "zone": "Serilingampally",
-                    "circleName": "Patancheruvu",
-                    "wardNo": 265,
-                    "landmarks": [
-                              "Muthangi Main Road",
-                              "Muthangi Bus Stop",
-                              "Near Muthangi Commercial Hub",
-                              "Muthangi Metro Gate"
-                    ]
-          },
-          {
-                    "id": "patancheruvu",
-                    "name": "Patancheruvu",
-                    "zone": "Serilingampally",
-                    "circleName": "Patancheruvu",
-                    "wardNo": 266,
-                    "landmarks": [
-                              "Patancheruvu Main Road",
-                              "Patancheruvu Bus Stop",
-                              "Near Patancheruvu Commercial Hub",
-                              "Patancheruvu Metro Gate"
-                    ]
-          },
-          {
-                    "id": "jpcolony",
-                    "name": "JP Colony",
-                    "zone": "Serilingampally",
-                    "circleName": "Patancheruvu",
-                    "wardNo": 267,
-                    "landmarks": [
-                              "JP Colony Main Road",
-                              "JP Colony Bus Stop",
-                              "Near JP Colony Commercial Hub",
-                              "JP Colony Metro Gate"
-                    ]
-          },
-          {
-                    "id": "ramachandrapuramrcpuram",
-                    "name": "Ramachandrapuram (RC Puram)",
-                    "zone": "Serilingampally",
-                    "circleName": "Ameenpur",
-                    "wardNo": 268,
-                    "landmarks": [
-                              "Ramachandrapuram (RC Puram) Main Road",
-                              "Ramachandrapuram (RC Puram) Bus Stop",
-                              "Near Ramachandrapuram (RC Puram) Commercial Hub",
-                              "Ramachandrapuram (RC Puram) Metro Gate"
-                    ]
-          },
-          {
-                    "id": "bharathinagar",
-                    "name": "Bharathi Nagar",
-                    "zone": "Serilingampally",
-                    "circleName": "Ameenpur",
-                    "wardNo": 269,
-                    "landmarks": [
-                              "Bharathi Nagar Main Road",
-                              "Bharathi Nagar Bus Stop",
-                              "Near Bharathi Nagar Commercial Hub",
-                              "Bharathi Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "beeramguda",
-                    "name": "beeramguda",
-                    "zone": "Serilingampally",
-                    "circleName": "Ameenpur",
-                    "wardNo": 270,
-                    "landmarks": [
-                              "beeramguda Main Road",
-                              "beeramguda Bus Stop",
-                              "Near beeramguda Commercial Hub",
-                              "beeramguda Metro Gate"
-                    ]
-          },
-          {
-                    "id": "ameenpur",
-                    "name": "Ameenpur",
-                    "zone": "Serilingampally",
-                    "circleName": "Ameenpur",
-                    "wardNo": 271,
-                    "landmarks": [
-                              "Ameenpur Main Road",
-                              "Ameenpur Bus Stop",
-                              "Near Ameenpur Commercial Hub",
-                              "Ameenpur Metro Gate"
-                    ]
-          },
-          {
-                    "id": "bollaram",
-                    "name": "Bollaram",
-                    "zone": "Serilingampally",
-                    "circleName": "Ameenpur",
-                    "wardNo": 272,
-                    "landmarks": [
-                              "Bollaram Main Road",
-                              "Bollaram Bus Stop",
-                              "Near Bollaram Commercial Hub",
-                              "Bollaram Metro Gate"
-                    ]
-          },
-          {
-                    "id": "nizampet",
-                    "name": "Nizampet",
-                    "zone": "Quthbullapur",
-                    "circleName": "Nizampet",
-                    "wardNo": 273,
-                    "landmarks": [
-                              "Nizampet Main Road",
-                              "Nizampet Bus Stop",
-                              "Near Nizampet Commercial Hub",
-                              "Nizampet Metro Gate"
-                    ]
-          },
-          {
-                    "id": "bachupally",
-                    "name": "Bachupally",
-                    "zone": "Quthbullapur",
-                    "circleName": "Nizampet",
-                    "wardNo": 274,
-                    "landmarks": [
-                              "Bachupally Main Road",
-                              "Bachupally Bus Stop",
-                              "Near Bachupally Commercial Hub",
-                              "Bachupally Metro Gate"
-                    ]
-          },
-          {
-                    "id": "bhandarilayout",
-                    "name": "Bhandari Layout",
-                    "zone": "Quthbullapur",
-                    "circleName": "Nizampet",
-                    "wardNo": 275,
-                    "landmarks": [
-                              "Bhandari Layout Main Road",
-                              "Bhandari Layout Bus Stop",
-                              "Near Bhandari Layout Commercial Hub",
-                              "Bhandari Layout Metro Gate"
-                    ]
-          },
-          {
-                    "id": "pragathinagar",
-                    "name": "Pragathi Nagar",
-                    "zone": "Quthbullapur",
-                    "circleName": "Nizampet",
-                    "wardNo": 276,
-                    "landmarks": [
-                              "Pragathi Nagar Main Road",
-                              "Pragathi Nagar Bus Stop",
-                              "Near Pragathi Nagar Commercial Hub",
-                              "Pragathi Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "mahadevpuram",
-                    "name": "Mahadevpuram",
-                    "zone": "Quthbullapur",
-                    "circleName": "Gajularamaram",
-                    "wardNo": 277,
-                    "landmarks": [
-                              "Mahadevpuram Main Road",
-                              "Mahadevpuram Bus Stop",
-                              "Near Mahadevpuram Commercial Hub",
-                              "Mahadevpuram Metro Gate"
-                    ]
-          },
-          {
-                    "id": "gajularamaram",
-                    "name": "Gajularamaram",
-                    "zone": "Quthbullapur",
-                    "circleName": "Gajularamaram",
-                    "wardNo": 278,
-                    "landmarks": [
-                              "Gajularamaram Main Road",
-                              "Gajularamaram Bus Stop",
-                              "Near Gajularamaram Commercial Hub",
-                              "Gajularamaram Metro Gate"
-                    ]
-          },
-          {
-                    "id": "rodamestrinagar",
-                    "name": "Rodamestri Nagar",
-                    "zone": "Quthbullapur",
-                    "circleName": "Chintal",
-                    "wardNo": 279,
-                    "landmarks": [
-                              "Rodamestri Nagar Main Road",
-                              "Rodamestri Nagar Bus Stop",
-                              "Near Rodamestri Nagar Commercial Hub",
-                              "Rodamestri Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "jagathgirigutta",
-                    "name": "Jagathgiri Gutta",
-                    "zone": "Quthbullapur",
-                    "circleName": "Chintal",
-                    "wardNo": 280,
-                    "landmarks": [
-                              "Jagathgiri Gutta Main Road",
-                              "Jagathgiri Gutta Bus Stop",
-                              "Near Jagathgiri Gutta Commercial Hub",
-                              "Jagathgiri Gutta Metro Gate"
-                    ]
-          },
-          {
-                    "id": "rangareddynagar",
-                    "name": "Ranga Reddy Nagar",
-                    "zone": "Quthbullapur",
-                    "circleName": "Chintal",
-                    "wardNo": 281,
-                    "landmarks": [
-                              "Ranga Reddy Nagar Main Road",
-                              "Ranga Reddy Nagar Bus Stop",
-                              "Near Ranga Reddy Nagar Commercial Hub",
-                              "Ranga Reddy Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "chintal",
-                    "name": "Chintal",
-                    "zone": "Quthbullapur",
-                    "circleName": "Chintal",
-                    "wardNo": 282,
-                    "landmarks": [
-                              "Chintal Main Road",
-                              "Chintal Bus Stop",
-                              "Near Chintal Commercial Hub",
-                              "Chintal Metro Gate"
-                    ]
-          },
-          {
-                    "id": "girinagar",
-                    "name": "Giri Nagar",
-                    "zone": "Quthbullapur",
-                    "circleName": "Chintal",
-                    "wardNo": 283,
-                    "landmarks": [
-                              "Giri Nagar Main Road",
-                              "Giri Nagar Bus Stop",
-                              "Near Giri Nagar Commercial Hub",
-                              "Giri Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "ganeshnagar",
-                    "name": "Ganesh Nagar",
-                    "zone": "Quthbullapur",
-                    "circleName": "Jeedimetla",
-                    "wardNo": 284,
-                    "landmarks": [
-                              "Ganesh Nagar Main Road",
-                              "Ganesh Nagar Bus Stop",
-                              "Near Ganesh Nagar Commercial Hub",
-                              "Ganesh Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "padmanagar",
-                    "name": "Padma Nagar",
-                    "zone": "Quthbullapur",
-                    "circleName": "Jeedimetla",
-                    "wardNo": 285,
-                    "landmarks": [
-                              "Padma Nagar Main Road",
-                              "Padma Nagar Bus Stop",
-                              "Near Padma Nagar Commercial Hub",
-                              "Padma Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "quthbullapur",
-                    "name": "Quthbullapur",
-                    "zone": "Quthbullapur",
-                    "circleName": "Jeedimetla",
-                    "wardNo": 286,
-                    "landmarks": [
-                              "Quthbullapur Main Road",
-                              "Quthbullapur Bus Stop",
-                              "Near Quthbullapur Commercial Hub",
-                              "Quthbullapur Metro Gate"
-                    ]
-          },
-          {
-                    "id": "petbasheerabad",
-                    "name": "Pet Basheerabad",
-                    "zone": "Quthbullapur",
-                    "circleName": "Jeedimetla",
-                    "wardNo": 287,
-                    "landmarks": [
-                              "Pet Basheerabad Main Road",
-                              "Pet Basheerabad Bus Stop",
-                              "Near Pet Basheerabad Commercial Hub",
-                              "Pet Basheerabad Metro Gate"
-                    ]
-          },
-          {
-                    "id": "kompally",
-                    "name": "Kompally",
-                    "zone": "Quthbullapur",
-                    "circleName": "Kompally",
-                    "wardNo": 288,
-                    "landmarks": [
-                              "Kompally Main Road",
-                              "Kompally Bus Stop",
-                              "Near Kompally Commercial Hub",
-                              "Kompally Metro Gate"
-                    ]
-          },
-          {
-                    "id": "doolapally",
-                    "name": "Doolapally",
-                    "zone": "Quthbullapur",
-                    "circleName": "Kompally",
-                    "wardNo": 289,
-                    "landmarks": [
-                              "Doolapally Main Road",
-                              "Doolapally Bus Stop",
-                              "Near Doolapally Commercial Hub",
-                              "Doolapally Metro Gate"
-                    ]
-          },
-          {
-                    "id": "subhashnagar",
-                    "name": "Subhash Nagar",
-                    "zone": "Quthbullapur",
-                    "circleName": "Kompally",
-                    "wardNo": 290,
-                    "landmarks": [
-                              "Subhash Nagar Main Road",
-                              "Subhash Nagar Bus Stop",
-                              "Near Subhash Nagar Commercial Hub",
-                              "Subhash Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "shapurnagar",
-                    "name": "Shapur Nagar",
-                    "zone": "Quthbullapur",
-                    "circleName": "Gajularamaram",
-                    "wardNo": 291,
-                    "landmarks": [
-                              "Shapur Nagar Main Road",
-                              "Shapur Nagar Bus Stop",
-                              "Near Shapur Nagar Commercial Hub",
-                              "Shapur Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "saibabanagar",
-                    "name": "Saibaba Nagar",
-                    "zone": "Quthbullapur",
-                    "circleName": "Kompally",
-                    "wardNo": 292,
-                    "landmarks": [
-                              "Saibaba Nagar Main Road",
-                              "Saibaba Nagar Bus Stop",
-                              "Near Saibaba Nagar Commercial Hub",
-                              "Saibaba Nagar Metro Gate"
-                    ]
-          },
-          {
-                    "id": "suraram",
-                    "name": "Suraram",
-                    "zone": "Quthbullapur",
-                    "circleName": "Gajularamaram",
-                    "wardNo": 293,
-                    "landmarks": [
-                              "Suraram Main Road",
-                              "Suraram Bus Stop",
-                              "Near Suraram Commercial Hub",
-                              "Suraram Metro Gate"
-                    ]
-          },
-          {
-                    "id": "bahadurpally",
-                    "name": "Bahadurpally",
-                    "zone": "Quthbullapur",
-                    "circleName": "Dundigal",
-                    "wardNo": 294,
-                    "landmarks": [
-                              "Bahadurpally Main Road",
-                              "Bahadurpally Bus Stop",
-                              "Near Bahadurpally Commercial Hub",
-                              "Bahadurpally Metro Gate"
-                    ]
-          },
-          {
-                    "id": "bowrampet",
-                    "name": "Bowrampet",
-                    "zone": "Quthbullapur",
-                    "circleName": "Dundigal",
-                    "wardNo": 295,
-                    "landmarks": [
-                              "Bowrampet Main Road",
-                              "Bowrampet Bus Stop",
-                              "Near Bowrampet Commercial Hub",
-                              "Bowrampet Metro Gate"
-                    ]
-          },
-          {
-                    "id": "dundigal",
-                    "name": "Dundigal",
-                    "zone": "Quthbullapur",
-                    "circleName": "Dundigal",
-                    "wardNo": 296,
-                    "landmarks": [
-                              "Dundigal Main Road",
-                              "Dundigal Bus Stop",
-                              "Near Dundigal Commercial Hub",
-                              "Dundigal Metro Gate"
-                    ]
-          },
-          {
-                    "id": "medchal",
-                    "name": "Medchal",
-                    "zone": "Quthbullapur",
-                    "circleName": "Medchal",
-                    "wardNo": 297,
-                    "landmarks": [
-                              "Medchal Main Road",
-                              "Medchal Bus Stop",
-                              "Near Medchal Commercial Hub",
-                              "Medchal Metro Gate"
-                    ]
-          },
-          {
-                    "id": "pudurkistapur",
-                    "name": "Pudur-Kistapur",
-                    "zone": "Quthbullapur",
-                    "circleName": "Medchal",
-                    "wardNo": 298,
-                    "landmarks": [
-                              "Pudur-Kistapur Main Road",
-                              "Pudur-Kistapur Bus Stop",
-                              "Near Pudur-Kistapur Commercial Hub",
-                              "Pudur-Kistapur Metro Gate"
-                    ]
-          },
-          {
-                    "id": "gundlapochampally",
-                    "name": "Gundlapochampally",
-                    "zone": "Quthbullapur",
-                    "circleName": "Medchal",
-                    "wardNo": 299,
-                    "landmarks": [
-                              "Gundlapochampally Main Road",
-                              "Gundlapochampally Bus Stop",
-                              "Near Gundlapochampally Commercial Hub",
-                              "Gundlapochampally Metro Gate"
-                    ]
-          },
-          {
-                    "id": "shamirpet",
-                    "name": "Shamirpet",
-                    "zone": "Malkajgiri",
-                    "circleName": "Keesara",
-                    "wardNo": 300,
-                    "landmarks": [
-                              "Shamirpet Main Road",
-                              "Shamirpet Bus Stop",
-                              "Near Shamirpet Commercial Hub",
-                              "Shamirpet Metro Gate"
-                    ]
-          }
-]
+        "subcities": [
+            {
+                "id": "keesara",
+                "name": "Keesara",
+                "zone": "Malkajgiri",
+                "circleName": "Keesara",
+                "wardNo": 1
+            },
+            {
+                "id": "chandrapuricolony",
+                "name": "Chandrapuri Colony",
+                "zone": "Malkajgiri",
+                "circleName": "Keesara",
+                "wardNo": 2
+            },
+            {
+                "id": "jawaharnagar",
+                "name": "Jawahar Nagar",
+                "zone": "Malkajgiri",
+                "circleName": "Keesara",
+                "wardNo": 3
+            },
+            {
+                "id": "dammaiguda",
+                "name": "Dammaiguda",
+                "zone": "Malkajgiri",
+                "circleName": "Keesara",
+                "wardNo": 4
+            },
+            {
+                "id": "nagaram",
+                "name": "Nagaram",
+                "zone": "Uppal",
+                "circleName": "Ghatkesar",
+                "wardNo": 5
+            },
+            {
+                "id": "ghatkesar",
+                "name": "Ghatkesar",
+                "zone": "Uppal",
+                "circleName": "Ghatkesar",
+                "wardNo": 6
+            },
+            {
+                "id": "edulabad",
+                "name": "Edulabad",
+                "zone": "Uppal",
+                "circleName": "Ghatkesar",
+                "wardNo": 7
+            },
+            {
+                "id": "pocharam",
+                "name": "Pocharam",
+                "zone": "Uppal",
+                "circleName": "Ghatkesar",
+                "wardNo": 8
+            },
+            {
+                "id": "medipally",
+                "name": "Medipally",
+                "zone": "Uppal",
+                "circleName": "Boduppal",
+                "wardNo": 9
+            },
+            {
+                "id": "peerzadiguda",
+                "name": "Peerzadiguda",
+                "zone": "Uppal",
+                "circleName": "Boduppal",
+                "wardNo": 10
+            },
+            {
+                "id": "boduppal",
+                "name": "Boduppal",
+                "zone": "Uppal",
+                "circleName": "Boduppal",
+                "wardNo": 11
+            },
+            {
+                "id": "chengicherla",
+                "name": "Chengicherla",
+                "zone": "Uppal",
+                "circleName": "Boduppal",
+                "wardNo": 12
+            },
+            {
+                "id": "vampuguda",
+                "name": "Vampuguda",
+                "zone": "Uppal",
+                "circleName": "Kapra",
+                "wardNo": 13
+            },
+            {
+                "id": "kapra",
+                "name": "Kapra",
+                "zone": "Uppal",
+                "circleName": "Kapra",
+                "wardNo": 14
+            },
+            {
+                "id": "drasraonagar",
+                "name": "Dr AS Rao Nagar",
+                "zone": "Uppal",
+                "circleName": "Kapra",
+                "wardNo": 15
+            },
+            {
+                "id": "kushaiguda",
+                "name": "Kushaiguda",
+                "zone": "Uppal",
+                "circleName": "Kapra",
+                "wardNo": 16
+            },
+            {
+                "id": "cherlapally",
+                "name": "Cherlapally",
+                "zone": "Uppal",
+                "circleName": "Kapra",
+                "wardNo": 17
+            },
+            {
+                "id": "shakthisainagar",
+                "name": "Shakthi Sai Nagar",
+                "zone": "Uppal",
+                "circleName": "Nacharam",
+                "wardNo": 18
+            },
+            {
+                "id": "hbcolony",
+                "name": "H.B. Colony",
+                "zone": "Uppal",
+                "circleName": "Nacharam",
+                "wardNo": 19
+            },
+            {
+                "id": "mallapur",
+                "name": "Mallapur",
+                "zone": "Uppal",
+                "circleName": "Nacharam",
+                "wardNo": 20
+            },
+            {
+                "id": "nacharam",
+                "name": "Nacharam",
+                "zone": "Uppal",
+                "circleName": "Nacharam",
+                "wardNo": 21
+            },
+            {
+                "id": "hmtnagar",
+                "name": "HMT Nagar",
+                "zone": "Uppal",
+                "circleName": "Nacharam",
+                "wardNo": 22
+            },
+            {
+                "id": "chilkanagar",
+                "name": "Chilkanagar",
+                "zone": "Uppal",
+                "circleName": "Uppal",
+                "wardNo": 23
+            },
+            {
+                "id": "beerappagadda",
+                "name": "Beerappagadda",
+                "zone": "Uppal",
+                "circleName": "Uppal",
+                "wardNo": 24
+            },
+            {
+                "id": "habsiguda",
+                "name": "Habsiguda",
+                "zone": "Uppal",
+                "circleName": "Uppal",
+                "wardNo": 25
+            },
+            {
+                "id": "ramanthapur",
+                "name": "Ramanthapur",
+                "zone": "Uppal",
+                "circleName": "Uppal",
+                "wardNo": 26
+            },
+            {
+                "id": "venkatreddynagar",
+                "name": "Venkat Reddy Nagar",
+                "zone": "Uppal",
+                "circleName": "Uppal",
+                "wardNo": 27
+            },
+            {
+                "id": "uppal",
+                "name": "Uppal",
+                "zone": "Uppal",
+                "circleName": "Uppal",
+                "wardNo": 28
+            },
+            {
+                "id": "nagole",
+                "name": "Nagole",
+                "zone": "Lb Nagar",
+                "circleName": "Nagole",
+                "wardNo": 29
+            },
+            {
+                "id": "kothapet",
+                "name": "Kothapet",
+                "zone": "Lb Nagar",
+                "circleName": "Saroornagar",
+                "wardNo": 30
+            },
+            {
+                "id": "chaitanyapuri",
+                "name": "Chaitanyapuri",
+                "zone": "Lb Nagar",
+                "circleName": "Saroornagar",
+                "wardNo": 31
+            },
+            {
+                "id": "gaddiannaram",
+                "name": "Gaddiannaram",
+                "zone": "Lb Nagar",
+                "circleName": "Saroornagar",
+                "wardNo": 32
+            },
+            {
+                "id": "saroornagar",
+                "name": "Saroornagar",
+                "zone": "Lb Nagar",
+                "circleName": "Saroornagar",
+                "wardNo": 33
+            },
+            {
+                "id": "doctorscolony",
+                "name": "Doctors Colony",
+                "zone": "Lb Nagar",
+                "circleName": "Saroornagar",
+                "wardNo": 34
+            },
+            {
+                "id": "rkpuram",
+                "name": "RK Puram",
+                "zone": "Lb Nagar",
+                "circleName": "Saroornagar",
+                "wardNo": 35
+            },
+            {
+                "id": "ntrnagar",
+                "name": "NTR Nagar",
+                "zone": "Lb Nagar",
+                "circleName": "Saroornagar",
+                "wardNo": 36
+            },
+            {
+                "id": "lingojiguda",
+                "name": "Lingojiguda",
+                "zone": "Lb Nagar",
+                "circleName": "Lb Nagar",
+                "wardNo": 37
+            },
+            {
+                "id": "champapet",
+                "name": "Champapet",
+                "zone": "Lb Nagar",
+                "circleName": "Lb Nagar",
+                "wardNo": 38
+            },
+            {
+                "id": "kharmanghat",
+                "name": "Kharmanghat",
+                "zone": "Lb Nagar",
+                "circleName": "Lb Nagar",
+                "wardNo": 39
+            },
+            {
+                "id": "bairamalguda",
+                "name": "Bairamalguda",
+                "zone": "Lb Nagar",
+                "circleName": "Lb Nagar",
+                "wardNo": 40
+            },
+            {
+                "id": "hastinapuram",
+                "name": "Hastinapuram",
+                "zone": "Lb Nagar",
+                "circleName": "Lb Nagar",
+                "wardNo": 41
+            },
+            {
+                "id": "bnreddynagar",
+                "name": "BN Reddy Nagar",
+                "zone": "Lb Nagar",
+                "circleName": "Hayathnagar",
+                "wardNo": 42
+            },
+            {
+                "id": "vanasthalipuram",
+                "name": "Vanasthalipuram",
+                "zone": "Lb Nagar",
+                "circleName": "Hayathnagar",
+                "wardNo": 43
+            },
+            {
+                "id": "chintalkunta",
+                "name": "Chintalkunta",
+                "zone": "Lb Nagar",
+                "circleName": "Hayathnagar",
+                "wardNo": 44
+            },
+            {
+                "id": "mansoorabad",
+                "name": "Mansoorabad",
+                "zone": "Lb Nagar",
+                "circleName": "Nagole",
+                "wardNo": 45
+            },
+            {
+                "id": "gsi",
+                "name": "GSI",
+                "zone": "Lb Nagar",
+                "circleName": "Nagole",
+                "wardNo": 46
+            },
+            {
+                "id": "lecturerscolony",
+                "name": "Lecturers Colony",
+                "zone": "Lb Nagar",
+                "circleName": "Nagole",
+                "wardNo": 47
+            },
+            {
+                "id": "highcourtcolony",
+                "name": "High Court Colony",
+                "zone": "Lb Nagar",
+                "circleName": "Hayathnagar",
+                "wardNo": 48
+            },
+            {
+                "id": "sahebnagar",
+                "name": "Sahebnagar",
+                "zone": "Lb Nagar",
+                "circleName": "Hayathnagar",
+                "wardNo": 49
+            },
+            {
+                "id": "hayathnagar",
+                "name": "Hayathnagar",
+                "zone": "Lb Nagar",
+                "circleName": "Hayathnagar",
+                "wardNo": 50
+            },
+            {
+                "id": "kuntloor",
+                "name": "Kuntloor",
+                "zone": "Lb Nagar",
+                "circleName": "Nagole",
+                "wardNo": 51
+            },
+            {
+                "id": "peddaamberpet",
+                "name": "Pedda Amberpet",
+                "zone": "Lb Nagar",
+                "circleName": "Nagole",
+                "wardNo": 52
+            },
+            {
+                "id": "thorrur",
+                "name": "Thorrur",
+                "zone": "Shamshabad",
+                "circleName": "Adibatla",
+                "wardNo": 53
+            },
+            {
+                "id": "kongarakalan",
+                "name": "Kongara Kalan",
+                "zone": "Shamshabad",
+                "circleName": "Adibatla",
+                "wardNo": 54
+            },
+            {
+                "id": "adibatla",
+                "name": "Adibatla",
+                "zone": "Shamshabad",
+                "circleName": "Adibatla",
+                "wardNo": 55
+            },
+            {
+                "id": "turkayamjal",
+                "name": "Turkayamjal",
+                "zone": "Shamshabad",
+                "circleName": "Adibatla",
+                "wardNo": 56
+            },
+            {
+                "id": "nadargul",
+                "name": "Nadargul",
+                "zone": "Shamshabad",
+                "circleName": "Badangpet",
+                "wardNo": 57
+            },
+            {
+                "id": "prashanthihills",
+                "name": "Prashanthi Hills",
+                "zone": "Shamshabad",
+                "circleName": "Badangpet",
+                "wardNo": 58
+            },
+            {
+                "id": "jillelaguda",
+                "name": "Jillelaguda",
+                "zone": "Shamshabad",
+                "circleName": "Badangpet",
+                "wardNo": 59
+            },
+            {
+                "id": "meerpet",
+                "name": "Meerpet",
+                "zone": "Shamshabad",
+                "circleName": "Badangpet",
+                "wardNo": 60
+            },
+            {
+                "id": "badangpet",
+                "name": "Badangpet",
+                "zone": "Shamshabad",
+                "circleName": "Badangpet",
+                "wardNo": 61
+            },
+            {
+                "id": "balapur",
+                "name": "Balapur",
+                "zone": "Shamshabad",
+                "circleName": "Badangpet",
+                "wardNo": 62
+            },
+            {
+                "id": "shaheennagar",
+                "name": "Shaheen Nagar",
+                "zone": "Shamshabad",
+                "circleName": "Jalpally",
+                "wardNo": 63
+            },
+            {
+                "id": "pahadishareef",
+                "name": "Pahadi Shareef",
+                "zone": "Shamshabad",
+                "circleName": "Jalpally",
+                "wardNo": 64
+            },
+            {
+                "id": "jalpally",
+                "name": "Jalpally",
+                "zone": "Shamshabad",
+                "circleName": "Jalpally",
+                "wardNo": 65
+            },
+            {
+                "id": "thukkuguda",
+                "name": "Thukkuguda",
+                "zone": "Shamshabad",
+                "circleName": "Shamshabad",
+                "wardNo": 66
+            },
+            {
+                "id": "mankhal",
+                "name": "Mankhal",
+                "zone": "Shamshabad",
+                "circleName": "Shamshabad",
+                "wardNo": 67
+            },
+            {
+                "id": "bandlaguda",
+                "name": "Bandlaguda",
+                "zone": "Rajendranagar",
+                "circleName": "Chandrayanagutta",
+                "wardNo": 68
+            },
+            {
+                "id": "noorinagar",
+                "name": "Noori Nagar",
+                "zone": "Rajendranagar",
+                "circleName": "Chandrayanagutta",
+                "wardNo": 69
+            },
+            {
+                "id": "barkas",
+                "name": "Barkas",
+                "zone": "Rajendranagar",
+                "circleName": "Chandrayanagutta",
+                "wardNo": 70
+            },
+            {
+                "id": "kanchanbagh",
+                "name": "Kanchanbagh",
+                "zone": "Rajendranagar",
+                "circleName": "Chandrayanagutta",
+                "wardNo": 71
+            },
+            {
+                "id": "chandrayangutta",
+                "name": "Chandrayangutta",
+                "zone": "Rajendranagar",
+                "circleName": "Chandrayanagutta",
+                "wardNo": 72
+            },
+            {
+                "id": "riyasatnagar",
+                "name": "Riyasat Nagar",
+                "zone": "Rajendranagar",
+                "circleName": "Jangammet",
+                "wardNo": 73
+            },
+            {
+                "id": "lalithabagh",
+                "name": "Lalitha Bagh",
+                "zone": "Rajendranagar",
+                "circleName": "Jangammet",
+                "wardNo": 74
+            },
+            {
+                "id": "jangammet",
+                "name": "Jangammet",
+                "zone": "Rajendranagar",
+                "circleName": "Jangammet",
+                "wardNo": 75
+            },
+            {
+                "id": "phoolbagh",
+                "name": "Phool Bagh",
+                "zone": "Rajendranagar",
+                "circleName": "Jangammet",
+                "wardNo": 76
+            },
+            {
+                "id": "quadrichaman",
+                "name": "Quadri Chaman",
+                "zone": "Rajendranagar",
+                "circleName": "Jangammet",
+                "wardNo": 77
+            },
+            {
+                "id": "gowlipura",
+                "name": "Gowlipura",
+                "zone": "Charminar",
+                "circleName": "Yakutpura",
+                "wardNo": 78
+            },
+            {
+                "id": "talabchanchalam",
+                "name": "Talab Chanchalam",
+                "zone": "Charminar",
+                "circleName": "Yakutpura",
+                "wardNo": 79
+            },
+            {
+                "id": "yakutpura",
+                "name": "Yakutpura",
+                "zone": "Charminar",
+                "circleName": "Yakutpura",
+                "wardNo": 80
+            },
+            {
+                "id": "dabeerpura",
+                "name": "Dabeerpura",
+                "zone": "Charminar",
+                "circleName": "Yakutpura",
+                "wardNo": 81
+            },
+            {
+                "id": "reinbazar",
+                "name": "Rein Bazar",
+                "zone": "Charminar",
+                "circleName": "Yakutpura",
+                "wardNo": 82
+            },
+            {
+                "id": "madannapet",
+                "name": "Madannapet",
+                "zone": "Charminar",
+                "circleName": "Yakutpura",
+                "wardNo": 83
+            },
+            {
+                "id": "bhanunagar",
+                "name": "Bhanu Nagar",
+                "zone": "Charminar",
+                "circleName": "Santosh Nagar",
+                "wardNo": 84
+            },
+            {
+                "id": "santoshnagar",
+                "name": "Santosh Nagar",
+                "zone": "Charminar",
+                "circleName": "Santosh Nagar",
+                "wardNo": 85
+            },
+            {
+                "id": "issadan",
+                "name": "IS SADAN",
+                "zone": "Charminar",
+                "circleName": "Santosh Nagar",
+                "wardNo": 86
+            },
+            {
+                "id": "saraswatinagar",
+                "name": "Saraswati Nagar",
+                "zone": "Charminar",
+                "circleName": "Santosh Nagar",
+                "wardNo": 87
+            },
+            {
+                "id": "saidabad",
+                "name": "Saidabad",
+                "zone": "Charminar",
+                "circleName": "Malakpet",
+                "wardNo": 88
+            },
+            {
+                "id": "asmangadh",
+                "name": "Asmangadh",
+                "zone": "Charminar",
+                "circleName": "Malakpet",
+                "wardNo": 89
+            },
+            {
+                "id": "moosarambagh",
+                "name": "Moosarambagh",
+                "zone": "Charminar",
+                "circleName": "Moosarambagh",
+                "wardNo": 90
+            },
+            {
+                "id": "oldmalakpet",
+                "name": "Old Malakpet",
+                "zone": "Charminar",
+                "circleName": "Moosarambagh",
+                "wardNo": 91
+            },
+            {
+                "id": "mchcolony",
+                "name": "MCH Colony",
+                "zone": "Charminar",
+                "circleName": "Moosarambagh",
+                "wardNo": 92
+            },
+            {
+                "id": "akberbagh",
+                "name": "Akberbagh",
+                "zone": "Charminar",
+                "circleName": "Malakpet",
+                "wardNo": 93
+            },
+            {
+                "id": "chawani",
+                "name": "Chawani",
+                "zone": "Charminar",
+                "circleName": "Malakpet",
+                "wardNo": 94
+            },
+            {
+                "id": "kaladera",
+                "name": "Kala Dera",
+                "zone": "Charminar",
+                "circleName": "Moosarambagh",
+                "wardNo": 95
+            },
+            {
+                "id": "azampura",
+                "name": "Azampura",
+                "zone": "Charminar",
+                "circleName": "Moosarambagh",
+                "wardNo": 96
+            },
+            {
+                "id": "puranihaveli",
+                "name": "Purani Haveli",
+                "zone": "Charminar",
+                "circleName": "Charminar",
+                "wardNo": 97
+            },
+            {
+                "id": "pathergatti",
+                "name": "Pathergatti",
+                "zone": "Charminar",
+                "circleName": "Charminar",
+                "wardNo": 98
+            },
+            {
+                "id": "haribowli",
+                "name": "Hari Bowli",
+                "zone": "Charminar",
+                "circleName": "Charminar",
+                "wardNo": 99
+            },
+            {
+                "id": "qazipura",
+                "name": "Qazipura",
+                "zone": "Charminar",
+                "circleName": "Charminar",
+                "wardNo": 100
+            },
+            {
+                "id": "ghansibazar",
+                "name": "Ghansi Bazar",
+                "zone": "Charminar",
+                "circleName": "Charminar",
+                "wardNo": 101
+            },
+            {
+                "id": "puranapul",
+                "name": "Purana Pul",
+                "zone": "Charminar",
+                "circleName": "Charminar",
+                "wardNo": 102
+            },
+            {
+                "id": "doodhbowli",
+                "name": "Doodh Bowli",
+                "zone": "Rajendranagar",
+                "circleName": "Bahadurpura",
+                "wardNo": 103
+            },
+            {
+                "id": "shahalibanda",
+                "name": "Shah Ali Banda",
+                "zone": "Rajendranagar",
+                "circleName": "Falaknuma",
+                "wardNo": 104
+            },
+            {
+                "id": "falaknuma",
+                "name": "Falaknuma",
+                "zone": "Rajendranagar",
+                "circleName": "Falaknuma",
+                "wardNo": 105
+            },
+            {
+                "id": "jahanuma",
+                "name": "Jahanuma",
+                "zone": "Rajendranagar",
+                "circleName": "Falaknuma",
+                "wardNo": 106
+            },
+            {
+                "id": "nawabsahebkunta",
+                "name": "Nawab Saheb Kunta",
+                "zone": "Rajendranagar",
+                "circleName": "Falaknuma",
+                "wardNo": 107
+            },
+            {
+                "id": "teegalkunta",
+                "name": "Teegal Kunta",
+                "zone": "Rajendranagar",
+                "circleName": "Bahadurpura",
+                "wardNo": 108
+            },
+            {
+                "id": "chandulalbaradari",
+                "name": "Chandu Lal Baradari",
+                "zone": "Rajendranagar",
+                "circleName": "Bahadurpura",
+                "wardNo": 109
+            },
+            {
+                "id": "ramnasthpura",
+                "name": "Ramnasthpura",
+                "zone": "Rajendranagar",
+                "circleName": "Bahadurpura",
+                "wardNo": 110
+            },
+            {
+                "id": "kishanbagh",
+                "name": "Kishanbagh",
+                "zone": "Rajendranagar",
+                "circleName": "Bahadurpura",
+                "wardNo": 111
+            },
+            {
+                "id": "attapur",
+                "name": "Attapur",
+                "zone": "Rajendranagar",
+                "circleName": "Attapur",
+                "wardNo": 112
+            },
+            {
+                "id": "hyderguda",
+                "name": "Hyderguda",
+                "zone": "Rajendranagar",
+                "circleName": "Attapur",
+                "wardNo": 113
+            },
+            {
+                "id": "sulemannagar",
+                "name": "Suleman Nagar",
+                "zone": "Rajendranagar",
+                "circleName": "Attapur",
+                "wardNo": 114
+            },
+            {
+                "id": "shastripuram",
+                "name": "Shastripuram",
+                "zone": "Rajendranagar",
+                "circleName": "Attapur",
+                "wardNo": 115
+            },
+            {
+                "id": "katedan",
+                "name": "Katedan",
+                "zone": "Rajendranagar",
+                "circleName": "Attapur",
+                "wardNo": 116
+            },
+            {
+                "id": "mailardevpally",
+                "name": "Mailardevpally",
+                "zone": "Rajendranagar",
+                "circleName": "Attapur",
+                "wardNo": 117
+            },
+            {
+                "id": "shamshabad",
+                "name": "Shamshabad",
+                "zone": "Shamshabad",
+                "circleName": "Shamshabad",
+                "wardNo": 118
+            },
+            {
+                "id": "kothwalguda",
+                "name": "Kothwalguda",
+                "zone": "Shamshabad",
+                "circleName": "Shamshabad",
+                "wardNo": 119
+            },
+            {
+                "id": "rajendranagar",
+                "name": "Rajendra Nagar",
+                "zone": "Rajendranagar",
+                "circleName": "Rajendra Nagar",
+                "wardNo": 120
+            },
+            {
+                "id": "bandlagudajagir",
+                "name": "Bandlaguda Jagir",
+                "zone": "Rajendranagar",
+                "circleName": "Rajendra Nagar",
+                "wardNo": 121
+            },
+            {
+                "id": "kismatpur",
+                "name": "Kismatpur",
+                "zone": "Rajendranagar",
+                "circleName": "Rajendra Nagar",
+                "wardNo": 122
+            },
+            {
+                "id": "hydershahkote",
+                "name": "Hydershahkote",
+                "zone": "Rajendranagar",
+                "circleName": "Rajendra Nagar",
+                "wardNo": 123
+            },
+            {
+                "id": "narsingi",
+                "name": "Narsingi",
+                "zone": "Serilingampally",
+                "circleName": "Narsingi",
+                "wardNo": 124
+            },
+            {
+                "id": "kokapet",
+                "name": "Kokapet",
+                "zone": "Serilingampally",
+                "circleName": "Narsingi",
+                "wardNo": 125
+            },
+            {
+                "id": "gandipet",
+                "name": "Gandipet",
+                "zone": "Serilingampally",
+                "circleName": "Narsingi",
+                "wardNo": 126
+            },
+            {
+                "id": "manikonda",
+                "name": "Manikonda",
+                "zone": "Serilingampally",
+                "circleName": "Narsingi",
+                "wardNo": 127
+            },
+            {
+                "id": "neknampur",
+                "name": "Neknampur",
+                "zone": "Serilingampally",
+                "circleName": "Narsingi",
+                "wardNo": 128
+            },
+            {
+                "id": "nizamcolony",
+                "name": "Nizam Colony",
+                "zone": "Golconda",
+                "circleName": "Golconda",
+                "wardNo": 129
+            },
+            {
+                "id": "nanalnagar",
+                "name": "Nanalnagar",
+                "zone": "Golconda",
+                "circleName": "Golconda",
+                "wardNo": 130
+            },
+            {
+                "id": "tolichowki",
+                "name": "Tolichowki",
+                "zone": "Golconda",
+                "circleName": "Golconda",
+                "wardNo": 131
+            },
+            {
+                "id": "golconda",
+                "name": "Golconda",
+                "zone": "Golconda",
+                "circleName": "Golconda",
+                "wardNo": 132
+            },
+            {
+                "id": "ibrahimbagh",
+                "name": "Ibrahimbagh",
+                "zone": "Golconda",
+                "circleName": "Golconda",
+                "wardNo": 133
+            },
+            {
+                "id": "langarhouz",
+                "name": "Langar Houz",
+                "zone": "Golconda",
+                "circleName": "Karwan",
+                "wardNo": 134
+            },
+            {
+                "id": "gudimalkapur",
+                "name": "Gudimalkapur",
+                "zone": "Golconda",
+                "circleName": "Karwan",
+                "wardNo": 135
+            },
+            {
+                "id": "karwan",
+                "name": "Karwan",
+                "zone": "Golconda",
+                "circleName": "Karwan",
+                "wardNo": 136
+            },
+            {
+                "id": "tappachabutra",
+                "name": "Tappachabutra",
+                "zone": "Golconda",
+                "circleName": "Karwan",
+                "wardNo": 137
+            },
+            {
+                "id": "ziaguda",
+                "name": "Ziaguda",
+                "zone": "Golconda",
+                "circleName": "Karwan",
+                "wardNo": 138
+            },
+            {
+                "id": "asifnagar",
+                "name": "Asif Nagar",
+                "zone": "Golconda",
+                "circleName": "Mehdipatnam",
+                "wardNo": 139
+            },
+            {
+                "id": "padmanabhanagar",
+                "name": "Padmanabha Nagar",
+                "zone": "Golconda",
+                "circleName": "Mehdipatnam",
+                "wardNo": 140
+            },
+            {
+                "id": "mehdipatnam",
+                "name": "Mehdipatnam",
+                "zone": "Golconda",
+                "circleName": "Mehdipatnam",
+                "wardNo": 141
+            },
+            {
+                "id": "syednagar",
+                "name": "Syed Nagar",
+                "zone": "Golconda",
+                "circleName": "Mehdipatnam",
+                "wardNo": 142
+            },
+            {
+                "id": "vijayanagarcolony",
+                "name": "Vijayanagar Colony",
+                "zone": "Golconda",
+                "circleName": "Masab Tank",
+                "wardNo": 143
+            },
+            {
+                "id": "ahmednagar",
+                "name": "Ahmed Nagar",
+                "zone": "Golconda",
+                "circleName": "Masab Tank",
+                "wardNo": 144
+            },
+            {
+                "id": "shantinagar",
+                "name": "Shanti Nagar",
+                "zone": "Golconda",
+                "circleName": "Masab Tank",
+                "wardNo": 145
+            },
+            {
+                "id": "redhills",
+                "name": "Red Hills",
+                "zone": "Khairatabad",
+                "circleName": "Khairatabad",
+                "wardNo": 146
+            },
+            {
+                "id": "mallepally",
+                "name": "Mallepally",
+                "zone": "Golconda",
+                "circleName": "Masab Tank",
+                "wardNo": 147
+            },
+            {
+                "id": "dattatreyanagar",
+                "name": "Dattatreya Nagar",
+                "zone": "Golconda",
+                "circleName": "Goshamahal",
+                "wardNo": 148
+            },
+            {
+                "id": "manghalhat",
+                "name": "Manghalhat",
+                "zone": "Golconda",
+                "circleName": "Goshamahal",
+                "wardNo": 149
+            },
+            {
+                "id": "goshamahal",
+                "name": "Goshamahal",
+                "zone": "Golconda",
+                "circleName": "Goshamahal",
+                "wardNo": 150
+            },
+            {
+                "id": "begumbazar",
+                "name": "Begum Bazar",
+                "zone": "Golconda",
+                "circleName": "Goshamahal",
+                "wardNo": 151
+            },
+            {
+                "id": "jambagh",
+                "name": "Jambagh",
+                "zone": "Golconda",
+                "circleName": "Goshamahal",
+                "wardNo": 152
+            },
+            {
+                "id": "exhibitiongrounds",
+                "name": "Exhibition Grounds",
+                "zone": "Golconda",
+                "circleName": "Goshamahal",
+                "wardNo": 153
+            },
+            {
+                "id": "gunfoundry",
+                "name": "Gunfoundry",
+                "zone": "Khairatabad",
+                "circleName": "Khairatabad",
+                "wardNo": 154
+            },
+            {
+                "id": "barkatpura",
+                "name": "BARKATPURA",
+                "zone": "Secunderabad",
+                "circleName": "Amberpet",
+                "wardNo": 155
+            },
+            {
+                "id": "kachiguda",
+                "name": "Kachiguda",
+                "zone": "Secunderabad",
+                "circleName": "Amberpet",
+                "wardNo": 156
+            },
+            {
+                "id": "golnaka",
+                "name": "Golnaka",
+                "zone": "Secunderabad",
+                "circleName": "Amberpet",
+                "wardNo": 157
+            },
+            {
+                "id": "patelnagar",
+                "name": "Patel Nagar",
+                "zone": "Secunderabad",
+                "circleName": "Amberpet",
+                "wardNo": 158
+            },
+            {
+                "id": "amberpet",
+                "name": "Amberpet",
+                "zone": "Secunderabad",
+                "circleName": "Amberpet",
+                "wardNo": 159
+            },
+            {
+                "id": "baghamberpet",
+                "name": "Bagh Amberpet",
+                "zone": "Secunderabad",
+                "circleName": "Amberpet",
+                "wardNo": 160
+            },
+            {
+                "id": "tilaknagar",
+                "name": "Tilak Nagar",
+                "zone": "Secunderabad",
+                "circleName": "Amberpet",
+                "wardNo": 161
+            },
+            {
+                "id": "nallakunta",
+                "name": "Nallakunta",
+                "zone": "Secunderabad",
+                "circleName": "Amberpet",
+                "wardNo": 162
+            },
+            {
+                "id": "adikmet",
+                "name": "Adikmet",
+                "zone": "Secunderabad",
+                "circleName": "Musheerabad",
+                "wardNo": 163
+            },
+            {
+                "id": "baghlingampally",
+                "name": "Bagh Lingampally",
+                "zone": "Secunderabad",
+                "circleName": "Musheerabad",
+                "wardNo": 164
+            },
+            {
+                "id": "gandhinagar",
+                "name": "Gandhi Nagar",
+                "zone": "Secunderabad",
+                "circleName": "Kavadiguda",
+                "wardNo": 165
+            },
+            {
+                "id": "kavadiguda",
+                "name": "Kavadiguda",
+                "zone": "Secunderabad",
+                "circleName": "Kavadiguda",
+                "wardNo": 166
+            },
+            {
+                "id": "bakaram",
+                "name": "Bakaram",
+                "zone": "Secunderabad",
+                "circleName": "Kavadiguda",
+                "wardNo": 167
+            },
+            {
+                "id": "bholakpur",
+                "name": "Bholakpur",
+                "zone": "Secunderabad",
+                "circleName": "Kavadiguda",
+                "wardNo": 168
+            },
+            {
+                "id": "musheerabad",
+                "name": "Musheerabad",
+                "zone": "Secunderabad",
+                "circleName": "Musheerabad",
+                "wardNo": 169
+            },
+            {
+                "id": "ramnagar",
+                "name": "Ramnagar",
+                "zone": "Secunderabad",
+                "circleName": "Musheerabad",
+                "wardNo": 170
+            },
+            {
+                "id": "bapujinagar",
+                "name": "Bapuji Nagar",
+                "zone": "Secunderabad",
+                "circleName": "Musheerabad",
+                "wardNo": 171
+            },
+            {
+                "id": "boudhanagar",
+                "name": "Boudha Nagar",
+                "zone": "Secunderabad",
+                "circleName": "Tarnaka",
+                "wardNo": 172
+            },
+            {
+                "id": "tarnaka",
+                "name": "Tarnaka",
+                "zone": "Secunderabad",
+                "circleName": "Tarnaka",
+                "wardNo": 173
+            },
+            {
+                "id": "seethaphalmandi",
+                "name": "Seethaphalmandi",
+                "zone": "Secunderabad",
+                "circleName": "Tarnaka",
+                "wardNo": 174
+            },
+            {
+                "id": "chilkalguda",
+                "name": "Chilkalguda",
+                "zone": "Secunderabad",
+                "circleName": "Tarnaka",
+                "wardNo": 175
+            },
+            {
+                "id": "mettuguda",
+                "name": "Mettuguda",
+                "zone": "Secunderabad",
+                "circleName": "Mettuguda",
+                "wardNo": 176
+            },
+            {
+                "id": "lalapet",
+                "name": "Lalapet",
+                "zone": "Secunderabad",
+                "circleName": "Mettuguda",
+                "wardNo": 177
+            },
+            {
+                "id": "northlalaguda",
+                "name": "North Lalaguda",
+                "zone": "Secunderabad",
+                "circleName": "Mettuguda",
+                "wardNo": 178
+            },
+            {
+                "id": "addagutta",
+                "name": "Addagutta",
+                "zone": "Secunderabad",
+                "circleName": "Mettuguda",
+                "wardNo": 179
+            },
+            {
+                "id": "eastanandbagh",
+                "name": "East Anandbagh",
+                "zone": "Malkajgiri",
+                "circleName": "Malajgiri",
+                "wardNo": 180
+            },
+            {
+                "id": "mirjalguda",
+                "name": "Mirjalguda",
+                "zone": "Malkajgiri",
+                "circleName": "Malajgiri",
+                "wardNo": 181
+            },
+            {
+                "id": "gouthamnagar",
+                "name": "Goutham Nagar",
+                "zone": "Malkajgiri",
+                "circleName": "Malajgiri",
+                "wardNo": 182
+            },
+            {
+                "id": "malkajgiri",
+                "name": "Malkajgiri",
+                "zone": "Malkajgiri",
+                "circleName": "Malajgiri",
+                "wardNo": 183
+            },
+            {
+                "id": "balramnagar",
+                "name": "Balram Nagar",
+                "zone": "Malkajgiri",
+                "circleName": "Moula Ali",
+                "wardNo": 184
+            },
+            {
+                "id": "vinayaknagar",
+                "name": "Vinayak Nagar",
+                "zone": "Malkajgiri",
+                "circleName": "Moula Ali",
+                "wardNo": 185
+            },
+            {
+                "id": "moulaali",
+                "name": "Moula Ali",
+                "zone": "Malkajgiri",
+                "circleName": "Moula Ali",
+                "wardNo": 186
+            },
+            {
+                "id": "kakatiyanagar",
+                "name": "Kakatiya Nagar",
+                "zone": "Malkajgiri",
+                "circleName": "Moula Ali",
+                "wardNo": 187
+            },
+            {
+                "id": "neredmet",
+                "name": "Neredmet",
+                "zone": "Malkajgiri",
+                "circleName": "Moula Ali",
+                "wardNo": 188
+            },
+            {
+                "id": "yapral",
+                "name": "Yapral",
+                "zone": "Malkajgiri",
+                "circleName": "Keesara",
+                "wardNo": 189
+            },
+            {
+                "id": "turkapally",
+                "name": "Turkapally",
+                "zone": "Malkajgiri",
+                "circleName": "Alwal",
+                "wardNo": 190
+            },
+            {
+                "id": "machabollaram",
+                "name": "Macha Bollaram",
+                "zone": "Malkajgiri",
+                "circleName": "Alwal",
+                "wardNo": 191
+            },
+            {
+                "id": "templealwal",
+                "name": "Temple Alwal",
+                "zone": "Malkajgiri",
+                "circleName": "Alwal",
+                "wardNo": 192
+            },
+            {
+                "id": "venkatapuram",
+                "name": "Venkatapuram",
+                "zone": "Malkajgiri",
+                "circleName": "Alwal",
+                "wardNo": 193
+            },
+            {
+                "id": "bhudevinagar",
+                "name": "Bhudevi Nagar",
+                "zone": "Malkajgiri",
+                "circleName": "Alwal",
+                "wardNo": 194
+            },
+            {
+                "id": "kanajiguda",
+                "name": "Kanajiguda",
+                "zone": "Malkajgiri",
+                "circleName": "Alwal",
+                "wardNo": 195
+            },
+            {
+                "id": "mondamarket",
+                "name": "Monda Market",
+                "zone": "Malkajgiri",
+                "circleName": "Bowenpally",
+                "wardNo": 196
+            },
+            {
+                "id": "padmaraonagar",
+                "name": "Padmarao Nagar",
+                "zone": "Secunderabad",
+                "circleName": "Kavadiguda",
+                "wardNo": 197
+            },
+            {
+                "id": "bansilalpet",
+                "name": "Bansilalpet",
+                "zone": "Secunderabad",
+                "circleName": "Kavadiguda",
+                "wardNo": 198
+            },
+            {
+                "id": "ramgopalpet",
+                "name": "Ramgopalpet",
+                "zone": "Secunderabad",
+                "circleName": "Kavadiguda",
+                "wardNo": 199
+            },
+            {
+                "id": "begumpet",
+                "name": "Begumpet",
+                "zone": "Khairatabad",
+                "circleName": "Ameerpet",
+                "wardNo": 200
+            },
+            {
+                "id": "ameerpet",
+                "name": "Ameerpet",
+                "zone": "Khairatabad",
+                "circleName": "Ameerpet",
+                "wardNo": 201
+            },
+            {
+                "id": "srnagar",
+                "name": "SR Nagar",
+                "zone": "Khairatabad",
+                "circleName": "Ameerpet",
+                "wardNo": 202
+            },
+            {
+                "id": "bkguda",
+                "name": "BK Guda",
+                "zone": "Khairatabad",
+                "circleName": "Ameerpet",
+                "wardNo": 203
+            },
+            {
+                "id": "sanathnagar",
+                "name": "Sanathnagar",
+                "zone": "Khairatabad",
+                "circleName": "Ameerpet",
+                "wardNo": 204
+            },
+            {
+                "id": "erragadda",
+                "name": "Erragadda",
+                "zone": "Khairatabad",
+                "circleName": "Yousufguda",
+                "wardNo": 205
+            },
+            {
+                "id": "vengalraonagar",
+                "name": "Vengal Rao Nagar",
+                "zone": "Khairatabad",
+                "circleName": "Yousufguda",
+                "wardNo": 206
+            },
+            {
+                "id": "srinagarcolony",
+                "name": "Srinagar Colony",
+                "zone": "Khairatabad",
+                "circleName": "Yousufguda",
+                "wardNo": 207
+            },
+            {
+                "id": "yousufguda",
+                "name": "Yousufguda",
+                "zone": "Khairatabad",
+                "circleName": "Yousufguda",
+                "wardNo": 208
+            },
+            {
+                "id": "agcolony",
+                "name": "AG Colony",
+                "zone": "Khairatabad",
+                "circleName": "Yousufguda",
+                "wardNo": 209
+            },
+            {
+                "id": "krishnanagar",
+                "name": "Krishna Nagar",
+                "zone": "Khairatabad",
+                "circleName": "Borabanda",
+                "wardNo": 210
+            },
+            {
+                "id": "rahamathnagar",
+                "name": "Rahamath Nagar",
+                "zone": "Khairatabad",
+                "circleName": "Borabanda",
+                "wardNo": 211
+            },
+            {
+                "id": "karmikanagar",
+                "name": "Karmika Nagar",
+                "zone": "Khairatabad",
+                "circleName": "Borabanda",
+                "wardNo": 212
+            },
+            {
+                "id": "rajeevnagar",
+                "name": "Rajeev Nagar",
+                "zone": "Khairatabad",
+                "circleName": "Borabanda",
+                "wardNo": 213
+            },
+            {
+                "id": "borabanda",
+                "name": "Borabanda",
+                "zone": "Khairatabad",
+                "circleName": "Borabanda",
+                "wardNo": 214
+            },
+            {
+                "id": "jubileehills",
+                "name": "Jubilee Hills",
+                "zone": "Khairatabad",
+                "circleName": "Jubilee Hills",
+                "wardNo": 215
+            },
+            {
+                "id": "venkateshwaracolony",
+                "name": "Venkateshwara Colony",
+                "zone": "Khairatabad",
+                "circleName": "Jubilee Hills",
+                "wardNo": 216
+            },
+            {
+                "id": "irrummanzil",
+                "name": "Irrum Manzil",
+                "zone": "Khairatabad",
+                "circleName": "Khairatabad",
+                "wardNo": 217
+            },
+            {
+                "id": "somajiguda",
+                "name": "Somajiguda",
+                "zone": "Khairatabad",
+                "circleName": "Khairatabad",
+                "wardNo": 218
+            },
+            {
+                "id": "khairatabad",
+                "name": "Khairatabad",
+                "zone": "Khairatabad",
+                "circleName": "Khairatabad",
+                "wardNo": 219
+            },
+            {
+                "id": "himayathnagar",
+                "name": "Himayathnagar",
+                "zone": "Khairatabad",
+                "circleName": "Khairatabad",
+                "wardNo": 220
+            },
+            {
+                "id": "banjarahills",
+                "name": "Banjara Hills",
+                "zone": "Khairatabad",
+                "circleName": "Jubilee Hills",
+                "wardNo": 221
+            },
+            {
+                "id": "filmnagar",
+                "name": "Film Nagar",
+                "zone": "Khairatabad",
+                "circleName": "Jubilee Hills",
+                "wardNo": 222
+            },
+            {
+                "id": "shaikpet",
+                "name": "Shaikpet",
+                "zone": "Golconda",
+                "circleName": "Golconda",
+                "wardNo": 223
+            },
+            {
+                "id": "oucolony",
+                "name": "OU Colony",
+                "zone": "Golconda",
+                "circleName": "Golconda",
+                "wardNo": 224
+            },
+            {
+                "id": "gachibowli",
+                "name": "Gachibowli",
+                "zone": "Serilingampally",
+                "circleName": "Serilingampally",
+                "wardNo": 225
+            },
+            {
+                "id": "nallagandla",
+                "name": "Nallagandla",
+                "zone": "Serilingampally",
+                "circleName": "Serilingampally",
+                "wardNo": 226
+            },
+            {
+                "id": "serilingampally",
+                "name": "Serilingampally",
+                "zone": "Serilingampally",
+                "circleName": "Serilingampally",
+                "wardNo": 227
+            },
+            {
+                "id": "masjidbanda",
+                "name": "Masjid Banda",
+                "zone": "Serilingampally",
+                "circleName": "Serilingampally",
+                "wardNo": 228
+            },
+            {
+                "id": "sriramnagar",
+                "name": "Sri Ram Nagar",
+                "zone": "Serilingampally",
+                "circleName": "Serilingampally",
+                "wardNo": 229
+            },
+            {
+                "id": "anjaiahnagar",
+                "name": "Anjaiah Nagar",
+                "zone": "Kukatpally",
+                "circleName": "Madhapur",
+                "wardNo": 230
+            },
+            {
+                "id": "hiteccity",
+                "name": "HITEC City",
+                "zone": "Kukatpally",
+                "circleName": "Madhapur",
+                "wardNo": 231
+            },
+            {
+                "id": "madhapur",
+                "name": "Madhapur",
+                "zone": "Kukatpally",
+                "circleName": "Madhapur",
+                "wardNo": 232
+            },
+            {
+                "id": "izzathnagar",
+                "name": "Izzath Nagar",
+                "zone": "Kukatpally",
+                "circleName": "Madhapur",
+                "wardNo": 233
+            },
+            {
+                "id": "kondapur",
+                "name": "Kondapur",
+                "zone": "Serilingampally",
+                "circleName": "Serilingampally",
+                "wardNo": 234
+            },
+            {
+                "id": "matrusrinagar",
+                "name": "Matrusri Nagar",
+                "zone": "Kukatpally",
+                "circleName": "Madhapur",
+                "wardNo": 235
+            },
+            {
+                "id": "hafeezpet",
+                "name": "Hafeezpet",
+                "zone": "Serilingampally",
+                "circleName": "Miyapur",
+                "wardNo": 236
+            },
+            {
+                "id": "madeenaguda",
+                "name": "Madeenaguda",
+                "zone": "Serilingampally",
+                "circleName": "Miyapur",
+                "wardNo": 237
+            },
+            {
+                "id": "chandanagar",
+                "name": "Chanda Nagar",
+                "zone": "Serilingampally",
+                "circleName": "Miyapur",
+                "wardNo": 238
+            },
+            {
+                "id": "deepthisrinagar",
+                "name": "Deepthisri Nagar",
+                "zone": "Serilingampally",
+                "circleName": "Miyapur",
+                "wardNo": 239
+            },
+            {
+                "id": "miyapur",
+                "name": "Miyapur",
+                "zone": "Serilingampally",
+                "circleName": "Miyapur",
+                "wardNo": 240
+            },
+            {
+                "id": "makthamahabubpet",
+                "name": "Maktha Mahabubpet",
+                "zone": "Serilingampally",
+                "circleName": "Miyapur",
+                "wardNo": 241
+            },
+            {
+                "id": "mayurinagar",
+                "name": "Mayuri Nagar",
+                "zone": "Kukatpally",
+                "circleName": "Madhapur",
+                "wardNo": 242
+            },
+            {
+                "id": "hydernagar",
+                "name": "Hyder Nagar",
+                "zone": "Kukatpally",
+                "circleName": "Allwyn Colony",
+                "wardNo": 243
+            },
+            {
+                "id": "bhagyanagarcolony",
+                "name": "Bhagya Nagar Colony",
+                "zone": "Kukatpally",
+                "circleName": "Allwyn Colony",
+                "wardNo": 244
+            },
+            {
+                "id": "shamshiguda",
+                "name": "Shamshiguda",
+                "zone": "Kukatpally",
+                "circleName": "Allwyn Colony",
+                "wardNo": 245
+            },
+            {
+                "id": "allwyncolony",
+                "name": "Allwyn Colony",
+                "zone": "Kukatpally",
+                "circleName": "Allwyn Colony",
+                "wardNo": 246
+            },
+            {
+                "id": "vivekanandanagarcolony",
+                "name": "Vivekananda Nagar Colony",
+                "zone": "Kukatpally",
+                "circleName": "Allwyn Colony",
+                "wardNo": 247
+            },
+            {
+                "id": "venkateshwaranagar",
+                "name": "Venkateshwara Nagar",
+                "zone": "Kukatpally",
+                "circleName": "Allwyn Colony",
+                "wardNo": 248
+            },
+            {
+                "id": "kukatpally",
+                "name": "Kukatpally",
+                "zone": "Kukatpally",
+                "circleName": "Kukatpally",
+                "wardNo": 249
+            },
+            {
+                "id": "balajinagar",
+                "name": "Balaji Nagar",
+                "zone": "Kukatpally",
+                "circleName": "Kukatpally",
+                "wardNo": 250
+            },
+            {
+                "id": "vasanthnagar",
+                "name": "Vasanth Nagar",
+                "zone": "Kukatpally",
+                "circleName": "Kukatpally",
+                "wardNo": 251
+            },
+            {
+                "id": "kphbcolony",
+                "name": "KPHB Colony",
+                "zone": "Kukatpally",
+                "circleName": "Kukatpally",
+                "wardNo": 252
+            },
+            {
+                "id": "kaithalapur",
+                "name": "Kaithalapur",
+                "zone": "Kukatpally",
+                "circleName": "Kukatpally",
+                "wardNo": 253
+            },
+            {
+                "id": "gayatrinagar",
+                "name": "Gayatri Nagar",
+                "zone": "Kukatpally",
+                "circleName": "Kukatpally",
+                "wardNo": 254
+            },
+            {
+                "id": "allapur",
+                "name": "Allapur",
+                "zone": "Kukatpally",
+                "circleName": "Moosapet",
+                "wardNo": 255
+            },
+            {
+                "id": "motinagar",
+                "name": "Moti Nagar",
+                "zone": "Kukatpally",
+                "circleName": "Moosapet",
+                "wardNo": 256
+            },
+            {
+                "id": "moosapet",
+                "name": "Moosapet",
+                "zone": "Kukatpally",
+                "circleName": "Moosapet",
+                "wardNo": 257
+            },
+            {
+                "id": "prashanthnagar",
+                "name": "Prashanth Nagar",
+                "zone": "Kukatpally",
+                "circleName": "Moosapet",
+                "wardNo": 258
+            },
+            {
+                "id": "balanagar",
+                "name": "Balanagar",
+                "zone": "Kukatpally",
+                "circleName": "Moosapet",
+                "wardNo": 259
+            },
+            {
+                "id": "fatehnagar",
+                "name": "Fateh Nagar",
+                "zone": "Malkajgiri",
+                "circleName": "Bowenpally",
+                "wardNo": 260
+            },
+            {
+                "id": "prakashnagar",
+                "name": "Prakash Nagar",
+                "zone": "Malkajgiri",
+                "circleName": "Bowenpally",
+                "wardNo": 261
+            },
+            {
+                "id": "oldbowenpally",
+                "name": "Old Bowenpally",
+                "zone": "Malkajgiri",
+                "circleName": "Bowenpally",
+                "wardNo": 262
+            },
+            {
+                "id": "tellapur",
+                "name": "Tellapur",
+                "zone": "Serilingampally",
+                "circleName": "Patancheruvu",
+                "wardNo": 263
+            },
+            {
+                "id": "hasmathpet",
+                "name": "Hasmathpet",
+                "zone": "Malkajgiri",
+                "circleName": "Bowenpally",
+                "wardNo": 264
+            },
+            {
+                "id": "muthangi",
+                "name": "Muthangi",
+                "zone": "Serilingampally",
+                "circleName": "Patancheruvu",
+                "wardNo": 265
+            },
+            {
+                "id": "patancheruvu",
+                "name": "Patancheruvu",
+                "zone": "Serilingampally",
+                "circleName": "Patancheruvu",
+                "wardNo": 266
+            },
+            {
+                "id": "jpcolony",
+                "name": "JP Colony",
+                "zone": "Serilingampally",
+                "circleName": "Patancheruvu",
+                "wardNo": 267
+            },
+            {
+                "id": "ramachandrapuramrcpuram",
+                "name": "Ramachandrapuram (RC Puram)",
+                "zone": "Serilingampally",
+                "circleName": "Ameenpur",
+                "wardNo": 268
+            },
+            {
+                "id": "bharathinagar",
+                "name": "Bharathi Nagar",
+                "zone": "Serilingampally",
+                "circleName": "Ameenpur",
+                "wardNo": 269
+            },
+            {
+                "id": "beeramguda",
+                "name": "beeramguda",
+                "zone": "Serilingampally",
+                "circleName": "Ameenpur",
+                "wardNo": 270
+            },
+            {
+                "id": "ameenpur",
+                "name": "Ameenpur",
+                "zone": "Serilingampally",
+                "circleName": "Ameenpur",
+                "wardNo": 271
+            },
+            {
+                "id": "bollaram",
+                "name": "Bollaram",
+                "zone": "Serilingampally",
+                "circleName": "Ameenpur",
+                "wardNo": 272
+            },
+            {
+                "id": "nizampet",
+                "name": "Nizampet",
+                "zone": "Quthbullapur",
+                "circleName": "Nizampet",
+                "wardNo": 273
+            },
+            {
+                "id": "bachupally",
+                "name": "Bachupally",
+                "zone": "Quthbullapur",
+                "circleName": "Nizampet",
+                "wardNo": 274
+            },
+            {
+                "id": "bhandarilayout",
+                "name": "Bhandari Layout",
+                "zone": "Quthbullapur",
+                "circleName": "Nizampet",
+                "wardNo": 275
+            },
+            {
+                "id": "pragathinagar",
+                "name": "Pragathi Nagar",
+                "zone": "Quthbullapur",
+                "circleName": "Nizampet",
+                "wardNo": 276
+            },
+            {
+                "id": "mahadevpuram",
+                "name": "Mahadevpuram",
+                "zone": "Quthbullapur",
+                "circleName": "Gajularamaram",
+                "wardNo": 277
+            },
+            {
+                "id": "gajularamaram",
+                "name": "Gajularamaram",
+                "zone": "Quthbullapur",
+                "circleName": "Gajularamaram",
+                "wardNo": 278
+            },
+            {
+                "id": "rodamestrinagar",
+                "name": "Rodamestri Nagar",
+                "zone": "Quthbullapur",
+                "circleName": "Chintal",
+                "wardNo": 279
+            },
+            {
+                "id": "jagathgirigutta",
+                "name": "Jagathgiri Gutta",
+                "zone": "Quthbullapur",
+                "circleName": "Chintal",
+                "wardNo": 280
+            },
+            {
+                "id": "rangareddynagar",
+                "name": "Ranga Reddy Nagar",
+                "zone": "Quthbullapur",
+                "circleName": "Chintal",
+                "wardNo": 281
+            },
+            {
+                "id": "chintal",
+                "name": "Chintal",
+                "zone": "Quthbullapur",
+                "circleName": "Chintal",
+                "wardNo": 282
+            },
+            {
+                "id": "girinagar",
+                "name": "Giri Nagar",
+                "zone": "Quthbullapur",
+                "circleName": "Chintal",
+                "wardNo": 283
+            },
+            {
+                "id": "ganeshnagar",
+                "name": "Ganesh Nagar",
+                "zone": "Quthbullapur",
+                "circleName": "Jeedimetla",
+                "wardNo": 284
+            },
+            {
+                "id": "padmanagar",
+                "name": "Padma Nagar",
+                "zone": "Quthbullapur",
+                "circleName": "Jeedimetla",
+                "wardNo": 285
+            },
+            {
+                "id": "quthbullapur",
+                "name": "Quthbullapur",
+                "zone": "Quthbullapur",
+                "circleName": "Jeedimetla",
+                "wardNo": 286
+            },
+            {
+                "id": "petbasheerabad",
+                "name": "Pet Basheerabad",
+                "zone": "Quthbullapur",
+                "circleName": "Jeedimetla",
+                "wardNo": 287
+            },
+            {
+                "id": "kompally",
+                "name": "Kompally",
+                "zone": "Quthbullapur",
+                "circleName": "Kompally",
+                "wardNo": 288
+            },
+            {
+                "id": "doolapally",
+                "name": "Doolapally",
+                "zone": "Quthbullapur",
+                "circleName": "Kompally",
+                "wardNo": 289
+            },
+            {
+                "id": "subhashnagar",
+                "name": "Subhash Nagar",
+                "zone": "Quthbullapur",
+                "circleName": "Kompally",
+                "wardNo": 290
+            },
+            {
+                "id": "shapurnagar",
+                "name": "Shapur Nagar",
+                "zone": "Quthbullapur",
+                "circleName": "Gajularamaram",
+                "wardNo": 291
+            },
+            {
+                "id": "saibabanagar",
+                "name": "Saibaba Nagar",
+                "zone": "Quthbullapur",
+                "circleName": "Kompally",
+                "wardNo": 292
+            },
+            {
+                "id": "suraram",
+                "name": "Suraram",
+                "zone": "Quthbullapur",
+                "circleName": "Gajularamaram",
+                "wardNo": 293
+            },
+            {
+                "id": "bahadurpally",
+                "name": "Bahadurpally",
+                "zone": "Quthbullapur",
+                "circleName": "Dundigal",
+                "wardNo": 294
+            },
+            {
+                "id": "bowrampet",
+                "name": "Bowrampet",
+                "zone": "Quthbullapur",
+                "circleName": "Dundigal",
+                "wardNo": 295
+            },
+            {
+                "id": "dundigal",
+                "name": "Dundigal",
+                "zone": "Quthbullapur",
+                "circleName": "Dundigal",
+                "wardNo": 296
+            },
+            {
+                "id": "medchal",
+                "name": "Medchal",
+                "zone": "Quthbullapur",
+                "circleName": "Medchal",
+                "wardNo": 297
+            },
+            {
+                "id": "pudurkistapur",
+                "name": "Pudur-Kistapur",
+                "zone": "Quthbullapur",
+                "circleName": "Medchal",
+                "wardNo": 298
+            },
+            {
+                "id": "gundlapochampally",
+                "name": "Gundlapochampally",
+                "zone": "Quthbullapur",
+                "circleName": "Medchal",
+                "wardNo": 299
+            },
+            {
+                "id": "shamirpet",
+                "name": "Shamirpet",
+                "zone": "Malkajgiri",
+                "circleName": "Keesara",
+                "wardNo": 300
+            }
+        ]
     },
     "bengaluru": {
         "name": "Bengaluru",
@@ -3916,48 +2116,143 @@ const CITIES_REGISTRY = {
         "subcities": [
             {
                 "id": "koramangala",
-                "name": "Koramangala",
-                "landmarks": [
-                    "Koramangala 5th Block",
-                    "Sony World Signal",
-                    "Forum Mall Hosur Road",
-                    "Jyoti Nivas College"
-                ]
+                "name": "Koramangala 1st-8th Block"
             },
             {
                 "id": "indiranagar",
-                "name": "Indiranagar",
-                "landmarks": [
-                    "100 Feet Road",
-                    "12th Main Indiranagar",
-                    "CMH Road Metro"
-                ]
+                "name": "Indiranagar 100ft Road"
             },
             {
                 "id": "whitefield",
-                "name": "Whitefield",
-                "landmarks": [
-                    "ITPL Main Gate",
-                    "Phoenix Marketcity",
-                    "EPIP Zone"
-                ]
+                "name": "Whitefield ITPL"
             },
             {
                 "id": "hsr",
-                "name": "HSR Layout",
-                "landmarks": [
-                    "HSR 27th Main",
-                    "HSR BDA Complex",
-                    "Sector 1 Park"
-                ]
+                "name": "HSR Layout Sector 1-7"
+            },
+            {
+                "id": "ecity",
+                "name": "Electronic City Phase 1 & 2"
             },
             {
                 "id": "marathahalli",
-                "name": "Marathahalli & Electronic City",
-                "landmarks": [
-                    "Marathahalli Multiplex",
-                    "Electronic City Phase 1 Wipro Gate"
-                ]
+                "name": "Marathahalli Bridge"
+            },
+            {
+                "id": "bellandur",
+                "name": "Bellandur Outer Ring Road"
+            },
+            {
+                "id": "sarjapur",
+                "name": "Sarjapur Road"
+            },
+            {
+                "id": "jayanagar",
+                "name": "Jayanagar 4th Block"
+            },
+            {
+                "id": "jpnagar",
+                "name": "JP Nagar Phase 1-8"
+            },
+            {
+                "id": "btm",
+                "name": "BTM Layout 1st & 2nd Stage"
+            },
+            {
+                "id": "hebbal",
+                "name": "Hebbal Manyata Tech Park"
+            },
+            {
+                "id": "yelahanka",
+                "name": "Yelahanka New Town"
+            },
+            {
+                "id": "banashankari",
+                "name": "Banashankari 2nd & 3rd Stage"
+            },
+            {
+                "id": "malleswaram",
+                "name": "Malleshwaram Sampige Road"
+            },
+            {
+                "id": "rajajinagar",
+                "name": "Rajajinagar Metro Hub"
+            },
+            {
+                "id": "kengeri",
+                "name": "Kengeri Satellite Town"
+            },
+            {
+                "id": "hennur",
+                "name": "Hennur Road"
+            },
+            {
+                "id": "thanisandra",
+                "name": "Thanisandra Main Road"
+            },
+            {
+                "id": "domlur",
+                "name": "Domlur EGL IT Park"
+            },
+            {
+                "id": "commercialstreet",
+                "name": "Commercial Street & MG Road"
+            },
+            {
+                "id": "frasertown",
+                "name": "Fraser Town"
+            },
+            {
+                "id": "kammanahalli",
+                "name": "Kammanahalli HRBR Layout"
+            },
+            {
+                "id": "nagawara",
+                "name": "Nagawara Junction"
+            },
+            {
+                "id": "rtnagar",
+                "name": "RT Nagar"
+            },
+            {
+                "id": "horamavu",
+                "name": "Horamavu"
+            },
+            {
+                "id": "ramamurthynagar",
+                "name": "Ramamurthy Nagar"
+            },
+            {
+                "id": "varthur",
+                "name": "Varthur Gunjur"
+            },
+            {
+                "id": "kadugodi",
+                "name": "Kadugodi Metro Station"
+            },
+            {
+                "id": "hoodi",
+                "name": "Hoodi Circle"
+            },
+            {
+                "id": "brookefield",
+                "name": "Brookefield AECS Layout"
+            },
+            {
+                "id": "kasavanahalli",
+                "name": "Kasavanahalli Haralur Road"
+            },
+            {
+                "id": "silkboard",
+                "name": "Silk Board & Madiwala"
+            },
+            {
+                "id": "ejipura",
+                "name": "Ejipura Inner Ring Road"
+            },
+            {
+                "id": "richmondtown",
+                "name": "Richmond Town & Ulsoor"
             }
         ]
     },
@@ -3966,39 +2261,310 @@ const CITIES_REGISTRY = {
         "icon": "🌊",
         "subcities": [
             {
-                "id": "andheri",
-                "name": "Andheri West & East",
-                "landmarks": [
-                    "Lokhandwala Complex",
-                    "Andheri Metro Station",
-                    "SEEPZ IT Zone"
-                ]
+                "id": "bandra",
+                "name": "Bandra West & Bandra Kurla Complex (BKC)"
             },
             {
-                "id": "bandra",
-                "name": "Bandra & BKC",
-                "landmarks": [
-                    "Bandra Kurla Complex (BKC)",
-                    "Carter Road Promenade",
-                    "Linking Road"
-                ]
+                "id": "andheri",
+                "name": "Andheri West & Lokhandwala"
+            },
+            {
+                "id": "andherieast",
+                "name": "Andheri East & MIDC"
             },
             {
                 "id": "powai",
-                "name": "Powai",
-                "landmarks": [
-                    "IIT Bombay Main Gate",
-                    "Hiranandani Gardens",
-                    "Powai Lake Road"
-                ]
+                "name": "Powai Hiranandani Gardens"
             },
             {
                 "id": "thane",
-                "name": "Thane & Navi Mumbai",
-                "landmarks": [
-                    "Thane Viviana Mall",
-                    "Vashi Sector 17 Navi Mumbai"
-                ]
+                "name": "Thane West Ghodbunder Road"
+            },
+            {
+                "id": "vashi",
+                "name": "Navi Mumbai Vashi & Sanpada"
+            },
+            {
+                "id": "nerul",
+                "name": "Nerul & Belapur CBD"
+            },
+            {
+                "id": "khar",
+                "name": "Khar West & Santacruz"
+            },
+            {
+                "id": "juhu",
+                "name": "Juhu Tara Road"
+            },
+            {
+                "id": "goregaon",
+                "name": "Goregaon East Film City"
+            },
+            {
+                "id": "malad",
+                "name": "Malad West Mindspace"
+            },
+            {
+                "id": "kandivali",
+                "name": "Kandivali West & East"
+            },
+            {
+                "id": "borivali",
+                "name": "Borivali West IC Colony"
+            },
+            {
+                "id": "ghatkopar",
+                "name": "Ghatkopar East & West"
+            },
+            {
+                "id": "kurla",
+                "name": "Kurla Phoenix Marketcity"
+            },
+            {
+                "id": "chembur",
+                "name": "Chembur East & Diamond Garden"
+            },
+            {
+                "id": "dadar",
+                "name": "Dadar West & Shivaji Park"
+            },
+            {
+                "id": "worli",
+                "name": "Worli Sea Face"
+            },
+            {
+                "id": "lowerparel",
+                "name": "Lower Parel High Street Phoenix"
+            },
+            {
+                "id": "colaba",
+                "name": "Colaba & Marine Drive"
+            },
+            {
+                "id": "prabhadevi",
+                "name": "Prabhadevi & Mahim"
+            },
+            {
+                "id": "mulund",
+                "name": "Mulund West"
+            },
+            {
+                "id": "vikhroli",
+                "name": "Vikhroli Godrej One"
+            },
+            {
+                "id": "airoli",
+                "name": "Airoli Mindspace IT Park"
+            },
+            {
+                "id": "kharghar",
+                "name": "Kharghar Central Park"
+            },
+            {
+                "id": "panvel",
+                "name": "Panvel & Ulwe"
+            }
+        ]
+    },
+    "pune": {
+        "name": "Pune",
+        "icon": "🏔️",
+        "subcities": [
+            {
+                "id": "hinjewadi",
+                "name": "Hinjewadi Rajiv Gandhi IT Park Phase 1-3"
+            },
+            {
+                "id": "kharadi",
+                "name": "Kharadi EON IT Park"
+            },
+            {
+                "id": "viman",
+                "name": "Viman Nagar Phoenix Marketcity"
+            },
+            {
+                "id": "baner",
+                "name": "Baner High Street"
+            },
+            {
+                "id": "balewadi",
+                "name": "Balewadi High Street & Stadium"
+            },
+            {
+                "id": "wakad",
+                "name": "Wakad Kaspate Wasti"
+            },
+            {
+                "id": "aundh",
+                "name": "Aundh ITI Road"
+            },
+            {
+                "id": "kothrud",
+                "name": "Kothrud Karve Road"
+            },
+            {
+                "id": "hadapsar",
+                "name": "Hadapsar Magarpatta City"
+            },
+            {
+                "id": "kalyaninagar",
+                "name": "Kalyani Nagar"
+            },
+            {
+                "id": "koregaonpark",
+                "name": "Koregaon Park North Main Road"
+            },
+            {
+                "id": "pimplesaudagar",
+                "name": "Pimple Saudagar"
+            },
+            {
+                "id": "bavdhan",
+                "name": "Bavdhan & Pashan"
+            },
+            {
+                "id": "katraj",
+                "name": "Katraj & Bibwewadi"
+            },
+            {
+                "id": "kondhwa",
+                "name": "Kondhwa NIBM Road"
+            },
+            {
+                "id": "fcroad",
+                "name": "FC Road & Deccan Gymkhana"
+            },
+            {
+                "id": "chinchwad",
+                "name": "Pimpri Chinchwad & Nigdi"
+            }
+        ]
+    },
+    "delhi": {
+        "name": "Delhi NCR",
+        "icon": "🕌",
+        "subcities": [
+            {
+                "id": "gurgaon",
+                "name": "Gurgaon Cyber City & DLF Phase 1-5"
+            },
+            {
+                "id": "golfcourseroad",
+                "name": "Gurgaon Golf Course Road & Extension"
+            },
+            {
+                "id": "sohnaroad",
+                "name": "Gurgaon Sohna Road"
+            },
+            {
+                "id": "noida",
+                "name": "Noida Sector 18, 62 & 63"
+            },
+            {
+                "id": "noidaexpressway",
+                "name": "Noida Expressway Sector 76 & 137"
+            },
+            {
+                "id": "greaternoida",
+                "name": "Greater Noida Knowledge Park"
+            },
+            {
+                "id": "saket",
+                "name": "Delhi Saket & Malviya Nagar"
+            },
+            {
+                "id": "hauzkhas",
+                "name": "Delhi Hauz Khas & Green Park"
+            },
+            {
+                "id": "vasantkunj",
+                "name": "Delhi Vasant Kunj & Vasant Vihar"
+            },
+            {
+                "id": "lajpatnagar",
+                "name": "Delhi Lajpat Nagar & South Ex"
+            },
+            {
+                "id": "dwarka",
+                "name": "Delhi Dwarka Sector 6, 10 & 21"
+            },
+            {
+                "id": "janakpuri",
+                "name": "Delhi Janakpuri & Tilak Nagar"
+            },
+            {
+                "id": "connaughtplace",
+                "name": "Delhi Connaught Place & Karol Bagh"
+            },
+            {
+                "id": "rohini",
+                "name": "Delhi Rohini & Pitampura"
+            },
+            {
+                "id": "mayurvihar",
+                "name": "Delhi Mayur Vihar & Laxmi Nagar"
+            }
+        ]
+    },
+    "chennai": {
+        "name": "Chennai",
+        "icon": "🏖️",
+        "subcities": [
+            {
+                "id": "omr",
+                "name": "OMR Thoraipakkam & Sholinganallur"
+            },
+            {
+                "id": "siruseri",
+                "name": "OMR Navalur & Siruseri IT Park"
+            },
+            {
+                "id": "velachery",
+                "name": "Velachery Main Road & Phoenix Mall"
+            },
+            {
+                "id": "annanagar",
+                "name": "Anna Nagar Tower Park"
+            },
+            {
+                "id": "tnagar",
+                "name": "T Nagar Pondy Bazaar"
+            },
+            {
+                "id": "adyar",
+                "name": "Adyar & Besant Nagar Beach"
+            },
+            {
+                "id": "guindy",
+                "name": "Guindy Industrial Estate"
+            },
+            {
+                "id": "porur",
+                "name": "Porur DLF IT Park"
+            },
+            {
+                "id": "vadapalani",
+                "name": "Vadapalani Forum Vijaya Mall"
+            },
+            {
+                "id": "nungambakkam",
+                "name": "Nungambakkam High Road"
+            },
+            {
+                "id": "mylapore",
+                "name": "Mylapore & Alwarpet"
+            },
+            {
+                "id": "chromepet",
+                "name": "Chromepet & Tambaram Sanatorium"
+            },
+            {
+                "id": "ecr",
+                "name": "ECR East Coast Road"
+            },
+            {
+                "id": "medavakkam",
+                "name": "Medavakkam & Perungudi"
             }
         ]
     }
