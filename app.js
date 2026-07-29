@@ -115,7 +115,6 @@ function updateDynamicSEOPageTitle() {
         if (cat) categoryName = cat.name;
     }
 
-    // Exact matches for consumer search intents (e.g. "Rent houses in Kukatpally")
     if (AppState.selectedCategory === 'house' && AppState.selectedArea !== 'all') {
         document.title = `Rent Houses & 2BHK Flats in ${areaName}, ${activeCityObj.name} — Direct Owner & Zero Brokerage | ManaRent`;
     } else if (AppState.selectedCategory === 'pg' && AppState.selectedArea !== 'all') {
@@ -145,7 +144,6 @@ async function fetchListings(resetPage = false) {
     }
 
     AppState.isLoading = true;
-
     updateDynamicSEOPageTitle();
 
     const queryParams = new URLSearchParams({
@@ -318,7 +316,6 @@ window.connectOwnerWithAd = function(targetUrl, ownerName, type) {
             <h3 class="ad-title">Connecting you to ${escapeHtml(ownerName)}...</h3>
             <p class="ad-sub">Verified Zero-Brokerage Direct Owner Connection</p>
             
-            <!-- AdSense Auto-Ad Slot / Featured Offer -->
             <div class="ad-box">
                 <ins class="adsbygoogle"
                      style="display:block"
@@ -447,19 +444,30 @@ function renderListingsGrid(listings, totalCount) {
         const waUrl = `https://wa.me/${item.whatsapp}?text=${waMsg}`;
         const phoneUrl = `tel:+${item.phone}`;
 
-        // Insert native in-feed AdSense banner every 8 listings
+        // Insert native in-feed AdSense banner every 8 listings with beautiful fallback partner card while AdSense is pending
         const showInFeedAd = (idx > 0 && idx % 8 === 0);
 
         return `
             ${showInFeedAd ? `
                 <div class="listing-card in-feed-ad-card">
-                    <span class="ad-tag-badge">SPONSORED AD</span>
+                    <span class="ad-tag-badge">SPONSORED PARTNER</span>
+                    
                     <ins class="adsbygoogle"
                          style="display:block"
                          data-ad-client="ca-pub-6965081263252229"
                          data-ad-slot="9876543210"
                          data-ad-format="auto"
                          data-full-width-responsive="true"></ins>
+
+                    <!-- Partner Fallback Container (Displays when AdSense is pending) -->
+                    <div class="ad-fallback-banner">
+                        <div class="ad-fallback-icon">🚚</div>
+                        <div class="ad-fallback-title">Packers & Movers Partner</div>
+                        <div class="ad-fallback-desc">Get 25% OFF Verified Home Shifting & Vehicle Transport in ${escapeHtml(activeCityObj.name)}.</div>
+                        <a href="https://wa.me/919876543210?text=Hi%20ManaRent%20Packers,%20I%20need%20a%20moving%20quote!" target="_blank" class="btn-primary" style="padding:0.4rem 0.9rem; font-size:0.78rem; text-decoration:none; margin-top:8px;">
+                            <span>Get Moving Quote</span>
+                        </a>
+                    </div>
                 </div>
             ` : ''}
 
@@ -562,7 +570,8 @@ async function handleFormSubmit(e) {
         whatsapp: phone || "919876543210",
         verified: true,
         rating: 5.0,
-        featured: true
+        featured: true,
+        createdAt: new Date().toISOString()
     };
 
     if (typeof INITIAL_LISTINGS !== 'undefined') {

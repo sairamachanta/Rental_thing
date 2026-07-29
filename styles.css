@@ -669,6 +669,35 @@ svg {
     letter-spacing: 0.05em;
 }
 
+.ad-fallback-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    gap: 0.4rem;
+}
+
+.ad-fallback-icon {
+    font-size: 2.2rem;
+    margin-bottom: 0.2rem;
+}
+
+.ad-fallback-title {
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: #fff;
+}
+
+.ad-fallback-desc {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    max-width: 260px;
+    line-height: 1.35;
+}
+
+
 .ad-interstitial-overlay {
     position: fixed;
     top: 0;
