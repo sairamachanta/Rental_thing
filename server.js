@@ -325,16 +325,25 @@ const server = http.createServer((req, res) => {
         return;
     }
 
-    // Static File Serving
-    let filePath = path.join(__dirname, req.url === '/' ? 'index.html' : pathname);
+    // Static File Serving (Supporting Query Parameters on Root & Files)
+    const isRoot = (pathname === '/' || pathname === '/index.html');
+    let filePath = path.join(__dirname, isRoot ? 'index.html' : pathname);
     const ext = path.extname(filePath).toLowerCase();
-    const contentType = MIME_TYPES[ext] || 'application/octet-stream';
+    const contentType = MIME_TYPES[ext] || 'text/html';
 
     fs.readFile(filePath, (err, content) => {
         if (err) {
-            if (err.code === 'ENOENT') {
-                res.writeHead(404, { 'Content-Type': 'text/html' });
-                res.end('<h1>404 Not Found</h1>', 'utf-8');
+            if (err.code === 'ENOENT' || err.code === 'EISDIR') {
+                // Fallback to index.html for query route SPA URLs
+                fs.readFile(path.join(__dirname, 'index.html'), (indexErr, indexContent) => {
+                    if (indexErr) {
+                        res.writeHead(500);
+                        res.end('Server Error: Missing index.html');
+                    } else {
+                        res.writeHead(200, { 'Content-Type': 'text/html' });
+                        res.end(indexContent, 'utf-8');
+                    }
+                });
             } else {
                 res.writeHead(500);
                 res.end(`Server Error: ${err.code}`);
@@ -347,5 +356,5 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(PORT, () => {
-    console.log(`🚀 ManaRent Google Favicon & Search Server running at http://localhost:${PORT}`);
+    console.log(`🚀 ManaRent Query Parameter Fix Server running at http://localhost:${PORT}`);
 });
