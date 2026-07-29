@@ -14,7 +14,8 @@ const MIME_TYPES = {
     '.txt': 'text/plain',
     '.png': 'image/png',
     '.jpg': 'image/jpeg',
-    '.svg': 'image/svg+xml'
+    '.svg': 'image/svg+xml',
+    '.ico': 'image/svg+xml'
 };
 
 const DB_PATH = path.join(__dirname, 'data', 'listings_db.json');
@@ -123,6 +124,16 @@ const server = http.createServer((req, res) => {
     if (req.method === 'OPTIONS') {
         res.writeHead(204);
         res.end();
+        return;
+    }
+
+    // Googlebot Favicon Route
+    if (pathname === '/favicon.ico' || pathname === '/favicon.svg') {
+        const faviconPath = path.join(__dirname, 'favicon.svg');
+        fs.readFile(faviconPath, (err, data) => {
+            if (err) { res.writeHead(404); res.end(); }
+            else { res.writeHead(200, { 'Content-Type': 'image/svg+xml' }); res.end(data); }
+        });
         return;
     }
 
@@ -336,5 +347,5 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(PORT, () => {
-    console.log(`🚀 ManaRent AdSense Enabled Server running at http://localhost:${PORT}`);
+    console.log(`🚀 ManaRent Google Favicon & Search Server running at http://localhost:${PORT}`);
 });
