@@ -1,5 +1,5 @@
 /**
- * ManaRent Real Data Scraper Engine with All Categories & Explicit Timestamps
+ * ManaRent Real Data Scraper Engine with All Categories & Exact Matching High-Res Images
  */
 
 const fs = require('fs');
@@ -9,6 +9,11 @@ const https = require('https');
 const DB_PATH = path.join(__dirname, 'data', 'listings_db.json');
 
 const CATEGORY_IMAGES = {
+    auto: [
+        "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=800&q=80"
+    ],
     car: [
         "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80",
         "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80",
@@ -36,6 +41,10 @@ const CATEGORY_IMAGES = {
     laptop: [
         "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=800&q=80",
         "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80"
+    ],
+    fashion: [
+        "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=800&q=80"
     ]
 };
 
