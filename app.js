@@ -1,5 +1,5 @@
 /**
- * ManaRent HUB - Client Controller with Anti-Bot Guards & High-Converting Interstitial Ad Prompts
+ * ManaRent HUB - Client Controller with Dynamic Intent SEO & Anti-Bot Guards
  */
 
 const AppState = {
@@ -82,12 +82,54 @@ function escapeHtml(str) {
 
 document.addEventListener("DOMContentLoaded", () => {
     detectAutomationTools();
+    parseURLParams();
     loadInitialSeedMemory();
     renderCitySelector();
     renderAreaPills();
     setupEventListeners();
     fetchListings(true);
 });
+
+function parseURLParams() {
+    const params = new URLSearchParams(window.location.search);
+    if (params.has('city')) AppState.selectedCity = params.get('city');
+    if (params.has('area')) AppState.selectedArea = params.get('area');
+    if (params.has('category')) AppState.selectedCategory = params.get('category');
+    if (params.has('search')) AppState.searchQuery = params.get('search');
+}
+
+function updateDynamicSEOPageTitle() {
+    const activeCityObj = (typeof CITIES_REGISTRY !== 'undefined' && CITIES_REGISTRY[AppState.selectedCity]) 
+        ? CITIES_REGISTRY[AppState.selectedCity] 
+        : { name: "Hyderabad" };
+
+    let areaName = activeCityObj.name;
+    if (AppState.selectedArea !== "all" && activeCityObj.subcities) {
+        const found = activeCityObj.subcities.find(a => a.id === AppState.selectedArea);
+        if (found) areaName = found.name;
+    }
+
+    let categoryName = "Rentals";
+    if (AppState.selectedCategory !== "all" && typeof RENTAL_CATEGORIES !== 'undefined') {
+        const cat = RENTAL_CATEGORIES.find(c => c.id === AppState.selectedCategory);
+        if (cat) categoryName = cat.name;
+    }
+
+    // Exact matches for consumer search intents (e.g. "Rent houses in Kukatpally")
+    if (AppState.selectedCategory === 'house' && AppState.selectedArea !== 'all') {
+        document.title = `Rent Houses & 2BHK Flats in ${areaName}, ${activeCityObj.name} — Direct Owner & Zero Brokerage | ManaRent`;
+    } else if (AppState.selectedCategory === 'pg' && AppState.selectedArea !== 'all') {
+        document.title = `PG & Hostels for Rent in ${areaName}, ${activeCityObj.name} — Verified Beds | ManaRent`;
+    } else if (AppState.selectedCategory === 'bike' && AppState.selectedArea !== 'all') {
+        document.title = `Bike & Scooter Rentals in ${areaName}, ${activeCityObj.name} — Daily / Monthly | ManaRent`;
+    } else if (AppState.selectedCategory === 'car' && AppState.selectedArea !== 'all') {
+        document.title = `Self-Drive Car Rentals in ${areaName}, ${activeCityObj.name} | ManaRent`;
+    } else if (AppState.selectedArea !== 'all') {
+        document.title = `Rent Houses, PGs, Bikes & Cars in ${areaName}, ${activeCityObj.name} | ManaRent`;
+    } else {
+        document.title = `Rent Houses, PGs, Bikes & Cars in ${activeCityObj.name} — #1 Hyperlocal Marketplace | ManaRent`;
+    }
+}
 
 function loadInitialSeedMemory() {
     if (typeof INITIAL_LISTINGS !== 'undefined') {
@@ -103,6 +145,8 @@ async function fetchListings(resetPage = false) {
     }
 
     AppState.isLoading = true;
+
+    updateDynamicSEOPageTitle();
 
     const queryParams = new URLSearchParams({
         page: AppState.currentPage,
@@ -174,13 +218,15 @@ function renderAreaPills() {
         { id: "all", name: `All ${activeCityObj.name}`, icon: ICONS.location }
     ];
 
-    activeCityObj.subcities.forEach(sub => {
-        areaPillData.push({
-            id: sub.id,
-            name: sub.name,
-            icon: ICONS.location
+    if (activeCityObj.subcities) {
+        activeCityObj.subcities.slice(0, 30).forEach(sub => {
+            areaPillData.push({
+                id: sub.id,
+                name: sub.name,
+                icon: ICONS.location
+            });
         });
-    });
+    }
 
     container.innerHTML = areaPillData.map(area => `
         <button class="area-pill ${AppState.selectedArea === area.id ? 'active' : ''}" 
@@ -191,9 +237,9 @@ function renderAreaPills() {
     `).join("");
 
     const dropdown = document.getElementById("areaSelectDropdown");
-    if (dropdown) {
-        dropdown.innerHTML = `<option value="all">All ${escapeHtml(activeCityObj.name)} Areas</option>` +
-            activeCityObj.subcities.map(sub => `<option value="${escapeHtml(sub.id)}">${escapeHtml(sub.name)}</option>`).join("");
+    if (dropdown && activeCityObj.subcities) {
+        dropdown.innerHTML = `<option value="all">All ${escapeHtml(activeCityObj.name)} Areas (${activeCityObj.subcities.length} Wards/Localities)</option>` +
+            activeCityObj.subcities.map(sub => `<option value="${escapeHtml(sub.id)}" ${AppState.selectedArea === sub.id ? 'selected' : ''}>${escapeHtml(sub.name)}</option>`).join("");
         dropdown.value = AppState.selectedArea;
     }
 }
@@ -366,7 +412,7 @@ function renderListingsGrid(listings, totalCount) {
 
     if (countEl) {
         if (AppState.selectedArea !== "all") {
-            const areaObj = activeCityObj.subcities.find(a => a.id === AppState.selectedArea);
+            const areaObj = activeCityObj.subcities ? activeCityObj.subcities.find(a => a.id === AppState.selectedArea) : null;
             const areaName = areaObj ? areaObj.name : AppState.selectedArea;
             countEl.textContent = `Displaying ${totalCount} Local Rentals in ${areaName}`;
         } else if (AppState.selectedCategory !== "all") {
@@ -485,7 +531,7 @@ async function handleFormSubmit(e) {
     const category = document.getElementById("formCategory").value;
     const areaId = document.getElementById("formArea").value;
     const activeCityObj = CITIES_REGISTRY[AppState.selectedCity] || CITIES_REGISTRY.hyderabad;
-    const areaObj = activeCityObj.subcities.find(a => a.id === areaId);
+    const areaObj = activeCityObj.subcities ? activeCityObj.subcities.find(a => a.id === areaId) : null;
     const areaName = areaObj ? areaObj.name : activeCityObj.name;
     
     const landmark = document.getElementById("formLandmark").value;
