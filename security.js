@@ -4,7 +4,7 @@
  * Protects against:
  * 1. Headless Browser Scrapers (Cypress, Playwright, Puppeteer, Selenium, PhantomJS)
  * 2. Data Harvesting & Unauthorized Scraping
- * 3. DDoS / API Rate Limiting (60 requests/min per IP)
+ * 3. DDoS / API Rate Limiting (120 requests/min per IP)
  * 4. XSS & Code Injection Attacks
  * 5. Honeypot Bot Traps
  */
@@ -19,6 +19,16 @@ const SECURITY_LOG_PATH = path.join(__dirname, 'data', 'security_alerts.log');
 
 // Localhost / Loopback IPs that are always trusted for developer testing
 const LOCAL_TRUSTED_IPS = new Set(['127.0.0.1', '::1', '::ffff:127.0.0.1', 'localhost']);
+
+// Trusted Search Engine Crawlers & Inspection Tools (Googlebot, Bingbot, AdSense Bot)
+const TRUSTED_CRAWLERS = [
+    'googlebot',
+    'google-inspectiontool',
+    'adsbot-google',
+    'mediapartners-google',
+    'bingbot',
+    'duckduckbot'
+];
 
 // Known Malicious Scraper / Automated Headless Tool User-Agents
 const BLOCKED_USER_AGENTS = [
@@ -46,9 +56,14 @@ function applySecurityFilters(req, res) {
     clientIP = clientIP.split(',')[0].trim();
     const userAgent = (req.headers['user-agent'] || '').toLowerCase();
 
-    // 0. Always allow trusted local developer access (127.0.0.1)
+    // 0. Always allow trusted local developer access & Search Engine Crawlers
     if (LOCAL_TRUSTED_IPS.has(clientIP)) {
         return true;
+    }
+
+    const isSearchEngine = TRUSTED_CRAWLERS.some(crawler => userAgent.includes(crawler));
+    if (isSearchEngine) {
+        return true; // Bypass security filters for Googlebot & Search Console Live Inspection
     }
 
     // 1. Check if IP is permanently blocked
@@ -72,10 +87,10 @@ function applySecurityFilters(req, res) {
         return false;
     }
 
-    // 3. API Rate Limiting (Max 60 requests per minute per IP)
+    // 3. API Rate Limiting (Max 120 requests per minute per IP)
     const currentTime = Date.now();
     const windowMs = 60 * 1000;
-    const maxRequests = 60;
+    const maxRequests = 120;
 
     let ipData = rateLimitStore.get(clientIP) || { count: 0, resetTime: currentTime + windowMs };
 
