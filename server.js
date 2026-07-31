@@ -180,9 +180,15 @@ const server = http.createServer((req, res) => {
     if (pathname === '/api/analytics' && req.method === 'GET') {
         const today = new Date().toISOString().split('T')[0];
         const todayData = analyticsData.dailyVisitors[today] || { views: 0, uniqueIPs: [] };
-        
+
+        const allUniqueIPs = new Set();
+        Object.values(analyticsData.dailyVisitors).forEach(day => {
+            if (day.uniqueIPs) day.uniqueIPs.forEach(ip => allUniqueIPs.add(ip));
+        });
+
         const summary = {
             totalPageViewsAllTime: analyticsData.totalPageViews,
+            totalUniqueVisitorsAllTime: allUniqueIPs.size,
             todayDate: today,
             todayTotalViews: todayData.views,
             todayUniqueVisitors: todayData.uniqueIPs.length,
