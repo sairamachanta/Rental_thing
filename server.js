@@ -96,6 +96,17 @@ function runAutoScraper() {
 
 setInterval(runAutoScraper, SCRAPE_INTERVAL_MS);
 
+// --- KEEP-ALIVE PING LOOP TO PREVENT RENDER SLEEP ---
+const KEEP_ALIVE_INTERVAL_MS = 10 * 60 * 1000; // 10 minutes
+function sendKeepAlivePing() {
+    https.get('https://manarent.onrender.com/sitemap.xml', (res) => {
+        console.log(`[KeepAlive] Ping sent to https://manarent.onrender.com/sitemap.xml. Status: ${res.statusCode}`);
+    }).on('error', (err) => {
+        console.log(`[KeepAlive Error] ${err.message}`);
+    });
+}
+setInterval(sendKeepAlivePing, KEEP_ALIVE_INTERVAL_MS);
+
 function escapeHtml(str) {
     if (typeof str !== 'string') return '';
     return str
