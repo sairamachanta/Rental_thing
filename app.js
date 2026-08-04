@@ -378,6 +378,15 @@ function setupEventListeners() {
     }
 
     const searchInput = document.getElementById("searchInput");
+    const searchBtn = document.getElementById("searchBtnTrigger");
+
+    const doSearch = () => {
+        if (searchInput) AppState.searchQuery = searchInput.value.toLowerCase().trim();
+        fetchListings(true);
+        const gridEl = document.getElementById("listingsGrid");
+        if (gridEl) gridEl.scrollIntoView({ behavior: "smooth", block: "start" });
+    };
+
     if (searchInput) {
         let debounceTimer;
         searchInput.addEventListener("input", (e) => {
@@ -385,7 +394,21 @@ function setupEventListeners() {
             debounceTimer = setTimeout(() => {
                 AppState.searchQuery = e.target.value.toLowerCase().trim();
                 fetchListings(true);
-            }, 300);
+            }, 400);
+        });
+
+        searchInput.addEventListener("keydown", (e) => {
+            if (e.key === "Enter") {
+                e.preventDefault();
+                doSearch();
+            }
+        });
+    }
+
+    if (searchBtn) {
+        searchBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            doSearch();
         });
     }
 
