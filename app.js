@@ -672,7 +672,7 @@ async function handleFormSubmit(e) {
     const title = document.getElementById("formTitle").value;
     const category = document.getElementById("formCategory").value;
     const areaId = document.getElementById("formArea").value;
-    const activeCityObj = CITIES_REGISTRY[AppState.selectedCity] || CITIES_REGISTRY.hyderabad;
+    const activeCityObj = (typeof CITIES_REGISTRY !== 'undefined' && CITIES_REGISTRY[AppState.selectedCity]) ? CITIES_REGISTRY[AppState.selectedCity] : CITIES_REGISTRY.hyderabad;
     const areaObj = activeCityObj.subcities ? activeCityObj.subcities.find(a => a.id === areaId) : null;
     const areaName = areaObj ? areaObj.name : activeCityObj.name;
     
@@ -708,32 +708,41 @@ async function handleFormSubmit(e) {
         createdAt: new Date().toISOString()
     };
 
-    if (typeof INITIAL_LISTINGS !== 'undefined') {
-        INITIAL_LISTINGS.unshift(newListing);
-    }
-    AppState.listings.unshift(newListing);
-
     try {
-        await fetch("/api/submit", {
+        const res = await fetch("/api/submit", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(newListing)
         });
+        if (res.ok) {
+            const data = await res.json();
+            if (data.id) newListing.id = data.id;
+        }
     } catch (err) {
-        console.log("Local submit preserved.");
+        console.log("Local submit fallback active.");
     }
+
+    if (typeof INITIAL_LISTINGS !== 'undefined') {
+        INITIAL_LISTINGS.unshift(newListing);
+    }
+
+    AppState.selectedCategory = "all";
+    AppState.selectedArea = "all";
+    AppState.searchQuery = "";
+    AppState.currentPage = 1;
+
+    AppState.listings.unshift(newListing);
 
     const modal = document.getElementById("postListingModal");
     if (modal) modal.classList.remove("active");
     e.target.reset();
 
-    AppState.selectedCategory = "all";
-    AppState.selectedArea = "all";
-    AppState.currentPage = 1;
-
     renderAreaPills();
     renderCategoryTabs();
-    fetchListings(true);
+
+    const pagedItems = AppState.listings.slice(0, AppState.limit);
+    renderListingsGrid(pagedItems, AppState.listings.length);
+    renderPaginationControls(Math.ceil(AppState.listings.length / AppState.limit), 1);
 
     const gridEl = document.getElementById("listingsGrid");
     if (gridEl) {
@@ -742,7 +751,7 @@ async function handleFormSubmit(e) {
 
     const successTextEl = document.getElementById("successModalText");
     if (successTextEl) {
-        successTextEl.innerHTML = `Your listing <b>"${escapeHtml(title)}"</b> is now live in <b>${escapeHtml(areaName)}, ${escapeHtml(activeCityObj.name)}</b> with Zero Brokerage!`;
+        successTextEl.innerHTML = `Your listing <b>"${escapeHtml(title)}"</b> is now live at position #1 in <b>${escapeHtml(areaName)}, ${escapeHtml(activeCityObj.name)}</b> with Zero Brokerage!`;
     }
 
     const successModal = document.getElementById("postSuccessModal");

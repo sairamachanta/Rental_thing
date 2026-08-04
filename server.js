@@ -308,7 +308,7 @@ const server = http.createServer((req, res) => {
                     deposit: parseInt(raw.price || '0', 10) * 2,
                     specs: escapeHtml(raw.specs || 'Verified Rental Specs'),
                     tags: ["Direct Owner Listing", "Just Posted"],
-                    image: escapeHtml(raw.image || 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80'),
+                    image: raw.image || 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80',
                     ownerName: escapeHtml(raw.ownerName || 'Owner'),
                     phone: escapeHtml(raw.phone || '919876543210'),
                     whatsapp: escapeHtml(raw.whatsapp || '919876543210'),
