@@ -353,6 +353,10 @@ window.connectOwnerWithAd = function(targetUrl, ownerName, type) {
                 </div>
             </div>
             
+            <div style="background: rgba(239, 68, 68, 0.15); border: 1px solid rgba(239, 68, 68, 0.35); padding: 8px 12px; border-radius: 8px; margin: 10px 0; font-size: 0.78rem; color: #fca5a5; text-align: left;">
+                <strong>🛡️ Safety Reminder:</strong> NEVER send token money online. Visit the property/vehicle & verify original owner documents first!
+            </div>
+            
             <div class="ad-timer">Opening ${type === 'whatsapp' ? 'WhatsApp' : 'Call'} in <span id="adCount">1.8</span>s...</div>
         </div>
     `;
