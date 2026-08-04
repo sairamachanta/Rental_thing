@@ -336,6 +336,19 @@ svg {
     -moz-appearance: none;
     transition: all 0.2s ease;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    height: 44px;
+    box-sizing: border-box;
+    margin: 0;
+    flex-shrink: 0;
+}
+
+#areaSelectDropdown {
+    min-width: 220px;
+    max-width: 280px;
+}
+
+#sortSelectDropdown {
+    min-width: 170px;
 }
 
 .filter-dropdown:focus, .filter-dropdown:hover {
