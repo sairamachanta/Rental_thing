@@ -118,9 +118,19 @@
                 <input type="text" id="searchInput" placeholder="Search by Landmark (e.g. KPHB Metro, DLF Road, Mindspace, Botanical Garden)...">
             </div>
 
-            <select class="filter-dropdown" id="areaSelectDropdown">
-                <!-- Rendered dynamically by JS -->
-            </select>
+            <!-- CUSTOM SEARCHABLE SUBCITY AREA DROPDOWN -->
+            <div class="custom-dropdown-wrapper" id="customAreaDropdownWrapper">
+                <button type="button" class="custom-dropdown-btn" id="customAreaDropdownBtn">
+                    <span id="customAreaSelectedText">📍 All Subcities</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="custom-dropdown-menu" id="customAreaDropdownMenu">
+                    <input type="text" class="custom-dropdown-search" id="customAreaSearchInput" placeholder="🔍 Search subcity area...">
+                    <div class="custom-dropdown-list" id="customAreaDropdownList">
+                        <!-- Populated dynamically with 260px scroll -->
+                    </div>
+                </div>
+            </div>
 
             <select class="filter-dropdown" id="sortSelectDropdown">
                 <option value="default">⚡ Sort: Default</option>

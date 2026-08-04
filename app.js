@@ -243,11 +243,25 @@ function renderAreaPills() {
         `).join("");
     }
 
-    const dropdown = document.getElementById("areaSelectDropdown");
-    if (dropdown && activeCityObj.subcities) {
-        dropdown.innerHTML = `<option value="all">📍 All ${escapeHtml(activeCityObj.name)} (${activeCityObj.subcities.length} Wards)</option>` +
-            activeCityObj.subcities.map(sub => `<option value="${escapeHtml(sub.id)}" ${AppState.selectedArea === sub.id ? 'selected' : ''}>📍 ${escapeHtml(sub.name)}</option>`).join("");
-        dropdown.value = AppState.selectedArea;
+    // Custom Searchable Dropdown Rendering
+    const selectedBtnText = document.getElementById("customAreaSelectedText");
+    const customList = document.getElementById("customAreaDropdownList");
+
+    if (activeCityObj.subcities && customList) {
+        const activeSub = activeCityObj.subcities.find(s => s.id === AppState.selectedArea);
+        if (selectedBtnText) {
+            selectedBtnText.textContent = activeSub ? `📍 ${activeSub.name}` : `📍 All ${activeCityObj.name} (${activeCityObj.subcities.length} Wards)`;
+        }
+
+        let itemsHtml = `<div class="custom-dropdown-item ${AppState.selectedArea === 'all' ? 'selected' : ''}" onclick="selectArea('all')">📍 All ${escapeHtml(activeCityObj.name)} (${activeCityObj.subcities.length} Wards)</div>`;
+
+        itemsHtml += activeCityObj.subcities.map(sub => `
+            <div class="custom-dropdown-item ${AppState.selectedArea === sub.id ? 'selected' : ''}" onclick="selectArea('${escapeHtml(sub.id)}')">
+                📍 ${escapeHtml(sub.name)}
+            </div>
+        `).join("");
+
+        customList.innerHTML = itemsHtml;
     }
 }
 
@@ -303,6 +317,8 @@ window.selectCity = function(cityKey) {
 
 window.selectArea = function(areaId) {
     AppState.selectedArea = areaId;
+    const wrapper = document.getElementById("customAreaDropdownWrapper");
+    if (wrapper) wrapper.classList.remove("active");
     renderAreaPills();
     renderCategoryTabs();
     fetchListings(true);
@@ -372,6 +388,38 @@ function setupEventListeners() {
             }, 300);
         });
     }
+
+    // Custom Searchable Dropdown Event Listeners
+    const customBtn = document.getElementById("customAreaDropdownBtn");
+    const customWrapper = document.getElementById("customAreaDropdownWrapper");
+    const customSearch = document.getElementById("customAreaSearchInput");
+
+    if (customBtn && customWrapper) {
+        customBtn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            customWrapper.classList.toggle("active");
+            if (customSearch && customWrapper.classList.contains("active")) {
+                customSearch.focus();
+            }
+        });
+    }
+
+    if (customSearch) {
+        customSearch.addEventListener("input", (e) => {
+            const query = e.target.value.toLowerCase().trim();
+            const items = document.querySelectorAll("#customAreaDropdownList .custom-dropdown-item");
+            items.forEach(item => {
+                const text = item.textContent.toLowerCase();
+                item.style.display = text.includes(query) ? "flex" : "none";
+            });
+        });
+    }
+
+    document.addEventListener("click", (e) => {
+        if (customWrapper && !customWrapper.contains(e.target)) {
+            customWrapper.classList.remove("active");
+        }
+    });
 
     const areaDropdown = document.getElementById("areaSelectDropdown");
     if (areaDropdown) {
