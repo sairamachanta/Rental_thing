@@ -157,7 +157,7 @@ const server = http.createServer((req, res) => {
         return;
     }
 
-    // SEO Dynamic Sitemap Route with All Listing URLs
+    // SEO Dynamic Sitemap Route with All Subcity Landing Pages, Guides & Listing URLs
     if (pathname === '/sitemap.xml') {
         const domain = "https://manarent.onrender.com";
         const staticPages = [
@@ -166,7 +166,14 @@ const server = http.createServer((req, res) => {
             "/about.html",
             "/privacy.html",
             "/terms.html",
-            "/contact.html"
+            "/contact.html",
+            "/guides/best-areas-to-rent-in-hyderabad",
+            "/guides/kondapur-vs-gachibowli-rentals",
+            "/guides/hyderabad-pg-vs-flat-guide"
+        ];
+
+        const subcities = [
+            "kukatpally", "kondapur", "hitech", "gachibowli", "madhapur", "miyapur", "secunderabad", "keesara", "dammaiguda", "nagaram", "ghatkesar", "boduppal", "kapra", "kushaiguda", "cherlapally", "begumpet", "banjara", "jubilee"
         ];
 
         let xml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
@@ -176,6 +183,12 @@ const server = http.createServer((req, res) => {
             xml += `  <url>\n    <loc>${domain}${p}</loc>\n    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>\n    <changefreq>daily</changefreq>\n    <priority>${p === '' ? '1.0' : '0.8'}</priority>\n  </url>\n`;
         });
 
+        // Add Subcity SEO Landing Pages
+        subcities.forEach(area => {
+            xml += `  <url>\n    <loc>${domain}/rent/hyderabad/${area}</loc>\n    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>\n    <changefreq>daily</changefreq>\n    <priority>0.9</priority>\n  </url>\n`;
+        });
+
+        // Add Individual Listings
         listingsDatabase.slice(0, 500).forEach(item => {
             const dateStr = item.createdAt ? item.createdAt.split('T')[0] : new Date().toISOString().split('T')[0];
             xml += `  <url>\n    <loc>${domain}/listing/${encodeURIComponent(item.id)}</loc>\n    <lastmod>${dateStr}</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.7</priority>\n  </url>\n`;
@@ -185,6 +198,165 @@ const server = http.createServer((req, res) => {
 
         res.writeHead(200, { 'Content-Type': 'text/xml; charset=utf-8' });
         res.end(xml);
+        return;
+    }
+
+    // SEO Subcity Locality Landing Pages (/rent/:city/:area)
+    if (pathname.startsWith('/rent/')) {
+        const parts = pathname.split('/').filter(Boolean); // ['rent', 'hyderabad', 'kukatpally']
+        const cityKey = parts[1] || 'hyderabad';
+        const areaId = parts[2] || 'all';
+
+        const areaNameFormatted = areaId.charAt(0).toUpperCase() + areaId.slice(1);
+        const cityNameFormatted = cityKey.charAt(0).toUpperCase() + cityKey.slice(1);
+
+        const matchingListings = listingsDatabase.filter(item => {
+            if (item.cityKey !== cityKey) return false;
+            if (areaId !== 'all' && item.areaId !== areaId) return false;
+            return true;
+        });
+
+        const displayItems = matchingListings.length > 0 ? matchingListings.slice(0, 24) : listingsDatabase.slice(0, 24);
+
+        const title = `Flats, PGs, Bikes & Rentals in ${areaNameFormatted}, ${cityNameFormatted} (Zero Brokerage) | ManaRent`;
+        const description = `Browse verified 1 BHK, 2 BHK flats, PGs, bike rentals & self-drive cars in ${areaNameFormatted}, ${cityNameFormatted}. Direct owner contact via WhatsApp or Call.`;
+        const canonicalUrl = `https://manarent.onrender.com/rent/${cityKey}/${areaId}`;
+
+        const cardsHtml = displayItems.map(item => {
+            const waMsg = encodeURIComponent(`Hi ${item.ownerName}, I am interested in your listing "${item.title}" in ${item.areaName} on ManaRent.`);
+            const waUrl = `https://wa.me/${item.whatsapp}?text=${waMsg}`;
+            const phoneUrl = `tel:+${item.phone}`;
+            const listingDetailUrl = `/listing/${encodeURIComponent(item.id)}`;
+
+            return `
+                <div class="listing-card">
+                    <div class="card-image-wrapper">
+                        <a href="${listingDetailUrl}">
+                            <img src="${item.image}" alt="${escapeHtml(item.title)}" class="card-image" loading="lazy">
+                        </a>
+                        ${item.featured ? `<span class="badge-featured">⭐ Featured</span>` : ''}
+                        ${item.verified ? `<span class="badge-verified">✓ Verified Owner</span>` : ''}
+                    </div>
+                    <div class="card-body">
+                        <div class="card-area-tag">📍 ${escapeHtml(item.areaName)} (${escapeHtml(item.cityName || 'Hyd')})</div>
+                        <h3 class="card-title">
+                            <a href="${listingDetailUrl}" style="color:#fff; text-decoration:none;">${escapeHtml(item.title.replace(/^Real Business:\s*/i, ''))}</a>
+                        </h3>
+                        <div class="card-landmark">📍 ${escapeHtml(item.landmark)}</div>
+                        <div class="card-specs">${escapeHtml(item.specs)}</div>
+                        <div class="card-footer">
+                            <div class="price-wrapper">
+                                <span class="price-amount">₹${item.price.toLocaleString("en-IN")}</span>
+                                <span class="price-period">per ${escapeHtml(item.period)}</span>
+                            </div>
+                            <div class="card-actions">
+                                <a href="${waUrl}" target="_blank" class="btn-whatsapp" style="text-decoration:none;">💬 WhatsApp</a>
+                                <a href="${phoneUrl}" class="btn-call" style="text-decoration:none;">📞 Call</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }).join("");
+
+        const html = `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${escapeHtml(title)}</title>
+    <meta name="description" content="${escapeHtml(description)}">
+    <link rel="canonical" href="${canonicalUrl}">
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body style="background:#070a12; color:#fff; font-family:'Outfit',sans-serif;">
+    <div style="max-width:1320px; margin:0 auto; padding:2rem 1.5rem;">
+        <a href="/" style="color:#c084fc; text-decoration:none; font-weight:700; display:inline-block; margin-bottom:1.5rem;">← Home</a>
+        <h1 style="font-size:2.2rem; font-weight:900; margin-bottom:0.5rem;">Verified Rentals in ${escapeHtml(areaNameFormatted)}, ${escapeHtml(cityNameFormatted)}</h1>
+        <p style="color:#94a3b8; margin-bottom:2rem;">Find 1 BHK, 2 BHK flats, PGs, bike rentals & self-drive cars in ${escapeHtml(areaNameFormatted)} with direct owner contact.</p>
+        
+        <div class="listings-grid">
+            ${cardsHtml}
+        </div>
+    </div>
+</body>
+</html>`;
+
+        res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+        res.end(html);
+        return;
+    }
+
+    // SEO Hyderabad Locality Guides Route (/guides/:slug)
+    if (pathname.startsWith('/guides/')) {
+        const slug = pathname.replace('/guides/', '').trim();
+        let articleTitle = "Hyderabad Rental Guide 2026";
+        let articleContent = "";
+
+        if (slug === "best-areas-to-rent-in-hyderabad") {
+            articleTitle = "Best Areas to Rent a Flat or PG in Hyderabad (2026 Locality Guide)";
+            articleContent = `
+                <h2>Top IT & Residential Rental Hubs in Hyderabad</h2>
+                <p>Choosing the right area to rent in Hyderabad depends on your work location, metro connectivity, and budget. Here is a breakdown of top IT hubs:</p>
+                <ul>
+                    <li><b>Kondapur & Madhapur:</b> Ideal for IT professionals working in Mindspace and Cyber Towers. Average 2 BHK rent ranges from ₹22,000 to ₹35,000 per month.</li>
+                    <li><b>Gachibowli & Financial District:</b> Best for employees at Google, Microsoft, and Amazon. Offers high-end gated community flats and luxury PGs.</li>
+                    <li><b>Kukatpally / KPHB Colony:</b> Excellent budget-friendly area with direct Red Line metro connectivity to Ameerpet and Hitech City. Average 2 BHK rent ranges from ₹15,000 to ₹24,000 per month.</li>
+                    <li><b>Miyapur & Chanda Nagar:</b> Quiet residential areas offering spacious 2 BHK and 3 BHK houses at affordable rates.</li>
+                </ul>
+            `;
+        } else if (slug === "kondapur-vs-gachibowli-rentals") {
+            articleTitle = "Kondapur vs Gachibowli: Rental Price & Lifestyle Comparison";
+            articleContent = `
+                <h2>Kondapur vs Gachibowli Rental Breakdown</h2>
+                <p>Both Kondapur and Gachibowli are premier IT corridor residential areas in Hyderabad. Here is how they compare:</p>
+                <ul>
+                    <li><b>Kondapur:</b> More vibrant street life, abundant grocery markets, close to Botanical Garden. Rent for 2 BHK: ₹20,000 - ₹30,000.</li>
+                    <li><b>Gachibowli:</b> Wider roads, proximity to Financial District, larger gated communities. Rent for 2 BHK: ₹25,000 - ₹40,000.</li>
+                </ul>
+            `;
+        } else {
+            articleTitle = "PG vs Flat for Rent in Hyderabad: Cost & Convenience Guide";
+            articleContent = `
+                <h2>PG vs Flat Comparison for IT Employees</h2>
+                <p>Deciding between a Paying Guest (PG) hostel and an independent flat in Hyderabad depends on your lifestyle:</p>
+                <ul>
+                    <li><b>PG Hostels:</b> All-inclusive (food, Wi-Fi, housekeeping). Cost: ₹7,000 to ₹14,000 per month. Perfect for solo bachelor IT professionals.</li>
+                    <li><b>Flats:</b> Full privacy, cooking freedom. Rent: ₹16,000 to ₹30,000 per month (plus maintenance and electricity). Ideal for families or friends sharing.</li>
+                </ul>
+            `;
+        }
+
+        const html = `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${escapeHtml(articleTitle)} | ManaRent Guides</title>
+    <meta name="description" content="${escapeHtml(articleTitle)} - Complete guide to rents, locality comparison, and zero brokerage owner contacts in Hyderabad.">
+    <link rel="canonical" href="https://manarent.onrender.com${pathname}">
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body style="background:#070a12; color:#fff; font-family:'Outfit',sans-serif; padding: 2rem 1rem;">
+    <div style="max-width:800px; margin:0 auto; background:#0f172a; border:1px solid rgba(255,255,255,0.1); border-radius:16px; padding:2rem; box-shadow:0 12px 35px rgba(0,0,0,0.5);">
+        <a href="/" style="color:#c084fc; text-decoration:none; font-weight:700; display:inline-block; margin-bottom:1.5rem;">← Back to Home</a>
+        <h1 style="font-size:2.2rem; font-weight:900; margin-bottom:1.5rem; color:#fff;">${escapeHtml(articleTitle)}</h1>
+        <div style="color:#cbd5e1; line-height:1.8; font-size:1.05rem;">
+            ${articleContent}
+        </div>
+        <div style="margin-top:2.5rem; text-align:center; background:rgba(139,92,246,0.15); border:1px solid var(--primary); padding:1.5rem; border-radius:12px;">
+            <h3 style="margin:0 0 0.5rem 0; color:#fff;">Looking for a Rental in Hyderabad?</h3>
+            <p style="margin:0 0 1rem 0; color:#94a3b8;">Browse 100% Zero-Brokerage Verified Owner Listings</p>
+            <a href="/" class="btn-primary" style="text-decoration:none; padding:0.65rem 1.5rem;">Explore All Rentals Now</a>
+        </div>
+    </div>
+</body>
+</html>`;
+
+        res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+        res.end(html);
         return;
     }
 
