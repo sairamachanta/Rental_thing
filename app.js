@@ -160,12 +160,13 @@ async function fetchListings(resetPage = false) {
         const res = await fetch(`/api/listings?${queryParams.toString()}`);
         if (res.ok) {
             const responseData = await res.json();
-            AppState.listings = resetPage ? responseData.data : [...AppState.listings, ...responseData.data];
+            AppState.listings = responseData.data;
             AppState.hasMore = responseData.hasMore;
             AppState.totalListingsCount = responseData.total;
 
             renderCategoryTabs();
-            renderListingsGrid(AppState.listings, responseData.total);
+            renderListingsGrid(responseData.data, responseData.total);
+            renderPaginationControls(Math.ceil(responseData.total / AppState.limit), AppState.currentPage);
         } else {
             fallbackLocalFilter();
         }
@@ -190,9 +191,16 @@ function fallbackLocalFilter() {
         return true;
     });
 
-    AppState.listings = filtered;
+    const totalCount = filtered.length;
+    const totalPages = Math.ceil(totalCount / AppState.limit);
+    if (AppState.currentPage > totalPages && totalPages > 0) AppState.currentPage = 1;
+
+    const pagedItems = filtered.slice((AppState.currentPage - 1) * AppState.limit, AppState.currentPage * AppState.limit);
+
+    AppState.listings = pagedItems;
     renderCategoryTabs();
-    renderListingsGrid(filtered, filtered.length);
+    renderListingsGrid(pagedItems, totalCount);
+    renderPaginationControls(totalPages, AppState.currentPage);
 }
 
 function renderCitySelector() {
@@ -386,16 +394,70 @@ function setupEventListeners() {
 
     const listingForm = document.getElementById("ownerListingForm");
     if (listingForm) listingForm.addEventListener("submit", handleFormSubmit);
-
-    window.addEventListener("scroll", () => {
-        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 500) {
-            if (AppState.hasMore && !AppState.isLoading) {
-                AppState.currentPage++;
-                fetchListings(false);
-            }
-        }
-    });
 }
+
+function renderPaginationControls(totalPages, currentPage) {
+    const container = document.getElementById("paginationContainer");
+    if (!container) return;
+
+    if (totalPages <= 1) {
+        container.innerHTML = "";
+        return;
+    }
+
+    let buttons = [];
+
+    // Previous Button
+    buttons.push(`
+        <button class="page-btn" ${currentPage === 1 ? 'disabled' : ''} onclick="changePage(${currentPage - 1})">
+            &laquo; Prev
+        </button>
+    `);
+
+    // Numbered Page Buttons
+    let startPage = Math.max(1, currentPage - 2);
+    let endPage = Math.min(totalPages, startPage + 4);
+    if (endPage - startPage < 4) {
+        startPage = Math.max(1, endPage - 4);
+    }
+
+    if (startPage > 1) {
+        buttons.push(`<button class="page-btn" onclick="changePage(1)">1</button>`);
+        if (startPage > 2) buttons.push(`<span style="color:var(--text-muted); padding:0 4px;">...</span>`);
+    }
+
+    for (let p = startPage; p <= endPage; p++) {
+        buttons.push(`
+            <button class="page-btn ${p === currentPage ? 'active' : ''}" onclick="changePage(${p})">
+                ${p}
+            </button>
+        `);
+    }
+
+    if (endPage < totalPages) {
+        if (endPage < totalPages - 1) buttons.push(`<span style="color:var(--text-muted); padding:0 4px;">...</span>`);
+        buttons.push(`<button class="page-btn" onclick="changePage(${totalPages})">${totalPages}</button>`);
+    }
+
+    // Next Button
+    buttons.push(`
+        <button class="page-btn" ${currentPage === totalPages ? 'disabled' : ''} onclick="changePage(${currentPage + 1})">
+            Next &raquo;
+        </button>
+    `);
+
+    container.innerHTML = buttons.join("");
+}
+
+window.changePage = function(page) {
+    if (page < 1 || page === AppState.currentPage) return;
+    AppState.currentPage = page;
+    fetchListings(false);
+    const gridEl = document.getElementById("listingsGrid");
+    if (gridEl) {
+        gridEl.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+};
 
 function renderListingsGrid(listings, totalCount) {
     const grid = document.getElementById("listingsGrid");
