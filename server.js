@@ -157,13 +157,119 @@ const server = http.createServer((req, res) => {
         return;
     }
 
-    // SEO Routes
+    // SEO Dynamic Sitemap Route with All Listing URLs
     if (pathname === '/sitemap.xml') {
-        const sitemapPath = path.join(__dirname, 'sitemap.xml');
-        fs.readFile(sitemapPath, (err, data) => {
-            if (err) { res.writeHead(404); res.end(); }
-            else { res.writeHead(200, { 'Content-Type': 'application/xml' }); res.end(data); }
+        const domain = "https://manarent.onrender.com";
+        const staticPages = [
+            "",
+            "/index.html",
+            "/about.html",
+            "/privacy.html",
+            "/terms.html",
+            "/contact.html"
+        ];
+
+        let xml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
+        xml += `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
+
+        staticPages.forEach(p => {
+            xml += `  <url>\n    <loc>${domain}${p}</loc>\n    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>\n    <changefreq>daily</changefreq>\n    <priority>${p === '' ? '1.0' : '0.8'}</priority>\n  </url>\n`;
         });
+
+        listingsDatabase.slice(0, 500).forEach(item => {
+            const dateStr = item.createdAt ? item.createdAt.split('T')[0] : new Date().toISOString().split('T')[0];
+            xml += `  <url>\n    <loc>${domain}/listing/${encodeURIComponent(item.id)}</loc>\n    <lastmod>${dateStr}</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.7</priority>\n  </url>\n`;
+        });
+
+        xml += `</urlset>`;
+
+        res.writeHead(200, { 'Content-Type': 'application/xml; charset=utf-8' });
+        res.end(xml);
+        return;
+    }
+
+    // Individual Listing Detail Page SSR Route (/listing/:id)
+    if (pathname.startsWith('/listing/')) {
+        const listingId = pathname.replace('/listing/', '').trim();
+        const item = listingsDatabase.find(l => l.id === listingId) || listingsDatabase[0];
+
+        const title = `${item.title} for Rent in ${item.areaName}, ${item.cityName || 'Hyderabad'} | ManaRent`;
+        const description = `Rent ${item.title} in ${item.areaName}, ${item.landmark}, ${item.cityName || 'Hyderabad'} for ₹${item.price.toLocaleString("en-IN")}/${item.period}. Zero brokerage direct owner contact via WhatsApp or Call.`;
+        const canonicalUrl = `https://manarent.onrender.com/listing/${item.id}`;
+
+        const waMsg = encodeURIComponent(`Hi ${item.ownerName}, I am interested in your listing "${item.title}" in ${item.areaName} on ManaRent.`);
+        const waUrl = `https://wa.me/${item.whatsapp}?text=${waMsg}`;
+        const phoneUrl = `tel:+${item.phone}`;
+
+        const html = `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${escapeHtml(title)}</title>
+    <meta name="description" content="${escapeHtml(description)}">
+    <link rel="canonical" href="${canonicalUrl}">
+
+    <!-- Open Graph SEO -->
+    <meta property="og:title" content="${escapeHtml(title)}">
+    <meta property="og:description" content="${escapeHtml(description)}">
+    <meta property="og:image" content="${item.image}">
+    <meta property="og:url" content="${canonicalUrl}">
+    <meta property="og:type" content="website">
+
+    <!-- Schema.org JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "${escapeHtml(item.title)}",
+      "image": "${item.image}",
+      "description": "${escapeHtml(item.specs)} - ${escapeHtml(item.landmark)}, ${escapeHtml(item.areaName)}",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "INR",
+        "price": "${item.price}",
+        "availability": "https://schema.org/InStock",
+        "seller": {
+          "@type": "Person",
+          "name": "${escapeHtml(item.ownerName)}"
+        }
+      }
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body style="background:#070a12; color:#fff; font-family:'Outfit',sans-serif; padding: 2rem 1rem;">
+    <div style="max-width:800px; margin:0 auto; background:#0f172a; border:1px solid rgba(255,255,255,0.1); border-radius:16px; padding:2rem; box-shadow:0 12px 35px rgba(0,0,0,0.5);">
+        <a href="/" style="color:#c084fc; text-decoration:none; font-weight:700; display:inline-block; margin-bottom:1.5rem;">← Back to All ManaRent Listings</a>
+        <img src="${item.image}" alt="${escapeHtml(item.title)}" style="width:100%; height:380px; object-fit:cover; border-radius:12px; margin-bottom:1.5rem;">
+        <span style="background:rgba(139,92,246,0.2); color:#c084fc; padding:4px 12px; border-radius:20px; font-weight:700; font-size:0.8rem; text-transform:uppercase;">📍 ${escapeHtml(item.areaName)} (${escapeHtml(item.cityName || 'Hyderabad')})</span>
+        <h1 style="font-size:2rem; margin:1rem 0 0.5rem 0; font-weight:800;">${escapeHtml(item.title)}</h1>
+        <p style="color:#94a3b8; font-size:1rem; margin-bottom:1rem;">📍 ${escapeHtml(item.landmark)}</p>
+        
+        <div style="font-size:1.8rem; font-weight:900; color:#22c55e; margin-bottom:1.5rem;">₹${item.price.toLocaleString("en-IN")} <span style="font-size:0.9rem; color:#94a3b8;">per ${escapeHtml(item.period)}</span></div>
+
+        <div style="background:rgba(0,0,0,0.3); border:1px solid rgba(255,255,255,0.1); border-radius:8px; padding:1rem; margin-bottom:1.5rem;">
+            <h4 style="margin:0 0 0.5rem 0; color:#c084fc;">Property Specifications</h4>
+            <p style="margin:0; color:#cbd5e1;">${escapeHtml(item.specs)}</p>
+        </div>
+
+        <div style="background:linear-gradient(135deg, rgba(239, 68, 68, 0.12), rgba(245, 158, 11, 0.1)); border:1px solid rgba(239, 68, 68, 0.35); padding:0.8rem 1rem; border-radius:8px; margin-bottom:1.5rem; color:#fca5a5; font-size:0.85rem;">
+            🛡️ <b>Tenant Safety Warning:</b> Never pay any online token advance before visiting & inspecting the property physically!
+        </div>
+
+        <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+            <a href="${waUrl}" target="_blank" style="flex:1; background:#25d366; color:#fff; text-align:center; padding:0.85rem; border-radius:8px; font-weight:800; text-decoration:none; display:inline-block;">💬 Chat on WhatsApp</a>
+            <a href="${phoneUrl}" style="flex:1; background:#8b5cf6; color:#fff; text-align:center; padding:0.85rem; border-radius:8px; font-weight:800; text-decoration:none; display:inline-block;">📞 Call Owner (${escapeHtml(item.ownerName)})</a>
+        </div>
+    </div>
+</body>
+</html>`;
+
+        res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+        res.end(html);
         return;
     }
 
@@ -331,23 +437,77 @@ const server = http.createServer((req, res) => {
         return;
     }
 
+    // Helper: Pre-Render SSR HTML for Top 24 Listings for Google Crawlers
+    function getPreRenderedListingsHtml() {
+        const top24 = listingsDatabase.slice(0, 24);
+        return top24.map(item => {
+            const waMsg = encodeURIComponent(`Hi ${item.ownerName}, I am interested in your listing "${item.title}" in ${item.areaName} on ManaRent.`);
+            const waUrl = `https://wa.me/${item.whatsapp}?text=${waMsg}`;
+            const phoneUrl = `tel:+${item.phone}`;
+            const listingDetailUrl = `/listing/${encodeURIComponent(item.id)}`;
+
+            return `
+                <div class="listing-card">
+                    <div class="card-image-wrapper">
+                        <a href="${listingDetailUrl}">
+                            <img src="${item.image}" alt="${escapeHtml(item.title)}" class="card-image" loading="lazy">
+                        </a>
+                        ${item.featured ? `<span class="badge-featured">⭐ Featured</span>` : ''}
+                        ${item.verified ? `<span class="badge-verified">✓ Verified Owner</span>` : ''}
+                    </div>
+                    <div class="card-body">
+                        <div class="card-area-tag">📍 ${escapeHtml(item.areaName)} (${escapeHtml(item.cityName || 'Hyd')})</div>
+                        <h3 class="card-title">
+                            <a href="${listingDetailUrl}" style="color:#fff; text-decoration:none;">${escapeHtml(item.title)}</a>
+                        </h3>
+                        <div class="card-landmark">📍 ${escapeHtml(item.landmark)}</div>
+                        <div class="card-specs">${escapeHtml(item.specs)}</div>
+                        
+                        <div class="card-tags">
+                            ${(item.tags || []).map(tag => `<span class="card-tag-item">${escapeHtml(tag)}</span>`).join('')}
+                        </div>
+
+                        <div class="card-footer">
+                            <div class="price-wrapper">
+                                <span class="price-amount">₹${item.price.toLocaleString("en-IN")}</span>
+                                <span class="price-period">per ${escapeHtml(item.period)}</span>
+                            </div>
+
+                            <div class="card-actions">
+                                <button onclick="connectOwnerWithAd('${waUrl}', '${escapeHtml(item.ownerName)}', 'whatsapp')" class="btn-whatsapp">
+                                    💬 <span>WhatsApp</span>
+                                </button>
+                                <button onclick="connectOwnerWithAd('${phoneUrl}', '${escapeHtml(item.ownerName)}', 'phone')" class="btn-call">
+                                    📞
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }).join("");
+    }
+
     // Static File Serving (Supporting Query Parameters on Root & Files)
     const isRoot = (pathname === '/' || pathname === '/index.html');
     let filePath = path.join(__dirname, isRoot ? 'index.html' : pathname);
     const ext = path.extname(filePath).toLowerCase();
     const contentType = MIME_TYPES[ext] || 'text/html';
 
-    fs.readFile(filePath, (err, content) => {
+    fs.readFile(filePath, 'utf-8', (err, content) => {
         if (err) {
             if (err.code === 'ENOENT' || err.code === 'EISDIR') {
-                // Fallback to index.html for query route SPA URLs
-                fs.readFile(path.join(__dirname, 'index.html'), (indexErr, indexContent) => {
+                fs.readFile(path.join(__dirname, 'index.html'), 'utf-8', (indexErr, indexContent) => {
                     if (indexErr) {
                         res.writeHead(500);
                         res.end('Server Error: Missing index.html');
                     } else {
-                        res.writeHead(200, { 'Content-Type': 'text/html' });
-                        res.end(indexContent, 'utf-8');
+                        const ssrHtml = indexContent.replace(
+                            '<div class="listings-grid" id="listingsGrid">',
+                            `<div class="listings-grid" id="listingsGrid">${getPreRenderedListingsHtml()}`
+                        );
+                        res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+                        res.end(ssrHtml, 'utf-8');
                     }
                 });
             } else {
@@ -355,8 +515,17 @@ const server = http.createServer((req, res) => {
                 res.end(`Server Error: ${err.code}`);
             }
         } else {
-            res.writeHead(200, { 'Content-Type': contentType });
-            res.end(content, 'utf-8');
+            if (isRoot) {
+                const ssrHtml = content.replace(
+                    '<div class="listings-grid" id="listingsGrid">',
+                    `<div class="listings-grid" id="listingsGrid">${getPreRenderedListingsHtml()}`
+                );
+                res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+                res.end(ssrHtml, 'utf-8');
+            } else {
+                res.writeHead(200, { 'Content-Type': contentType });
+                res.end(content, 'utf-8');
+            }
         }
     });
 });
