@@ -1161,8 +1161,11 @@ footer {
         flex-direction: column;
     }
     .search-input-group,
-    .filter-dropdown {
+    .filter-dropdown,
+    .custom-dropdown-wrapper,
+    #sortSelectDropdown {
         width: 100%;
+        max-width: 100%;
     }
     .form-row {
         grid-template-columns: 1fr;
