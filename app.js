@@ -214,38 +214,39 @@ function renderCitySelector() {
 }
 
 function renderAreaPills() {
-    const container = document.getElementById("areaPillsContainer");
-    if (!container || typeof CITIES_REGISTRY === 'undefined') return;
-
+    if (typeof CITIES_REGISTRY === 'undefined') return;
     const activeCityObj = CITIES_REGISTRY[AppState.selectedCity];
     if (!activeCityObj) return;
 
-    const areaPillData = [
-        { id: "all", name: `All ${activeCityObj.name}`, icon: ICONS.location }
-    ];
+    const container = document.getElementById("areaPillsContainer");
+    if (container) {
+        const areaPillData = [
+            { id: "all", name: `All ${activeCityObj.name}`, icon: ICONS.location }
+        ];
 
-    if (activeCityObj.subcities) {
-        activeCityObj.subcities.slice(0, 30).forEach(sub => {
-            areaPillData.push({
-                id: sub.id,
-                name: sub.name,
-                icon: ICONS.location
+        if (activeCityObj.subcities) {
+            activeCityObj.subcities.slice(0, 30).forEach(sub => {
+                areaPillData.push({
+                    id: sub.id,
+                    name: sub.name,
+                    icon: ICONS.location
+                });
             });
-        });
-    }
+        }
 
-    container.innerHTML = areaPillData.map(area => `
-        <button class="area-pill ${AppState.selectedArea === area.id ? 'active' : ''}" 
-                onclick="selectArea('${escapeHtml(area.id)}')">
-            <span class="pill-icon">${area.icon}</span>
-            <span>${escapeHtml(area.name)}</span>
-        </button>
-    `).join("");
+        container.innerHTML = areaPillData.map(area => `
+            <button class="area-pill ${AppState.selectedArea === area.id ? 'active' : ''}" 
+                    onclick="selectArea('${escapeHtml(area.id)}')">
+                <span class="pill-icon">${area.icon}</span>
+                <span>${escapeHtml(area.name)}</span>
+            </button>
+        `).join("");
+    }
 
     const dropdown = document.getElementById("areaSelectDropdown");
     if (dropdown && activeCityObj.subcities) {
-        dropdown.innerHTML = `<option value="all">All ${escapeHtml(activeCityObj.name)} Areas (${activeCityObj.subcities.length} Wards/Localities)</option>` +
-            activeCityObj.subcities.map(sub => `<option value="${escapeHtml(sub.id)}" ${AppState.selectedArea === sub.id ? 'selected' : ''}>${escapeHtml(sub.name)}</option>`).join("");
+        dropdown.innerHTML = `<option value="all">📍 All ${escapeHtml(activeCityObj.name)} (${activeCityObj.subcities.length} Wards)</option>` +
+            activeCityObj.subcities.map(sub => `<option value="${escapeHtml(sub.id)}" ${AppState.selectedArea === sub.id ? 'selected' : ''}>📍 ${escapeHtml(sub.name)}</option>`).join("");
         dropdown.value = AppState.selectedArea;
     }
 }
