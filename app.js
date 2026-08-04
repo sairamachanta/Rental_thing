@@ -706,10 +706,31 @@ async function handleFormSubmit(e) {
 
     AppState.selectedCategory = "all";
     AppState.selectedArea = "all";
+    AppState.currentPage = 1;
 
     renderAreaPills();
     renderCategoryTabs();
-    renderListingsGrid(AppState.listings, AppState.listings.length);
+    fetchListings(true);
 
-    alert(`🎉 Success! Your rental listing for "${title}" in ${areaName} (${activeCityObj.name}) has been published.`);
+    const gridEl = document.getElementById("listingsGrid");
+    if (gridEl) {
+        gridEl.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    const successTextEl = document.getElementById("successModalText");
+    if (successTextEl) {
+        successTextEl.innerHTML = `Your listing <b>"${escapeHtml(title)}"</b> is now live in <b>${escapeHtml(areaName)}, ${escapeHtml(activeCityObj.name)}</b> with Zero Brokerage!`;
+    }
+
+    const successModal = document.getElementById("postSuccessModal");
+    if (successModal) {
+        successModal.classList.add("active");
+    }
 }
+
+window.closeSuccessModal = function() {
+    const successModal = document.getElementById("postSuccessModal");
+    if (successModal) {
+        successModal.classList.remove("active");
+    }
+};
