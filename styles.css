@@ -318,21 +318,35 @@ svg {
 }
 
 .filter-dropdown {
-    background: rgba(0, 0, 0, 0.35);
-    border: 1px solid var(--border-glass);
+    background-color: #0f172a;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23c084fc' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.85rem center;
+    background-size: 1rem;
+    border: 1px solid var(--primary);
     color: var(--text-main);
-    padding: 0.65rem 1rem;
+    padding: 0.65rem 2.4rem 0.65rem 1.1rem;
     border-radius: var(--radius-md);
     font-size: 0.88rem;
-    font-weight: 600;
+    font-weight: 700;
     outline: none;
     cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
     transition: all 0.2s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.filter-dropdown:focus, .filter-dropdown:hover {
+    border-color: #c084fc;
+    box-shadow: 0 0 15px rgba(192, 132, 252, 0.4);
 }
 
 .filter-dropdown option {
     background: #0f172a;
     color: #fff;
+    padding: 8px;
 }
 
 /* --- CATEGORY SELECTOR TABS --- */
@@ -344,8 +358,8 @@ svg {
 
 .category-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.1rem;
 }
 
 .category-card {
@@ -954,6 +968,12 @@ footer {
     text-align: center;
 }
 
+@media (max-width: 1100px) {
+    .category-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
     .hero-title {
         font-size: 2rem;
@@ -971,6 +991,12 @@ footer {
     .form-row {
         grid-template-columns: 1fr;
     }
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .nav-links-desktop {
+        display: none;
+    }
 }
 
 @media (max-width: 520px) {
@@ -981,6 +1007,7 @@ footer {
     .nav-actions {
         width: 100%;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
     .nav-actions select {
         flex: 1;
