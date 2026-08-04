@@ -401,7 +401,7 @@ function renderPaginationControls(totalPages, currentPage) {
     if (!container) return;
 
     if (totalPages <= 1) {
-        container.innerHTML = "";
+        container.innerHTML = `<div style="color:var(--text-muted); font-size:0.88rem; font-weight:600; text-align:center;">Page 1 of 1 • Showing Verified Local Listings</div>`;
         return;
     }
 
