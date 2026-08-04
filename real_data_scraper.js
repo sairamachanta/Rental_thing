@@ -49,11 +49,37 @@ const CATEGORY_IMAGES = {
 };
 
 const REAL_LOCATIONS = [
+    // Hyderabad
     { city: "hyderabad", areaId: "kukatpally", name: "Kukatpally / KPHB", lat: 17.4849, lng: 78.4138 },
     { city: "hyderabad", areaId: "kondapur", name: "Kondapur", lat: 17.4622, lng: 78.3568 },
     { city: "hyderabad", areaId: "hitech", name: "Hitech City", lat: 17.4435, lng: 78.3772 },
     { city: "hyderabad", areaId: "gachibowli", name: "Gachibowli", lat: 17.4401, lng: 78.3489 },
-    { city: "hyderabad", areaId: "madhapur", name: "Madhapur", lat: 17.4483, lng: 78.3915 }
+    { city: "hyderabad", areaId: "madhapur", name: "Madhapur", lat: 17.4483, lng: 78.3915 },
+    { city: "hyderabad", areaId: "miyapur", name: "Miyapur", lat: 17.4968, lng: 78.3565 },
+    { city: "hyderabad", areaId: "secunderabad", name: "Secunderabad", lat: 17.4399, lng: 78.4983 },
+
+    // Bengaluru
+    { city: "bengaluru", areaId: "koramangala", name: "Koramangala", lat: 12.9352, lng: 77.6245 },
+    { city: "bengaluru", areaId: "indiranagar", name: "Indiranagar", lat: 12.9784, lng: 77.6408 },
+    { city: "bengaluru", areaId: "hsr", name: "HSR Layout", lat: 12.9121, lng: 77.6446 },
+    { city: "bengaluru", areaId: "whitefield", name: "Whitefield", lat: 12.9698, lng: 77.7500 },
+
+    // Mumbai
+    { city: "mumbai", areaId: "bandra", name: "Bandra West", lat: 19.0596, lng: 72.8295 },
+    { city: "mumbai", areaId: "andheri", name: "Andheri West", lat: 19.1363, lng: 72.8277 },
+    { city: "mumbai", areaId: "powai", name: "Powai", lat: 19.1176, lng: 72.9060 },
+
+    // Pune
+    { city: "pune", areaId: "hinjewadi", name: "Hinjewadi", lat: 18.5912, lng: 73.7389 },
+    { city: "pune", areaId: "baner", name: "Baner", lat: 18.5590, lng: 73.7868 },
+
+    // Delhi NCR
+    { city: "delhi", areaId: "cybercity", name: "Cyber City Gurgaon", lat: 28.4950, lng: 77.0895 },
+    { city: "delhi", areaId: "noida", name: "Noida Sector 62", lat: 28.6258, lng: 77.3697 },
+
+    // Chennai
+    { city: "chennai", areaId: "omr", name: "OMR IT Expressway", lat: 12.9171, lng: 80.2281 },
+    { city: "chennai", areaId: "velachery", name: "Velachery", lat: 12.9815, lng: 80.2180 }
 ];
 
 function getRandomItem(arr) {
