@@ -183,7 +183,7 @@ const server = http.createServer((req, res) => {
 
         xml += `</urlset>`;
 
-        res.writeHead(200, { 'Content-Type': 'application/xml; charset=utf-8' });
+        res.writeHead(200, { 'Content-Type': 'text/xml; charset=utf-8' });
         res.end(xml);
         return;
     }
@@ -192,12 +192,13 @@ const server = http.createServer((req, res) => {
     if (pathname.startsWith('/listing/')) {
         const listingId = pathname.replace('/listing/', '').trim();
         const item = listingsDatabase.find(l => l.id === listingId) || listingsDatabase[0];
+        const cleanTitle = (item.title || '').replace(/^Real Business:\s*/i, '');
 
-        const title = `${item.title} for Rent in ${item.areaName}, ${item.cityName || 'Hyderabad'} | ManaRent`;
-        const description = `Rent ${item.title} in ${item.areaName}, ${item.landmark}, ${item.cityName || 'Hyderabad'} for ₹${item.price.toLocaleString("en-IN")}/${item.period}. Zero brokerage direct owner contact via WhatsApp or Call.`;
+        const title = `${cleanTitle} for Rent in ${item.areaName}, ${item.cityName || 'Hyderabad'} | ManaRent`;
+        const description = `Rent ${cleanTitle} in ${item.areaName}, ${item.landmark}, ${item.cityName || 'Hyderabad'} for ₹${item.price.toLocaleString("en-IN")}/${item.period}. Zero brokerage direct owner contact via WhatsApp or Call.`;
         const canonicalUrl = `https://manarent.onrender.com/listing/${item.id}`;
 
-        const waMsg = encodeURIComponent(`Hi ${item.ownerName}, I am interested in your listing "${item.title}" in ${item.areaName} on ManaRent.`);
+        const waMsg = encodeURIComponent(`Hi ${item.ownerName}, I am interested in your listing "${cleanTitle}" in ${item.areaName} on ManaRent.`);
         const waUrl = `https://wa.me/${item.whatsapp}?text=${waMsg}`;
         const phoneUrl = `tel:+${item.phone}`;
 
@@ -222,7 +223,7 @@ const server = http.createServer((req, res) => {
     {
       "@context": "https://schema.org/",
       "@type": "Product",
-      "name": "${escapeHtml(item.title)}",
+      "name": "${escapeHtml(cleanTitle)}",
       "image": "${item.image}",
       "description": "${escapeHtml(item.specs)} - ${escapeHtml(item.landmark)}, ${escapeHtml(item.areaName)}",
       "offers": {
@@ -244,9 +245,9 @@ const server = http.createServer((req, res) => {
 <body style="background:#070a12; color:#fff; font-family:'Outfit',sans-serif; padding: 2rem 1rem;">
     <div style="max-width:800px; margin:0 auto; background:#0f172a; border:1px solid rgba(255,255,255,0.1); border-radius:16px; padding:2rem; box-shadow:0 12px 35px rgba(0,0,0,0.5);">
         <a href="/" style="color:#c084fc; text-decoration:none; font-weight:700; display:inline-block; margin-bottom:1.5rem;">← Back to All ManaRent Listings</a>
-        <img src="${item.image}" alt="${escapeHtml(item.title)}" style="width:100%; height:380px; object-fit:cover; border-radius:12px; margin-bottom:1.5rem;">
+        <img src="${item.image}" alt="${escapeHtml(cleanTitle)}" style="width:100%; height:380px; object-fit:cover; border-radius:12px; margin-bottom:1.5rem;">
         <span style="background:rgba(139,92,246,0.2); color:#c084fc; padding:4px 12px; border-radius:20px; font-weight:700; font-size:0.8rem; text-transform:uppercase;">📍 ${escapeHtml(item.areaName)} (${escapeHtml(item.cityName || 'Hyderabad')})</span>
-        <h1 style="font-size:2rem; margin:1rem 0 0.5rem 0; font-weight:800;">${escapeHtml(item.title)}</h1>
+        <h1 style="font-size:2rem; margin:1rem 0 0.5rem 0; font-weight:800;">${escapeHtml(cleanTitle)}</h1>
         <p style="color:#94a3b8; font-size:1rem; margin-bottom:1rem;">📍 ${escapeHtml(item.landmark)}</p>
         
         <div style="font-size:1.8rem; font-weight:900; color:#22c55e; margin-bottom:1.5rem;">₹${item.price.toLocaleString("en-IN")} <span style="font-size:0.9rem; color:#94a3b8;">per ${escapeHtml(item.period)}</span></div>
