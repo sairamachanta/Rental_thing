@@ -445,9 +445,34 @@ const server = http.createServer((req, res) => {
             🛡️ <b>Tenant Safety Warning:</b> Never pay any online token advance before visiting & inspecting the property physically!
         </div>
 
-        <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+        <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-bottom:2rem;">
             <a href="${waUrl}" target="_blank" style="flex:1; background:#25d366; color:#fff; text-align:center; padding:0.85rem; border-radius:8px; font-weight:800; text-decoration:none; display:inline-block;">💬 Chat on WhatsApp</a>
             <a href="${phoneUrl}" style="flex:1; background:#8b5cf6; color:#fff; text-align:center; padding:0.85rem; border-radius:8px; font-weight:800; text-decoration:none; display:inline-block;">📞 Call Owner (${escapeHtml(item.ownerName)})</a>
+        </div>
+
+        <!-- Hyperlocal Neighborhood & Renters FAQ -->
+        <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1);">
+            <h3 style="color:#fff; margin-bottom:1rem; font-size:1.25rem;">🏠 Hyperlocal Neighborhood Insights</h3>
+            <p style="color:#cbd5e1; font-size:0.95rem; line-height:1.6; margin-bottom:1.5rem;">
+                Located in the high-density micro-market of <b>${escapeHtml(item.areaName)}</b>, this property provides excellent access to local transit points, IT corridors, and commercial areas in ${escapeHtml(item.cityName || 'Hyderabad')}. Standard security deposit for rentals in this locality is typically 2 to 3 months' rent.
+            </p>
+
+            <h3 style="color:#fff; margin-bottom:1rem; font-size:1.25rem;">🛡️ Renters Safety & Security Guidelines</h3>
+            <ul style="color:#cbd5e1; font-size:0.95rem; line-height:1.6; padding-left:1.2rem; margin-bottom:1.5rem;">
+                <li style="margin-bottom:0.5rem;"><b>Inspect in Person:</b> Always schedule a physical visit to inspect the property or vehicle condition before making any commitments.</li>
+                <li style="margin-bottom:0.5rem;"><b>Verify Ownership Documents:</b> Request to see the owner's original property tax receipt or identity card before finalizing agreements.</li>
+                <li style="margin-bottom:0.5rem;"><b>No Early Payments:</b> Do not transfer money online as "token deposit" or "advance booking fees" to anyone claiming to be the owner before meeting them in person.</li>
+                <li style="margin-bottom:0.5rem;"><b>Use Registered Agreements:</b> Make sure to sign a standard 11-month rent agreement draft detailing all terms, security deposit refund terms, and maintenance liabilities.</li>
+            </ul>
+
+            <h3 style="color:#fff; margin-bottom:1rem; font-size:1.25rem;">❓ Frequently Asked Questions (FAQ)</h3>
+            <div style="background:rgba(255,255,255,0.03); border-radius:8px; padding:1rem; border:1px solid rgba(255,255,255,0.05);">
+                <p style="margin:0 0 0.5rem 0; font-weight:700; color:#c084fc;">Q1: Is there any brokerage fee for this rental?</p>
+                <p style="margin:0 0 1rem 0; color:#cbd5e1; font-size:0.9rem;">A: No. ManaRent is a 100% direct-to-owner rental platform. We do not charge any brokerage fees or commission fees from tenants or owners.</p>
+                
+                <p style="margin:0 0 0.5rem 0; font-weight:700; color:#c084fc;">Q2: How do I schedule a visit to the property?</p>
+                <p style="margin:0; color:#cbd5e1; font-size:0.9rem;">A: Click the "Chat on WhatsApp" or "Call Owner" button above to get in touch directly with the owner and schedule a convenient visit time.</p>
+            </div>
         </div>
     </div>
 </body>

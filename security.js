@@ -20,14 +20,14 @@ const SECURITY_LOG_PATH = path.join(__dirname, 'data', 'security_alerts.log');
 // Localhost / Loopback IPs that are always trusted for developer testing
 const LOCAL_TRUSTED_IPS = new Set(['127.0.0.1', '::1', '::ffff:127.0.0.1', 'localhost']);
 
-// Trusted Search Engine Crawlers & Inspection Tools (Googlebot, Bingbot, AdSense Bot)
+// Trusted Search Engine Crawlers & Inspection Tools (Googlebot, Bingbot, AdSense Bot, etc.)
 const TRUSTED_CRAWLERS = [
-    'googlebot',
-    'google-inspectiontool',
-    'adsbot-google',
-    'mediapartners-google',
-    'bingbot',
-    'duckduckbot'
+    'google',
+    'bing',
+    'duckduck',
+    'yahoo',
+    'yandex',
+    'baidu'
 ];
 
 // Known Malicious Scraper / Automated Headless Tool User-Agents
