@@ -341,15 +341,10 @@ window.connectOwnerWithAd = function(targetUrl, ownerName, type) {
             <h3 class="ad-title">Connecting you to ${escapeHtml(ownerName)}...</h3>
             <p class="ad-sub">Verified Zero-Brokerage Direct Owner Connection</p>
             
-            <div class="ad-box">
-                <ins class="adsbygoogle"
-                     style="display:block"
-                     data-ad-client="ca-pub-6965081263252229"
-                     data-ad-slot="1234567890"
-                     data-ad-format="auto"
-                     data-full-width-responsive="true"></ins>
-                <div style="font-size:0.75rem; color:var(--text-muted); margin-top:6px;">
-                    🚚 Moving to a new house? <b>Get 20% OFF Packers & Movers in Hyderabad!</b>
+            <div class="ad-box" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); padding: 1rem; border-radius: 8px; margin: 10px 0;">
+                <div style="font-size:1.1rem; color:var(--secondary); font-weight:800; margin-bottom:8px;">🚚 Packers & Movers Partner Offer</div>
+                <div style="font-size:0.9rem; color:#cbd5e1; line-height:1.4;">
+                    Moving to a new house? Get <b>20% OFF</b> verified Packers & Movers in Hyderabad, Bangalore & Chennai! Use code: <b>MANARENT20</b>
                 </div>
             </div>
             
