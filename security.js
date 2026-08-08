@@ -11,6 +11,10 @@
 
 const fs = require('fs');
 const path = require('path');
+const dns = require('dns');
+
+// Googlebot/Bingbot IP verification cache: IP -> true/false/'pending'
+const googlebotIpCache = new Map();
 
 // Rate limiting store (In-memory per IP)
 const rateLimitStore = new Map();
@@ -49,6 +53,49 @@ function logSecurityAlert(ip, reason, userAgent) {
 }
 
 /**
+ * Asynchronously verify if an IP belongs to a genuine Search Engine Crawler (Googlebot, Bingbot, etc.)
+ * using reverse and forward DNS lookups as recommended by Google.
+ */
+function verifySearchEngineIpAsync(ip) {
+    if (googlebotIpCache.has(ip)) return;
+    
+    // Set to pending initially to avoid multiple concurrent DNS queries
+    googlebotIpCache.set(ip, 'pending');
+
+    dns.reverse(ip, (err, hostnames) => {
+        if (err || !hostnames || hostnames.length === 0) {
+            googlebotIpCache.set(ip, false);
+            logSecurityAlert(ip, "Fake Search Engine Bot detected (Failed reverse DNS)", "User-Agent claiming to be Google/Bing");
+            return;
+        }
+
+        const hostname = hostnames[0].toLowerCase();
+        const isValidDomain = hostname.endsWith('.googlebot.com') || 
+                              hostname.endsWith('.google.com') ||
+                              hostname.endsWith('.search.msn.com');
+
+        if (!isValidDomain) {
+            googlebotIpCache.set(ip, false);
+            logSecurityAlert(ip, `Fake Search Engine Bot hostname: ${hostname}`, "User-Agent claiming to be Google/Bing");
+            return;
+        }
+
+        // Verify hostname resolves back to the original IP (forward DNS check)
+        dns.resolve(hostname, (resolveErr, ips) => {
+            if (resolveErr || !ips || !ips.includes(ip)) {
+                googlebotIpCache.set(ip, false);
+                logSecurityAlert(ip, `Fake Search Engine Bot forward DNS check failed for ${hostname}`, "User-Agent claiming to be Google/Bing");
+                return;
+            }
+
+            // Successfully verified as a real Google or Bing crawler!
+            googlebotIpCache.set(ip, true);
+            console.log(`[SECURITY] Successfully verified real Search Engine Bot IP: ${ip} (${hostname})`);
+        });
+    });
+}
+
+/**
  * Main Security Inspection Function for HTTP Server Requests
  */
 function applySecurityFilters(req, res) {
@@ -56,14 +103,33 @@ function applySecurityFilters(req, res) {
     clientIP = clientIP.split(',')[0].trim();
     const userAgent = (req.headers['user-agent'] || '').toLowerCase();
 
-    // 0. Always allow trusted local developer access & Search Engine Crawlers
+    // 0. Always allow trusted local developer access
     if (LOCAL_TRUSTED_IPS.has(clientIP)) {
         return true;
     }
 
+    // 1. Search Engine Crawler & AdSense Bot Identification with Reverse/Forward DNS validation
     const isSearchEngine = TRUSTED_CRAWLERS.some(crawler => userAgent.includes(crawler));
     if (isSearchEngine) {
-        return true; // Bypass security filters for Googlebot & Search Console Live Inspection
+        const isVerified = googlebotIpCache.get(clientIP);
+        
+        if (isVerified === true) {
+            return true; // Bypass security filters for verified search engines
+        }
+        
+        if (isVerified === false) {
+            logSecurityAlert(clientIP, "Access denied: Fake Search Engine Bot detected", userAgent);
+            res.writeHead(403, { 'Content-Type': 'application/json' });
+            res.end(JSON.stringify({ error: "Access Denied: Suspicious activity detected." }));
+            return false;
+        }
+
+        if (isVerified === undefined) {
+            // Trigger background verification so we don't block the crawler on their very first request.
+            verifySearchEngineIpAsync(clientIP);
+        }
+        
+        return true; // Let the initial request pass while verification is pending in background
     }
 
     // 1. Check if IP is permanently blocked
